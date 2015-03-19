@@ -1,0 +1,36 @@
+PODS:
+  - BlurryModalSegue (1.1.2):
+    - MZAppearance (~> 1.1.1)
+    - UIImage+BlurredFrame (~> 0.0.4)
+  - Bolts (1.1.4)
+  - Facebook-iOS-SDK (3.23.1):
+    - Bolts (~> 1.0)
+  - MZAppearance (1.1.3)
+  - Parse (1.6.4):
+    - Bolts (~> 1.1)
+  - ParseFacebookUtils (1.6.4):
+    - Facebook-iOS-SDK (~> 3.20)
+    - Parse (~> 1.6.4)
+  - ParseUI (1.1.1):
+    - Parse (~> 1.6)
+    - ParseFacebookUtils (~> 1.6)
+  - UIColor+uiGradients (0.1.0)
+  - UIImage+BlurredFrame (0.0.4)
+
+DEPENDENCIES:
+  - BlurryModalSegue
+  - ParseUI
+  - UIColor+uiGradients
+
+SPEC CHECKSUMS:
+  BlurryModalSegue: 5775612771e4b6a162043a535d157b9503b0031e
+  Bolts: dd9fb8433d67f5acc3b6b4d1379bbc5513d716c1
+  Facebook-iOS-SDK: 89dae50e975ebab95a01b0962d27277fc9cf08fd
+  MZAppearance: c88502c0c2345120630c34e09d5ff09e2969ba30
+  Parse: c2610f7a12ad0defc974803b819c4efe7746e6db
+  ParseFacebookUtils: 00833ccf6fec7d6429e2403fe457496a5089358b
+  ParseUI: f7e9e0e5271f75a19c74ead8fdd95d36160e268e
+  UIColor+uiGradients: a914f0f8554a99883e7dabc41b9acf448b7b0e78
+  UIImage+BlurredFrame: 0c38f5760d72125c47d16001a88faaac573bd35d
+
+COCOAPODS: 0.35.0
