@@ -1,15 +1,18 @@
 //
 //  ViewController.h
-//  LunchBroke
+//  LnchBrkr
 //
-//  Created by Joseph Smalls-Mantey on 3/19/15.
-//  Copyright (c) 2015 Joseph Smalls-Mantey. All rights reserved.
+//  Created by Ian Smith on 3/13/15.
+//  Copyright (c) 2015 Ian Smith. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) NSString *email;
+@property (strong, nonatomic) NSString *password;
 
 @end
+
 

@@ -1,955 +1,514 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>19B9A3C11A64D30CFA15EB7D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>64C6A6E43FB3F62EE4463155</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADC21ABB36A40058125A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>38CCADCD1ABB36A40058125A</string>
-				<string>38CCADE71ABB36A40058125A</string>
-				<string>38CCADCC1ABB36A40058125A</string>
-				<string>771CC370037316E4E09CDC95</string>
-				<string>19B9A3C11A64D30CFA15EB7D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADC31ABB36A40058125A</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0620</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Joseph Smalls-Mantey</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>38CCADCA1ABB36A40058125A</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.2</string>
-					</dict>
-					<key>38CCADE31ABB36A40058125A</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.2</string>
-						<key>TestTargetID</key>
-						<string>38CCADCA1ABB36A40058125A</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>38CCADC61ABB36A40058125A</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>38CCADC21ABB36A40058125A</string>
-			<key>productRefGroup</key>
-			<string>38CCADCC1ABB36A40058125A</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>38CCADCA1ABB36A40058125A</string>
-				<string>38CCADE31ABB36A40058125A</string>
-			</array>
-		</dict>
-		<key>38CCADC61ABB36A40058125A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>38CCADEC1ABB36A40058125A</string>
-				<string>38CCADED1ABB36A40058125A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>38CCADC71ABB36A40058125A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>38CCADD71ABB36A40058125A</string>
-				<string>38CCADD41ABB36A40058125A</string>
-				<string>38CCADD11ABB36A40058125A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>38CCADC81ABB36A40058125A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9DBCDDF2D6641C7068ED3470</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>38CCADC91ABB36A40058125A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>38CCADDA1ABB36A40058125A</string>
-				<string>38CCADDF1ABB36A40058125A</string>
-				<string>38CCADDC1ABB36A40058125A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>38CCADCA1ABB36A40058125A</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>38CCADEE1ABB36A40058125A</string>
-			<key>buildPhases</key>
-			<array>
-				<string>FC90F5777FE8136F1E0950B0</string>
-				<string>38CCADC71ABB36A40058125A</string>
-				<string>38CCADC81ABB36A40058125A</string>
-				<string>38CCADC91ABB36A40058125A</string>
-				<string>EBE9F76D59C5E4E897AF5413</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>LunchBroke</string>
-			<key>productName</key>
-			<string>LunchBroke</string>
-			<key>productReference</key>
-			<string>38CCADCB1ABB36A40058125A</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>38CCADCB1ABB36A40058125A</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>LunchBroke.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>38CCADCC1ABB36A40058125A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>38CCADCB1ABB36A40058125A</string>
-				<string>38CCADE41ABB36A40058125A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADCD1ABB36A40058125A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>38CCADD21ABB36A40058125A</string>
-				<string>38CCADD31ABB36A40058125A</string>
-				<string>38CCADD51ABB36A40058125A</string>
-				<string>38CCADD61ABB36A40058125A</string>
-				<string>38CCADD81ABB36A40058125A</string>
-				<string>38CCADDB1ABB36A40058125A</string>
-				<string>38CCADDD1ABB36A40058125A</string>
-				<string>38CCADCE1ABB36A40058125A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>LunchBroke</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADCE1ABB36A40058125A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>38CCADCF1ABB36A40058125A</string>
-				<string>38CCADD01ABB36A40058125A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADCF1ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADD01ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADD11ABB36A40058125A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>38CCADD01ABB36A40058125A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>38CCADD21ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADD31ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADD41ABB36A40058125A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>38CCADD31ABB36A40058125A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>38CCADD51ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADD61ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADD71ABB36A40058125A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>38CCADD61ABB36A40058125A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>38CCADD81ABB36A40058125A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>38CCADD91ABB36A40058125A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADD91ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADDA1ABB36A40058125A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>38CCADD81ABB36A40058125A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>38CCADDB1ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADDC1ABB36A40058125A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>38CCADDB1ABB36A40058125A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>38CCADDD1ABB36A40058125A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>38CCADDE1ABB36A40058125A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADDE1ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADDF1ABB36A40058125A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>38CCADDD1ABB36A40058125A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>38CCADE01ABB36A40058125A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>38CCADEB1ABB36A40058125A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>38CCADE11ABB36A40058125A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>38CCADE21ABB36A40058125A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>38CCADE31ABB36A40058125A</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>38CCADF11ABB36A40058125A</string>
-			<key>buildPhases</key>
-			<array>
-				<string>38CCADE01ABB36A40058125A</string>
-				<string>38CCADE11ABB36A40058125A</string>
-				<string>38CCADE21ABB36A40058125A</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>38CCADE61ABB36A40058125A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>LunchBrokeTests</string>
-			<key>productName</key>
-			<string>LunchBrokeTests</string>
-			<key>productReference</key>
-			<string>38CCADE41ABB36A40058125A</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>38CCADE41ABB36A40058125A</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>LunchBrokeTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>38CCADE51ABB36A40058125A</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>38CCADC31ABB36A40058125A</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>38CCADCA1ABB36A40058125A</string>
-			<key>remoteInfo</key>
-			<string>LunchBroke</string>
-		</dict>
-		<key>38CCADE61ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>38CCADCA1ABB36A40058125A</string>
-			<key>targetProxy</key>
-			<string>38CCADE51ABB36A40058125A</string>
-		</dict>
-		<key>38CCADE71ABB36A40058125A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>38CCADEA1ABB36A40058125A</string>
-				<string>38CCADE81ABB36A40058125A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>LunchBrokeTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADE81ABB36A40058125A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>38CCADE91ABB36A40058125A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADE91ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADEA1ABB36A40058125A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>LunchBrokeTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>38CCADEB1ABB36A40058125A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>38CCADEA1ABB36A40058125A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>38CCADEC1ABB36A40058125A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.2</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>38CCADED1ABB36A40058125A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.2</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>38CCADEE1ABB36A40058125A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>38CCADEF1ABB36A40058125A</string>
-				<string>38CCADF01ABB36A40058125A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>38CCADEF1ABB36A40058125A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>95D1EDED09F3D1DA8CDF4CB2</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>LunchBroke/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>38CCADF01ABB36A40058125A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>E828165CDE2157D7440DD6BE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>LunchBroke/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>38CCADF11ABB36A40058125A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>38CCADF21ABB36A40058125A</string>
-				<string>38CCADF31ABB36A40058125A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>38CCADF21ABB36A40058125A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>LunchBrokeTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/LunchBroke.app/LunchBroke</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>38CCADF31ABB36A40058125A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>LunchBrokeTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/LunchBroke.app/LunchBroke</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>64C6A6E43FB3F62EE4463155</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-LunchBroke.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>771CC370037316E4E09CDC95</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>95D1EDED09F3D1DA8CDF4CB2</string>
-				<string>E828165CDE2157D7440DD6BE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>95D1EDED09F3D1DA8CDF4CB2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-LunchBroke.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9DBCDDF2D6641C7068ED3470</key>
-		<dict>
-			<key>fileRef</key>
-			<string>64C6A6E43FB3F62EE4463155</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E828165CDE2157D7440DD6BE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-LunchBroke.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EBE9F76D59C5E4E897AF5413</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>FC90F5777FE8136F1E0950B0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>38CCADC31ABB36A40058125A</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38CCADD11ABB36A40058125A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD01ABB36A40058125A /* main.m */; };
+		38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD31ABB36A40058125A /* AppDelegate.m */; };
+		38CCADD71ABB36A40058125A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD61ABB36A40058125A /* ViewController.m */; };
+		38CCADDC1ABB36A40058125A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38CCADDB1ABB36A40058125A /* Images.xcassets */; };
+		38CCADDF1ABB36A40058125A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCADDD1ABB36A40058125A /* LaunchScreen.xib */; };
+		38CCADEB1ABB36A40058125A /* LunchBrokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADEA1ABB36A40058125A /* LunchBrokeTests.m */; };
+		38CCADFE1ABB38D80058125A /* LocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF51ABB38D80058125A /* LocationsTableViewController.m */; };
+		38CCADFF1ABB38D80058125A /* AddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF71ABB38D80058125A /* AddLocationViewController.m */; };
+		38CCAE001ABB38D80058125A /* NewEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF91ABB38D80058125A /* NewEventTableViewController.m */; };
+		38CCAE011ABB38D80058125A /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFB1ABB38D80058125A /* ParseClient.m */; };
+		38CCAE021ABB38D80058125A /* Locations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFD1ABB38D80058125A /* Locations.m */; };
+		38CCAE041ABB39050058125A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE031ABB39050058125A /* Main.storyboard */; };
+		9DBCDDF2D6641C7068ED3470 /* libPods-LunchBroke.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38CCADE51ABB36A40058125A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38CCADC31ABB36A40058125A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38CCADCA1ABB36A40058125A;
+			remoteInfo = LunchBroke;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38CCADCB1ABB36A40058125A /* LunchBroke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchBroke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38CCADCF1ABB36A40058125A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38CCADD01ABB36A40058125A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		38CCADD21ABB36A40058125A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		38CCADD31ABB36A40058125A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		38CCADD51ABB36A40058125A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		38CCADD61ABB36A40058125A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		38CCADDB1ABB36A40058125A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		38CCADDE1ABB36A40058125A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		38CCADE41ABB36A40058125A /* LunchBrokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LunchBrokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38CCADE91ABB36A40058125A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38CCADEA1ABB36A40058125A /* LunchBrokeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LunchBrokeTests.m; sourceTree = "<group>"; };
+		38CCADF41ABB38D80058125A /* LocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsTableViewController.h; sourceTree = "<group>"; };
+		38CCADF51ABB38D80058125A /* LocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsTableViewController.m; sourceTree = "<group>"; };
+		38CCADF61ABB38D80058125A /* AddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLocationViewController.h; sourceTree = "<group>"; };
+		38CCADF71ABB38D80058125A /* AddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLocationViewController.m; sourceTree = "<group>"; };
+		38CCADF81ABB38D80058125A /* NewEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEventTableViewController.h; sourceTree = "<group>"; };
+		38CCADF91ABB38D80058125A /* NewEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventTableViewController.m; sourceTree = "<group>"; };
+		38CCADFA1ABB38D80058125A /* ParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseClient.h; sourceTree = "<group>"; };
+		38CCADFB1ABB38D80058125A /* ParseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseClient.m; sourceTree = "<group>"; };
+		38CCADFC1ABB38D80058125A /* Locations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locations.h; sourceTree = "<group>"; };
+		38CCADFD1ABB38D80058125A /* Locations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locations.m; sourceTree = "<group>"; };
+		38CCAE031ABB39050058125A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LunchBroke.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D1EDED09F3D1DA8CDF4CB2 /* Pods-LunchBroke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchBroke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.debug.xcconfig"; sourceTree = "<group>"; };
+		E828165CDE2157D7440DD6BE /* Pods-LunchBroke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchBroke.release.xcconfig"; path = "Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38CCADC81ABB36A40058125A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DBCDDF2D6641C7068ED3470 /* libPods-LunchBroke.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38CCADE11ABB36A40058125A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19B9A3C11A64D30CFA15EB7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38CCADC21ABB36A40058125A = {
+			isa = PBXGroup;
+			children = (
+				38CCADCD1ABB36A40058125A /* LunchBroke */,
+				38CCADE71ABB36A40058125A /* LunchBrokeTests */,
+				38CCADCC1ABB36A40058125A /* Products */,
+				771CC370037316E4E09CDC95 /* Pods */,
+				19B9A3C11A64D30CFA15EB7D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		38CCADCC1ABB36A40058125A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38CCADCB1ABB36A40058125A /* LunchBroke.app */,
+				38CCADE41ABB36A40058125A /* LunchBrokeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38CCADCD1ABB36A40058125A /* LunchBroke */ = {
+			isa = PBXGroup;
+			children = (
+				38CCAE031ABB39050058125A /* Main.storyboard */,
+				38CCADD21ABB36A40058125A /* AppDelegate.h */,
+				38CCADD31ABB36A40058125A /* AppDelegate.m */,
+				38CCADD51ABB36A40058125A /* ViewController.h */,
+				38CCADD61ABB36A40058125A /* ViewController.m */,
+				38CCADDB1ABB36A40058125A /* Images.xcassets */,
+				38CCADDD1ABB36A40058125A /* LaunchScreen.xib */,
+				38CCADF41ABB38D80058125A /* LocationsTableViewController.h */,
+				38CCADF51ABB38D80058125A /* LocationsTableViewController.m */,
+				38CCADF61ABB38D80058125A /* AddLocationViewController.h */,
+				38CCADF71ABB38D80058125A /* AddLocationViewController.m */,
+				38CCADF81ABB38D80058125A /* NewEventTableViewController.h */,
+				38CCADF91ABB38D80058125A /* NewEventTableViewController.m */,
+				38CCADFA1ABB38D80058125A /* ParseClient.h */,
+				38CCADFB1ABB38D80058125A /* ParseClient.m */,
+				38CCADFC1ABB38D80058125A /* Locations.h */,
+				38CCADFD1ABB38D80058125A /* Locations.m */,
+				38CCADCE1ABB36A40058125A /* Supporting Files */,
+			);
+			path = LunchBroke;
+			sourceTree = "<group>";
+		};
+		38CCADCE1ABB36A40058125A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38CCADCF1ABB36A40058125A /* Info.plist */,
+				38CCADD01ABB36A40058125A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38CCADE71ABB36A40058125A /* LunchBrokeTests */ = {
+			isa = PBXGroup;
+			children = (
+				38CCADEA1ABB36A40058125A /* LunchBrokeTests.m */,
+				38CCADE81ABB36A40058125A /* Supporting Files */,
+			);
+			path = LunchBrokeTests;
+			sourceTree = "<group>";
+		};
+		38CCADE81ABB36A40058125A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38CCADE91ABB36A40058125A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		771CC370037316E4E09CDC95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95D1EDED09F3D1DA8CDF4CB2 /* Pods-LunchBroke.debug.xcconfig */,
+				E828165CDE2157D7440DD6BE /* Pods-LunchBroke.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38CCADCA1ABB36A40058125A /* LunchBroke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38CCADEE1ABB36A40058125A /* Build configuration list for PBXNativeTarget "LunchBroke" */;
+			buildPhases = (
+				FC90F5777FE8136F1E0950B0 /* Check Pods Manifest.lock */,
+				38CCADC71ABB36A40058125A /* Sources */,
+				38CCADC81ABB36A40058125A /* Frameworks */,
+				38CCADC91ABB36A40058125A /* Resources */,
+				EBE9F76D59C5E4E897AF5413 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LunchBroke;
+			productName = LunchBroke;
+			productReference = 38CCADCB1ABB36A40058125A /* LunchBroke.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38CCADE31ABB36A40058125A /* LunchBrokeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38CCADF11ABB36A40058125A /* Build configuration list for PBXNativeTarget "LunchBrokeTests" */;
+			buildPhases = (
+				38CCADE01ABB36A40058125A /* Sources */,
+				38CCADE11ABB36A40058125A /* Frameworks */,
+				38CCADE21ABB36A40058125A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38CCADE61ABB36A40058125A /* PBXTargetDependency */,
+			);
+			name = LunchBrokeTests;
+			productName = LunchBrokeTests;
+			productReference = 38CCADE41ABB36A40058125A /* LunchBrokeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38CCADC31ABB36A40058125A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Joseph Smalls-Mantey";
+				TargetAttributes = {
+					38CCADCA1ABB36A40058125A = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					38CCADE31ABB36A40058125A = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 38CCADCA1ABB36A40058125A;
+					};
+				};
+			};
+			buildConfigurationList = 38CCADC61ABB36A40058125A /* Build configuration list for PBXProject "LunchBroke" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38CCADC21ABB36A40058125A;
+			productRefGroup = 38CCADCC1ABB36A40058125A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38CCADCA1ABB36A40058125A /* LunchBroke */,
+				38CCADE31ABB36A40058125A /* LunchBrokeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38CCADC91ABB36A40058125A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38CCAE041ABB39050058125A /* Main.storyboard in Resources */,
+				38CCADDF1ABB36A40058125A /* LaunchScreen.xib in Resources */,
+				38CCADDC1ABB36A40058125A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38CCADE21ABB36A40058125A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EBE9F76D59C5E4E897AF5413 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC90F5777FE8136F1E0950B0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38CCADC71ABB36A40058125A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38CCADFF1ABB38D80058125A /* AddLocationViewController.m in Sources */,
+				38CCAE001ABB38D80058125A /* NewEventTableViewController.m in Sources */,
+				38CCAE021ABB38D80058125A /* Locations.m in Sources */,
+				38CCADFE1ABB38D80058125A /* LocationsTableViewController.m in Sources */,
+				38CCADD71ABB36A40058125A /* ViewController.m in Sources */,
+				38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */,
+				38CCAE011ABB38D80058125A /* ParseClient.m in Sources */,
+				38CCADD11ABB36A40058125A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38CCADE01ABB36A40058125A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38CCADEB1ABB36A40058125A /* LunchBrokeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38CCADE61ABB36A40058125A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38CCADCA1ABB36A40058125A /* LunchBroke */;
+			targetProxy = 38CCADE51ABB36A40058125A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38CCADDD1ABB36A40058125A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38CCADDE1ABB36A40058125A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38CCADEC1ABB36A40058125A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38CCADED1ABB36A40058125A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38CCADEF1ABB36A40058125A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95D1EDED09F3D1DA8CDF4CB2 /* Pods-LunchBroke.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LunchBroke/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		38CCADF01ABB36A40058125A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E828165CDE2157D7440DD6BE /* Pods-LunchBroke.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LunchBroke/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		38CCADF21ABB36A40058125A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LunchBrokeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LunchBroke.app/LunchBroke";
+			};
+			name = Debug;
+		};
+		38CCADF31ABB36A40058125A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LunchBrokeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LunchBroke.app/LunchBroke";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38CCADC61ABB36A40058125A /* Build configuration list for PBXProject "LunchBroke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38CCADEC1ABB36A40058125A /* Debug */,
+				38CCADED1ABB36A40058125A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38CCADEE1ABB36A40058125A /* Build configuration list for PBXNativeTarget "LunchBroke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38CCADEF1ABB36A40058125A /* Debug */,
+				38CCADF01ABB36A40058125A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38CCADF11ABB36A40058125A /* Build configuration list for PBXNativeTarget "LunchBrokeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38CCADF21ABB36A40058125A /* Debug */,
+				38CCADF31ABB36A40058125A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38CCADC31ABB36A40058125A /* Project object */;
+}
