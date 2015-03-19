@@ -12,6 +12,7 @@
 #import <UIColor+uiGradients.h>
 
 @interface LocationsTableViewController ()
+- (IBAction)pullToRefresh:(id)sender;
 
 @end
 
@@ -133,4 +134,8 @@
 
 
 
+- (IBAction)pullToRefresh:(id)sender {
+    [self fetchLocations];
+    [sender endRefreshing];
+}
 @end

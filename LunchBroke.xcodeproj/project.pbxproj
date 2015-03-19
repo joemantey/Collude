@@ -227,6 +227,7 @@
 				TargetAttributes = {
 					38CCADCA1ABB36A40058125A = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 9RXLE5FXUN;
 					};
 					38CCADE31ABB36A40058125A = {
 						CreatedOnToolsVersion = 6.2;
@@ -435,6 +436,7 @@
 			baseConfigurationReference = 95D1EDED09F3D1DA8CDF4CB2 /* Pods-LunchBroke.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LunchBroke/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,6 +448,7 @@
 			baseConfigurationReference = E828165CDE2157D7440DD6BE /* Pods-LunchBroke.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LunchBroke/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
