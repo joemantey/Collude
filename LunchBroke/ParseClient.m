@@ -21,20 +21,22 @@
     return self;
 }
 
--(void) pushVoteToParseWithEmail:(NSString *)email vote:(NSString *)vote
+-(void) pushVoteToParseWithUser:(PFObject *)currentUser andEvent:(PFObject *)event
 {
-    //Pushing data up to Parse
-    PFObject *voteObject = [PFObject objectWithClassName:@"Vote"];
-    voteObject[@"user"] = email;
-    voteObject[@"vote"] = vote;
-    voteObject[@"date"] = [NSDate date];
-    [voteObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            
-        } else {
-            NSLog(@"%@",error.description);
-        }
-    }];
+//    //Pushing data up to Parse
+//    NSMutableArray *
+//    
+//    PFObject *voteObject = [PFObject objectWithClassName:@"Vote"];
+//    
+//    
+//    
+//    [voteObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            // Some stuff should happen here.
+//        } else {
+//            NSLog(@"%@",error.description);
+//        }
+//    }];
 }
 
 -(void) getDataFromParse
@@ -44,7 +46,6 @@
         if (!error) {
             // Retrive values like below,object id is retrieved by objects.objectId
             NSString *firstName = testObject[@"firstName"];
-            
             NSString *lastName = testObject[@"lastName"];
             NSLog(@"First Name: %@", firstName);
             NSLog(@"Last Name: %@", lastName);

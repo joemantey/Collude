@@ -12,6 +12,7 @@
 #import <UIColor+uiGradients.h>
 
 @interface LocationsTableViewController ()
+- (IBAction)pullToRefresh:(id)sender;
 
 @end
 
@@ -48,7 +49,7 @@
 
 -(void) fetchLocations
 {
-    PFQuery *locationCount = [PFQuery queryWithClassName:@"Locations"];
+    PFQuery *locationCount = [PFQuery queryWithClassName:@"Event"];
     [locationCount findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.locationArray = [NSMutableArray arrayWithArray:objects];
         [self.tableView reloadData];
@@ -84,6 +85,7 @@
    imageView.image = [UIImage imageNamed:@"DJ-100.png"]
     ;
     
+<<<<<<< HEAD
     [cell.contentView addSubview:imageView];
 //    UIImage *img = [UIImage imageNamed:@"anyImageName"];
 //    img =(UIImage *)[cell.contentView viewWithTag:1];
@@ -91,6 +93,11 @@
 
 // Locations *location = self.locationArray[indexPath.row];
 //    cell.textLabel.text = location[@"Name"];
+=======
+    // Configure the cell...
+    Locations *location = self.locationArray[indexPath.row];
+    cell.textLabel.text = location[@"location"];
+>>>>>>> 53b28dc705bac4eedbf3a02d5719f6ee13df82d0
     return cell;
 }
 
@@ -146,4 +153,8 @@
 
 
 
+- (IBAction)pullToRefresh:(id)sender {
+    [self fetchLocations];
+    [sender endRefreshing];
+}
 @end
