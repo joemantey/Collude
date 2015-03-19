@@ -7,6 +7,7 @@
 //
 
 #import "NewEventTableViewController.h"
+#import <Parse/Parse.h>
 
 @interface NewEventTableViewController ()
 - (IBAction)cancelButton:(id)sender;
@@ -17,6 +18,7 @@
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSDate *selectedDate;
 @property (nonatomic) BOOL datePickerIsShowing;
+- (IBAction)savebutton:(id)sender;
 
 @end
 
@@ -186,5 +188,27 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)pickerDateChanged:(id)sender {
+}
+
+- (IBAction)savebutton:(id)sender {
+    
+    NSString *nameField = self.nameField.text;
+    PFObject *newEvent = [PFObject objectWithClassName:@"Event"];
+    newEvent[@"location"] = nameField;
+    
+    NSDate *choosenDate = [self.datePicker date];
+    
+    newEvent[@"date"] = choosenDate;
+    
+    NSLog(@"choosenDate: %@", choosenDate);
+    
+    [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+            NSLog(@"Save Success");
+        } else {
+            NSLog(@"%@",error.description);
+        }
+    }];
 }
 @end
