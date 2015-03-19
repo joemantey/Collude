@@ -72,12 +72,25 @@
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 64.0;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
+//    
+//     Configure the cell...
+    UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(500, 50, 20, 20)];
+   imageView.image = [UIImage imageNamed:@"DJ-100.png"]
+    ;
     
-    // Configure the cell...
-    Locations *location = self.locationArray[indexPath.row];
-    cell.textLabel.text = location[@"Name"];
+    [cell.contentView addSubview:imageView];
+//    UIImage *img = [UIImage imageNamed:@"anyImageName"];
+//    img =(UIImage *)[cell.contentView viewWithTag:1];
+
+
+// Locations *location = self.locationArray[indexPath.row];
+//    cell.textLabel.text = location[@"Name"];
     return cell;
 }
 

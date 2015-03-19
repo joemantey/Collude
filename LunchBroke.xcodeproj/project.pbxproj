@@ -19,6 +19,7 @@
 		38CCAE011ABB38D80058125A /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFB1ABB38D80058125A /* ParseClient.m */; };
 		38CCAE021ABB38D80058125A /* Locations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFD1ABB38D80058125A /* Locations.m */; };
 		38CCAE041ABB39050058125A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE031ABB39050058125A /* Main.storyboard */; };
+		38CCAE0A1ABB49F80058125A /* Icon 3 in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE091ABB49F80058125A /* Icon 3 */; };
 		9DBCDDF2D6641C7068ED3470 /* libPods-LunchBroke.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		38CCADFC1ABB38D80058125A /* Locations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locations.h; sourceTree = "<group>"; };
 		38CCADFD1ABB38D80058125A /* Locations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locations.m; sourceTree = "<group>"; };
 		38CCAE031ABB39050058125A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		38CCAE091ABB49F80058125A /* Icon 3 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Icon 3"; sourceTree = "<group>"; };
 		64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LunchBroke.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D1EDED09F3D1DA8CDF4CB2 /* Pods-LunchBroke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchBroke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.debug.xcconfig"; sourceTree = "<group>"; };
 		E828165CDE2157D7440DD6BE /* Pods-LunchBroke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchBroke.release.xcconfig"; path = "Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				38CCADFB1ABB38D80058125A /* ParseClient.m */,
 				38CCADFC1ABB38D80058125A /* Locations.h */,
 				38CCADFD1ABB38D80058125A /* Locations.m */,
+				38CCAE091ABB49F80058125A /* Icon 3 */,
 				38CCADCE1ABB36A40058125A /* Supporting Files */,
 			);
 			path = LunchBroke;
@@ -260,6 +263,7 @@
 			files = (
 				38CCAE041ABB39050058125A /* Main.storyboard in Resources */,
 				38CCADDF1ABB36A40058125A /* LaunchScreen.xib in Resources */,
+				38CCAE0A1ABB49F80058125A /* Icon 3 in Resources */,
 				38CCADDC1ABB36A40058125A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
