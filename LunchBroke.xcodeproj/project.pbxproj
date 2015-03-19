@@ -114,16 +114,9 @@
 				38CCAE031ABB39050058125A /* Main.storyboard */,
 				38CCADD21ABB36A40058125A /* AppDelegate.h */,
 				38CCADD31ABB36A40058125A /* AppDelegate.m */,
-				38CCADD51ABB36A40058125A /* ViewController.h */,
-				38CCADD61ABB36A40058125A /* ViewController.m */,
 				38CCADDB1ABB36A40058125A /* Images.xcassets */,
+				38CCAE061ABB3A6B0058125A /* ModelViewController */,
 				38CCADDD1ABB36A40058125A /* LaunchScreen.xib */,
-				38CCADF41ABB38D80058125A /* LocationsTableViewController.h */,
-				38CCADF51ABB38D80058125A /* LocationsTableViewController.m */,
-				38CCADF61ABB38D80058125A /* AddLocationViewController.h */,
-				38CCADF71ABB38D80058125A /* AddLocationViewController.m */,
-				38CCADF81ABB38D80058125A /* NewEventTableViewController.h */,
-				38CCADF91ABB38D80058125A /* NewEventTableViewController.m */,
 				38CCADFA1ABB38D80058125A /* ParseClient.h */,
 				38CCADFB1ABB38D80058125A /* ParseClient.m */,
 				38CCADFC1ABB38D80058125A /* Locations.h */,
@@ -157,6 +150,21 @@
 				38CCADE91ABB36A40058125A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38CCAE061ABB3A6B0058125A /* ModelViewController */ = {
+			isa = PBXGroup;
+			children = (
+				38CCADF41ABB38D80058125A /* LocationsTableViewController.h */,
+				38CCADF51ABB38D80058125A /* LocationsTableViewController.m */,
+				38CCADF61ABB38D80058125A /* AddLocationViewController.h */,
+				38CCADF71ABB38D80058125A /* AddLocationViewController.m */,
+				38CCADF81ABB38D80058125A /* NewEventTableViewController.h */,
+				38CCADF91ABB38D80058125A /* NewEventTableViewController.m */,
+				38CCADD51ABB36A40058125A /* ViewController.h */,
+				38CCADD61ABB36A40058125A /* ViewController.m */,
+			);
+			name = ModelViewController;
 			sourceTree = "<group>";
 		};
 		771CC370037316E4E09CDC95 /* Pods */ = {
