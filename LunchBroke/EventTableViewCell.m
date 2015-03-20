@@ -27,14 +27,25 @@
     // Configure the view for the selected state
 }
 
+
+//method for toggling voting buttons which overrides the setter
 -(void)setIsSelected:(BOOL)isSelected{
+   
+    //override the setter and set it to isSelected
     _isSelected = isSelected;
     
+    
+    //if the vote button is selected
     if (isSelected){
         
+        
         self.voteButton.backgroundColor = [UIColor redColor];
+        self.voteTextField.text = @"cancel";
+        
+    
     }else{
         self.voteButton.backgroundColor = [UIColor clearColor];
+        self.voteTextField.text = @"vote";
     }
     
 }
