@@ -161,6 +161,9 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="eventAttendees:" destination="clS-Fg-pL8" eventType="editingDidEnd" id="hnH-YC-eW1"/>
+                                            </connections>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date: Monday at 6:30pm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d05-Gy-sOR">
                                             <rect key="frame" x="64" y="60" width="350" height="20"/>
@@ -180,6 +183,9 @@
                                             <state key="normal" image="Unchecked Checkbox-100.png">
                                                 <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="voteButtonTapped:" destination="clS-Fg-pL8" eventType="touchUpInside" id="ZTM-YE-jfX"/>
+                                            </connections>
                                         </button>
                                         <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sarah's Salwich Shop" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yX7-FI-YRY">
                                             <rect key="frame" x="58" y="23" width="350" height="20"/>
@@ -191,6 +197,12 @@
                                                 <constraint firstAttribute="height" constant="20" id="hUz-RW-WNK"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="vote" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-s4-xEw">
+                                            <rect key="frame" x="531" y="61" width="52" height="30"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
@@ -207,7 +219,9 @@
                                         <constraint firstAttribute="centerY" secondItem="vOf-1c-D3e" secondAttribute="centerY" id="Wub-pK-pjj"/>
                                         <constraint firstAttribute="centerX" secondItem="vOf-1c-D3e" secondAttribute="centerX" id="Wur-gb-l9K"/>
                                         <constraint firstItem="d05-Gy-sOR" firstAttribute="leading" secondItem="vOf-1c-D3e" secondAttribute="leading" id="agp-Re-EGo"/>
+                                        <constraint firstItem="KpQ-s4-xEw" firstAttribute="centerX" secondItem="kWO-it-slH" secondAttribute="centerX" id="dwE-7s-cw1"/>
                                         <constraint firstItem="G72-fx-5sP" firstAttribute="trailing" secondItem="vOf-1c-D3e" secondAttribute="leading" constant="10" id="pk5-bL-pe0"/>
+                                        <constraint firstItem="KpQ-s4-xEw" firstAttribute="top" secondItem="kWO-it-slH" secondAttribute="bottom" id="qph-hn-9sy"/>
                                         <constraint firstItem="vOf-1c-D3e" firstAttribute="leading" secondItem="G72-fx-5sP" secondAttribute="trailing" constant="12" id="vM2-4v-PCP"/>
                                         <constraint firstItem="G72-fx-5sP" firstAttribute="leading" secondItem="oJM-zL-gH5" secondAttribute="leadingMargin" constant="8" id="w45-Lu-xEg"/>
                                         <constraint firstItem="yX7-FI-YRY" firstAttribute="width" secondItem="vOf-1c-D3e" secondAttribute="width" id="wwD-o6-r1o"/>
@@ -224,6 +238,12 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="eventAttendeeCount" destination="vOf-1c-D3e" id="frD-CP-bkP"/>
+                                    <outlet property="eventDate" destination="d05-Gy-sOR" id="PK3-1b-Ejx"/>
+                                    <outlet property="eventIcon" destination="G72-fx-5sP" id="Dnl-rr-vXN"/>
+                                    <outlet property="eventName" destination="yX7-FI-YRY" id="zkF-bk-LYK"/>
+                                    <outlet property="voteButton" destination="kWO-it-slH" id="Knp-8B-KRo"/>
+                                    <outlet property="voteTextField" destination="KpQ-s4-xEw" id="HCJ-ip-aCC"/>
                                     <segue destination="oVT-n3-LyI" kind="custom" customClass="BlurryModalSegue" id="otn-j3-4Kt"/>
                                 </connections>
                             </tableViewCell>

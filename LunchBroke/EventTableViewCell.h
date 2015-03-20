@@ -10,7 +10,15 @@
 
 @class Event;
 @interface EventTableViewCell : UITableViewCell
+- (IBAction)voteButtonTapped:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *voteTextField;
+@property (weak, nonatomic) IBOutlet UITextField *eventName;
+@property (weak, nonatomic) IBOutlet UITextField *eventAttendeeCount;
+@property (weak, nonatomic) IBOutlet UITextField *eventDate;
+@property (weak, nonatomic) IBOutlet UIImageView *eventIcon;
+@property (weak, nonatomic) IBOutlet UIButton *voteButton;
 
 @property (nonatomic) Event *event;
+
 
 @end

@@ -9,7 +9,13 @@
 
 #import "EventTableViewCell.h"
 
+@interface EventTableViewCell ()
+
+@property (nonatomic) BOOL isSelected;
+
+@end
 @implementation EventTableViewCell
+
 
 - (void)awakeFromNib {
     // Initialization code
@@ -21,4 +27,20 @@
     // Configure the view for the selected state
 }
 
+-(void)setIsSelected:(BOOL)isSelected{
+    _isSelected = isSelected;
+    
+    if (isSelected){
+        
+        self.voteButton.backgroundColor = [UIColor redColor];
+    }else{
+        self.voteButton.backgroundColor = [UIColor clearColor];
+    }
+    
+}
+
+- (IBAction)voteButtonTapped:(id)sender {
+    
+    self.isSelected = !self.isSelected;
+}
 @end
