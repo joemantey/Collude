@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "Locations.h"
 #import <UIColor+uiGradients.h>
+#import "EventTableViewCell.h"
 
 @interface LocationsTableViewController ()
 - (IBAction)pullToRefresh:(id)sender;
@@ -78,26 +79,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
-//    
-//     Configure the cell...
-    UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(500, 50, 20, 20)];
-   imageView.image = [UIImage imageNamed:@"DJ-100.png"]
-    ;
+    EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
+   
+//    cell.event = self.EVENTARRAY[indexPath.row];
     
-<<<<<<< HEAD
-    [cell.contentView addSubview:imageView];
-//    UIImage *img = [UIImage imageNamed:@"anyImageName"];
-//    img =(UIImage *)[cell.contentView viewWithTag:1];
+// UILabel *nameLabel = (UILabel*)[cell viewWithTag:1];
+////    nameLabel.text = @"Hello";
+//    Locations *location = self.locationArray[indexPath.row];
 
-
-// Locations *location = self.locationArray[indexPath.row];
-//    cell.textLabel.text = location[@"Name"];
-=======
-    // Configure the cell...
-    Locations *location = self.locationArray[indexPath.row];
-    cell.textLabel.text = location[@"location"];
->>>>>>> 53b28dc705bac4eedbf3a02d5719f6ee13df82d0
+    
     return cell;
 }
 
