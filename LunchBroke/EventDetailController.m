@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Ian Smith. All rights reserved.
 //
 
-#import "AddLocationViewController.h"
+#import "EventDetailController.h"
 #import <Parse/Parse.h>
 
-@interface AddLocationViewController ()
+@interface EventDetailController ()
 - (IBAction)dismissTapped:(id)sender;
 - (IBAction)saveTapped:(id)sender;
 
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation AddLocationViewController
+@implementation EventDetailController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

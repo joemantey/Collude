@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface LoginController : UIViewController
 
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *password;
