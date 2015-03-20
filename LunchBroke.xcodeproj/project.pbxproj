@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38267A951ABB699500D1EC59 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38267A941ABB699500D1EC59 /* EventTableViewCell.m */; };
+		38267A9B1ABB6B6A00D1EC59 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 38267A9A1ABB6B6A00D1EC59 /* Event.m */; };
+		38267A9D1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267A9C1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png */; };
 		38CCADD11ABB36A40058125A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD01ABB36A40058125A /* main.m */; };
 		38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD31ABB36A40058125A /* AppDelegate.m */; };
 		38CCADD71ABB36A40058125A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD61ABB36A40058125A /* ViewController.m */; };
@@ -19,6 +22,12 @@
 		38CCAE011ABB38D80058125A /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFB1ABB38D80058125A /* ParseClient.m */; };
 		38CCAE021ABB38D80058125A /* Locations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFD1ABB38D80058125A /* Locations.m */; };
 		38CCAE041ABB39050058125A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE031ABB39050058125A /* Main.storyboard */; };
+		38CCAE1D1ABB5D440058125A /* Beer-100-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE171ABB5D440058125A /* Beer-100-2.png */; };
+		38CCAE1E1ABB5D440058125A /* Birthday Cake-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE181ABB5D440058125A /* Birthday Cake-100.png */; };
+		38CCAE1F1ABB5D440058125A /* Cupcake-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE191ABB5D440058125A /* Cupcake-100.png */; };
+		38CCAE201ABB5D440058125A /* DJ-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1A1ABB5D440058125A /* DJ-100.png */; };
+		38CCAE211ABB5D440058125A /* Groups Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1B1ABB5D440058125A /* Groups Filled-100.png */; };
+		38CCAE221ABB5D440058125A /* Restaurant-100-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1C1ABB5D440058125A /* Restaurant-100-3.png */; };
 		9DBCDDF2D6641C7068ED3470 /* libPods-LunchBroke.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38267A931ABB699500D1EC59 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
+		38267A941ABB699500D1EC59 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
+		38267A991ABB6B6A00D1EC59 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		38267A9A1ABB6B6A00D1EC59 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		38267A9C1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unchecked Checkbox-100.png"; sourceTree = "<group>"; };
 		38CCADCB1ABB36A40058125A /* LunchBroke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchBroke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CCADCF1ABB36A40058125A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CCADD01ABB36A40058125A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,6 +70,12 @@
 		38CCADFC1ABB38D80058125A /* Locations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locations.h; sourceTree = "<group>"; };
 		38CCADFD1ABB38D80058125A /* Locations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locations.m; sourceTree = "<group>"; };
 		38CCAE031ABB39050058125A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		38CCAE171ABB5D440058125A /* Beer-100-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beer-100-2.png"; sourceTree = "<group>"; };
+		38CCAE181ABB5D440058125A /* Birthday Cake-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Birthday Cake-100.png"; sourceTree = "<group>"; };
+		38CCAE191ABB5D440058125A /* Cupcake-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cupcake-100.png"; sourceTree = "<group>"; };
+		38CCAE1A1ABB5D440058125A /* DJ-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DJ-100.png"; sourceTree = "<group>"; };
+		38CCAE1B1ABB5D440058125A /* Groups Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Groups Filled-100.png"; sourceTree = "<group>"; };
+		38CCAE1C1ABB5D440058125A /* Restaurant-100-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Restaurant-100-3.png"; sourceTree = "<group>"; };
 		64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LunchBroke.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D1EDED09F3D1DA8CDF4CB2 /* Pods-LunchBroke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchBroke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.debug.xcconfig"; sourceTree = "<group>"; };
 		E828165CDE2157D7440DD6BE /* Pods-LunchBroke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchBroke.release.xcconfig"; path = "Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +108,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		38267A961ABB699C00D1EC59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				38CCADFA1ABB38D80058125A /* ParseClient.h */,
+				38CCADFB1ABB38D80058125A /* ParseClient.m */,
+				38CCADFC1ABB38D80058125A /* Locations.h */,
+				38CCADFD1ABB38D80058125A /* Locations.m */,
+				38267A991ABB6B6A00D1EC59 /* Event.h */,
+				38267A9A1ABB6B6A00D1EC59 /* Event.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		38267A971ABB69A200D1EC59 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38267A931ABB699500D1EC59 /* EventTableViewCell.h */,
+				38267A941ABB699500D1EC59 /* EventTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		38267A981ABB69A600D1EC59 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				38CCADF41ABB38D80058125A /* LocationsTableViewController.h */,
+				38CCADF51ABB38D80058125A /* LocationsTableViewController.m */,
+				38CCADF61ABB38D80058125A /* AddLocationViewController.h */,
+				38CCADF71ABB38D80058125A /* AddLocationViewController.m */,
+				38CCADF81ABB38D80058125A /* NewEventTableViewController.h */,
+				38CCADF91ABB38D80058125A /* NewEventTableViewController.m */,
+				38CCADD51ABB36A40058125A /* ViewController.h */,
+				38CCADD61ABB36A40058125A /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		38CCADC21ABB36A40058125A = {
 			isa = PBXGroup;
 			children = (
@@ -115,12 +172,17 @@
 				38CCADD21ABB36A40058125A /* AppDelegate.h */,
 				38CCADD31ABB36A40058125A /* AppDelegate.m */,
 				38CCADDB1ABB36A40058125A /* Images.xcassets */,
-				38CCAE061ABB3A6B0058125A /* ModelViewController */,
+				38267A9C1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png */,
+				38267A981ABB69A600D1EC59 /* Controllers */,
+				38267A971ABB69A200D1EC59 /* Views */,
+				38267A961ABB699C00D1EC59 /* Models */,
 				38CCADDD1ABB36A40058125A /* LaunchScreen.xib */,
-				38CCADFA1ABB38D80058125A /* ParseClient.h */,
-				38CCADFB1ABB38D80058125A /* ParseClient.m */,
-				38CCADFC1ABB38D80058125A /* Locations.h */,
-				38CCADFD1ABB38D80058125A /* Locations.m */,
+				38CCAE171ABB5D440058125A /* Beer-100-2.png */,
+				38CCAE181ABB5D440058125A /* Birthday Cake-100.png */,
+				38CCAE191ABB5D440058125A /* Cupcake-100.png */,
+				38CCAE1A1ABB5D440058125A /* DJ-100.png */,
+				38CCAE1B1ABB5D440058125A /* Groups Filled-100.png */,
+				38CCAE1C1ABB5D440058125A /* Restaurant-100-3.png */,
 				38CCADCE1ABB36A40058125A /* Supporting Files */,
 			);
 			path = LunchBroke;
@@ -150,21 +212,6 @@
 				38CCADE91ABB36A40058125A /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		38CCAE061ABB3A6B0058125A /* ModelViewController */ = {
-			isa = PBXGroup;
-			children = (
-				38CCADF41ABB38D80058125A /* LocationsTableViewController.h */,
-				38CCADF51ABB38D80058125A /* LocationsTableViewController.m */,
-				38CCADF61ABB38D80058125A /* AddLocationViewController.h */,
-				38CCADF71ABB38D80058125A /* AddLocationViewController.m */,
-				38CCADF81ABB38D80058125A /* NewEventTableViewController.h */,
-				38CCADF91ABB38D80058125A /* NewEventTableViewController.m */,
-				38CCADD51ABB36A40058125A /* ViewController.h */,
-				38CCADD61ABB36A40058125A /* ViewController.m */,
-			);
-			name = ModelViewController;
 			sourceTree = "<group>";
 		};
 		771CC370037316E4E09CDC95 /* Pods */ = {
@@ -259,8 +306,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38CCAE201ABB5D440058125A /* DJ-100.png in Resources */,
+				38CCAE1F1ABB5D440058125A /* Cupcake-100.png in Resources */,
+				38CCAE1D1ABB5D440058125A /* Beer-100-2.png in Resources */,
+				38CCAE1E1ABB5D440058125A /* Birthday Cake-100.png in Resources */,
+				38267A9D1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png in Resources */,
+				38CCAE221ABB5D440058125A /* Restaurant-100-3.png in Resources */,
 				38CCAE041ABB39050058125A /* Main.storyboard in Resources */,
 				38CCADDF1ABB36A40058125A /* LaunchScreen.xib in Resources */,
+				38CCAE211ABB5D440058125A /* Groups Filled-100.png in Resources */,
 				38CCADDC1ABB36A40058125A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +368,8 @@
 			files = (
 				38CCADFF1ABB38D80058125A /* AddLocationViewController.m in Sources */,
 				38CCAE001ABB38D80058125A /* NewEventTableViewController.m in Sources */,
+				38267A9B1ABB6B6A00D1EC59 /* Event.m in Sources */,
+				38267A951ABB699500D1EC59 /* EventTableViewCell.m in Sources */,
 				38CCAE021ABB38D80058125A /* Locations.m in Sources */,
 				38CCADFE1ABB38D80058125A /* LocationsTableViewController.m in Sources */,
 				38CCADD71ABB36A40058125A /* ViewController.m in Sources */,

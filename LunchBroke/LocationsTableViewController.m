@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "Locations.h"
 #import <UIColor+uiGradients.h>
+#import "EventTableViewCell.h"
 
 @interface LocationsTableViewController ()
 - (IBAction)pullToRefresh:(id)sender;
@@ -71,12 +72,20 @@
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 64.0;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
+    EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
+   
+//    cell.event = self.EVENTARRAY[indexPath.row];
     
-    // Configure the cell...
-    Locations *location = self.locationArray[indexPath.row];
-    cell.textLabel.text = location[@"location"];
+// UILabel *nameLabel = (UILabel*)[cell viewWithTag:1];
+////    nameLabel.text = @"Hello";
+//    Locations *location = self.locationArray[indexPath.row];
+
+    
     return cell;
 }
 

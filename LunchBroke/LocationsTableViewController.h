@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LocationsTableViewController : UITableViewController
+@interface LocationsTableViewController : UITableViewController <UITextFieldDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSMutableArray *locationArray;
 

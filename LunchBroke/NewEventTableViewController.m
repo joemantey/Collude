@@ -39,30 +39,42 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+//    [self.tableView setBackgroundColor:[UIColor clearColor]];
+//    [self.tableView setBackgroundView:nil];
 }
 
 #pragma mark - Table view data source
 
+
 - (void)setupTimeDisplay
 {
-    [self.tableView setBackgroundColor:[UIColor clearColor]];
-    [self.tableView setBackgroundView:nil];
     
+    //The date formatter will inform which time options are shown on the date picker
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateStyle:NSDateFormatterLongStyle];
     [self.dateFormatter setTimeStyle:NSDateFormatterLongStyle];
     
+    //Set's the the defailt date to today's date
     NSDate *defaultDate = [NSDate date];
     
+    
+    //set the text and tint of the date formatter
     self.timeDisplay.text = [self.dateFormatter stringFromDate:defaultDate];
     self.timeDisplay.textColor = [self.tableView tintColor];
     
+    //set's the default state for the date picker to today's date
     self.selectedDate = defaultDate;
+    
+    //upon view did load, hide the date picker cell
     [self hideDatePickerCell];
 }
 
+//Since we are using a static tableview, we can use the constants to set parameters for our tableview. Using define, we can put all of our "magic numbers" in one place, in case we need to change them later.
 #define kDatePickerIndex 2
 #define kDatePickerCellHeight 164
+
+//If datePickerIsShowing, set the height of the cell to 164 (the hieght of a date picker). If !datePickerIsShowing, set the height of the cell to 0
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     CGFloat height = self.tableView.rowHeight;
@@ -77,17 +89,19 @@
 }
 
 
-
+//When the row with the date displayed is selected....
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 1){
         
+        //If the datePickerIsShowing...
         if (self.datePickerIsShowing){
             
+            //...hide it!
             [self hideDatePickerCell];
-            
+        //But if the !datePickerIsShowing
         }else {
-            
+            //...show it!
             [self showDatePickerCell];
         }
     }
@@ -95,17 +109,23 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+//when this method is called...
 - (void)showDatePickerCell {
     
+    //...change the BOOLEAN to indicate the the date picker is (about to be) shown...
     self.datePickerIsShowing = YES;
     
+    //...refresh the tableview...
     [self.tableView beginUpdates];
-    
     [self.tableView endUpdates];
     
+    //...seems like a good time to stop hiding the date picker...
     self.datePicker.hidden = NO;
+    //Now some setup. Turn the date picker clear so we can have it fade in during our animation.
     self.datePicker.alpha = 0.0f;
     
+    
+    //Let's get our Walt Disney on and animate the appearance of this date picker.
     [UIView animateWithDuration:0.25 animations:^{
         
         self.datePicker.alpha = 1.0f;
@@ -115,16 +135,19 @@
 
 - (void)hideDatePickerCell {
     
+    //Toggle the BOOL to represent the datePickerCell is (about to be) hidden
     self.datePickerIsShowing = NO;
     
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
     
+    //Animation time again. This time were turning the date picker clear.
     [UIView animateWithDuration:0.25
                      animations:^{
                          self.datePicker.alpha = 0.0f;
                      }
                      completion:^(BOOL finished){
+                         //when we're done animating, hide the picker
                          self.datePicker.hidden = YES;
                      }];
 }
