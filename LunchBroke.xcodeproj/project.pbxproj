@@ -12,12 +12,12 @@
 		38267A9D1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267A9C1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png */; };
 		38CCADD11ABB36A40058125A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD01ABB36A40058125A /* main.m */; };
 		38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD31ABB36A40058125A /* AppDelegate.m */; };
-		38CCADD71ABB36A40058125A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD61ABB36A40058125A /* ViewController.m */; };
+		38CCADD71ABB36A40058125A /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD61ABB36A40058125A /* LoginController.m */; };
 		38CCADDC1ABB36A40058125A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38CCADDB1ABB36A40058125A /* Images.xcassets */; };
 		38CCADDF1ABB36A40058125A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCADDD1ABB36A40058125A /* LaunchScreen.xib */; };
 		38CCADEB1ABB36A40058125A /* LunchBrokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADEA1ABB36A40058125A /* LunchBrokeTests.m */; };
 		38CCADFE1ABB38D80058125A /* LocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF51ABB38D80058125A /* LocationsTableViewController.m */; };
-		38CCADFF1ABB38D80058125A /* AddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF71ABB38D80058125A /* AddLocationViewController.m */; };
+		38CCADFF1ABB38D80058125A /* EventDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF71ABB38D80058125A /* EventDetailController.m */; };
 		38CCAE001ABB38D80058125A /* NewEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF91ABB38D80058125A /* NewEventTableViewController.m */; };
 		38CCAE011ABB38D80058125A /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFB1ABB38D80058125A /* ParseClient.m */; };
 		38CCAE021ABB38D80058125A /* Locations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFD1ABB38D80058125A /* Locations.m */; };
@@ -52,8 +52,8 @@
 		38CCADD01ABB36A40058125A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38CCADD21ABB36A40058125A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38CCADD31ABB36A40058125A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		38CCADD51ABB36A40058125A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		38CCADD61ABB36A40058125A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		38CCADD51ABB36A40058125A /* LoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		38CCADD61ABB36A40058125A /* LoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		38CCADDB1ABB36A40058125A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		38CCADDE1ABB36A40058125A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		38CCADE41ABB36A40058125A /* LunchBrokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LunchBrokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,8 +61,8 @@
 		38CCADEA1ABB36A40058125A /* LunchBrokeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LunchBrokeTests.m; sourceTree = "<group>"; };
 		38CCADF41ABB38D80058125A /* LocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsTableViewController.h; sourceTree = "<group>"; };
 		38CCADF51ABB38D80058125A /* LocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsTableViewController.m; sourceTree = "<group>"; };
-		38CCADF61ABB38D80058125A /* AddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLocationViewController.h; sourceTree = "<group>"; };
-		38CCADF71ABB38D80058125A /* AddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLocationViewController.m; sourceTree = "<group>"; };
+		38CCADF61ABB38D80058125A /* EventDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailController.h; sourceTree = "<group>"; };
+		38CCADF71ABB38D80058125A /* EventDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailController.m; sourceTree = "<group>"; };
 		38CCADF81ABB38D80058125A /* NewEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEventTableViewController.h; sourceTree = "<group>"; };
 		38CCADF91ABB38D80058125A /* NewEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventTableViewController.m; sourceTree = "<group>"; };
 		38CCADFA1ABB38D80058125A /* ParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseClient.h; sourceTree = "<group>"; };
@@ -135,12 +135,12 @@
 			children = (
 				38CCADF41ABB38D80058125A /* LocationsTableViewController.h */,
 				38CCADF51ABB38D80058125A /* LocationsTableViewController.m */,
-				38CCADF61ABB38D80058125A /* AddLocationViewController.h */,
-				38CCADF71ABB38D80058125A /* AddLocationViewController.m */,
+				38CCADF61ABB38D80058125A /* EventDetailController.h */,
+				38CCADF71ABB38D80058125A /* EventDetailController.m */,
 				38CCADF81ABB38D80058125A /* NewEventTableViewController.h */,
 				38CCADF91ABB38D80058125A /* NewEventTableViewController.m */,
-				38CCADD51ABB36A40058125A /* ViewController.h */,
-				38CCADD61ABB36A40058125A /* ViewController.m */,
+				38CCADD51ABB36A40058125A /* LoginController.h */,
+				38CCADD61ABB36A40058125A /* LoginController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -366,13 +366,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38CCADFF1ABB38D80058125A /* AddLocationViewController.m in Sources */,
+				38CCADFF1ABB38D80058125A /* EventDetailController.m in Sources */,
 				38CCAE001ABB38D80058125A /* NewEventTableViewController.m in Sources */,
 				38267A9B1ABB6B6A00D1EC59 /* Event.m in Sources */,
 				38267A951ABB699500D1EC59 /* EventTableViewCell.m in Sources */,
 				38CCAE021ABB38D80058125A /* Locations.m in Sources */,
 				38CCADFE1ABB38D80058125A /* LocationsTableViewController.m in Sources */,
-				38CCADD71ABB36A40058125A /* ViewController.m in Sources */,
+				38CCADD71ABB36A40058125A /* LoginController.m in Sources */,
 				38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */,
 				38CCAE011ABB38D80058125A /* ParseClient.m in Sources */,
 				38CCADD11ABB36A40058125A /* main.m in Sources */,

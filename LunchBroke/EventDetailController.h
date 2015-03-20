@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddLocationViewController : UIViewController <UITableViewDelegate>
+@interface EventDetailController : UIViewController <UITableViewDelegate>
 
 @end

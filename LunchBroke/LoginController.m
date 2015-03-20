@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Ian Smith. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LoginController.h"
 #import <Parse/Parse.h>
 #import "ParseClient.h"
 #import <UIColor+uiGradients.h>
 
-@interface ViewController ()
+@interface LoginController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *emailAddressField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation ViewController
+@implementation LoginController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
