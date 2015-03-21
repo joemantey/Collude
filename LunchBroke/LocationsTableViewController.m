@@ -84,7 +84,8 @@
 // UILabel *nameLabel = (UILabel*)[cell viewWithTag:1];
 ////    nameLabel.text = @"Hello";
 //    Locations *location = self.locationArray[indexPath.row];
-
+    Locations *location = self.locationArray[indexPath.row];
+    cell.textLabel.text = location[@"location"];
     
     return cell;
 }

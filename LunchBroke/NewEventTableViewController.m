@@ -10,14 +10,16 @@
 #import <Parse/Parse.h>
 
 @interface NewEventTableViewController ()
-- (IBAction)cancelButton:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *timeDisplay;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
-- (IBAction)pickerDateChanged:(id)sender;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSDate *selectedDate;
 @property (nonatomic) BOOL datePickerIsShowing;
+
+- (IBAction)cancelButton:(id)sender;
+- (IBAction)pickerDateChanged:(id)sender;
 - (IBAction)savebutton:(id)sender;
 
 @end
