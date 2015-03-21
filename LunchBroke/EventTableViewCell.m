@@ -38,7 +38,7 @@
     //if the vote button is selected
     if (isSelected){
         
-        
+        //...change stuff!
         self.voteButton.backgroundColor = [UIColor redColor];
         self.voteTextField.text = @"cancel";
         

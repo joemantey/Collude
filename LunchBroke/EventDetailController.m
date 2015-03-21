@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerOutlet;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end
 

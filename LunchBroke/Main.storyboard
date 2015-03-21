@@ -4,6 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Login Controller-->
@@ -89,20 +90,19 @@
                                     <action selector="saveTapped:" destination="oVT-n3-LyI" eventType="touchUpInside" id="r2S-P2-nV6"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="og0-MS-D6F">
-                                <rect key="frame" x="66" y="80" width="474" height="451"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="og0-MS-D6F">
+                                <rect key="frame" x="63" y="80" width="474" height="451"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="474" id="Uop-QI-XF9"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="og0-MS-D6F" firstAttribute="width" secondItem="fBU-9n-Byz" secondAttribute="width" multiplier="0.8" id="1Rr-DM-Cnq"/>
                             <constraint firstItem="JwQ-8x-Wu0" firstAttribute="top" secondItem="d2M-rS-oyb" secondAttribute="bottom" constant="8" id="5iN-Rn-c5z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eOU-dA-KVh" secondAttribute="trailing" id="8Ji-qg-gFf"/>
                             <constraint firstItem="JwQ-8x-Wu0" firstAttribute="leading" secondItem="fBU-9n-Byz" secondAttribute="leadingMargin" id="Hb3-rD-6Xk"/>
                             <constraint firstAttribute="centerX" secondItem="og0-MS-D6F" secondAttribute="centerX" constant="-3" id="NWU-9Y-ehY"/>
+                            <constraint firstItem="og0-MS-D6F" firstAttribute="height" secondItem="fBU-9n-Byz" secondAttribute="height" multiplier="0.6" id="SYQ-Iy-Tcn"/>
                             <constraint firstItem="JwQ-8x-Wu0" firstAttribute="leading" secondItem="fBU-9n-Byz" secondAttribute="leadingMargin" id="Xg0-kM-Iy6"/>
                             <constraint firstAttribute="centerX" secondItem="eOU-dA-KVh" secondAttribute="centerX" id="kty-uR-eMo"/>
                             <constraint firstItem="JwQ-8x-Wu0" firstAttribute="top" secondItem="eOU-dA-KVh" secondAttribute="top" id="mfJ-e3-7F5"/>
@@ -115,6 +115,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="og0-MS-D6F" id="6DO-Ma-Nzn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcV-tm-V8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,7 +265,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aZK-X8-xbv">
