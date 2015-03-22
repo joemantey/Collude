@@ -25,20 +25,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUpGradient];
     // Do any additional setup after loading the view.
     
 }
 
 
--(void)setUp{
+-(void)setUpGradient{
 
     CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.view.bounds;
+    gradient.frame = self.containerView.bounds;
     gradient.startPoint = CGPointZero;
     gradient.endPoint = CGPointMake(0, 1);
     gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_namnStartColor] CGColor], (id)[[UIColor uig_sunriseStartColor]CGColor], nil];
     
-        [self.containerView.layer insertSublayer:gradient atIndex:1];
+        [self.containerView.layer insertSublayer:gradient atIndex:0];
 }
 
 
