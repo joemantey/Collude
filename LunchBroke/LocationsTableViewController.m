@@ -27,18 +27,15 @@
 }
 
 
+
 -(void)setColors
 {
-    
+    //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
-    [self.navigationController.navigationBar setTranslucent:NO];
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.view.bounds;
-    gradient.startPoint = CGPointZero;
-    gradient.endPoint = CGPointMake(0, 1);
-    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_shrimpyStartColor] CGColor], (id)[[UIColor uig_mangoPulpStartColor]CGColor], nil];
     
-//    [self.view.layer insertSublayer:gradient atIndex:0];
+    //turn the bar opaque
+    [self.navigationController.navigationBar setTranslucent:NO];
+
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -60,18 +57,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - Table view delegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.locationArray count];
 }
 
-
+//makes cells taller
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 64.0;
 }
@@ -79,21 +72,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
    
-//    cell.event = self.EVENTARRAY[indexPath.row];
-    
-// UILabel *nameLabel = (UILabel*)[cell viewWithTag:1];
-////    nameLabel.text = @"Hello";
-//    Locations *location = self.locationArray[indexPath.row];
     Locations *location = self.locationArray[indexPath.row];
     cell.textLabel.text = location[@"location"];
     
     return cell;
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return [indexPath row] * 2; // your dynamic height...
-//}
 
 
 /*
@@ -146,4 +129,12 @@
     [self fetchLocations];
     [sender endRefreshing];
 }
+
+//    CAGradientLayer *gradient = [CAGradientLayer layer];
+//    gradient.frame = self.view.bounds;
+//    gradient.startPoint = CGPointZero;
+//    gradient.endPoint = CGPointMake(0, 1);
+//    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_shrimpyStartColor] CGColor], (id)[[UIColor uig_mangoPulpStartColor]CGColor], nil];
+
+//    [self.view.layer insertSublayer:gradient atIndex:0];
 @end

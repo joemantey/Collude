@@ -23,7 +23,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    [self setRestorationIdentifier:@"locationCell"];
     // Configure the view for the selected state
 }
 
