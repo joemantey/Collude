@@ -16,7 +16,7 @@
 		38CCADDC1ABB36A40058125A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38CCADDB1ABB36A40058125A /* Images.xcassets */; };
 		38CCADDF1ABB36A40058125A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCADDD1ABB36A40058125A /* LaunchScreen.xib */; };
 		38CCADEB1ABB36A40058125A /* LunchBrokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADEA1ABB36A40058125A /* LunchBrokeTests.m */; };
-		38CCADFE1ABB38D80058125A /* LocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF51ABB38D80058125A /* LocationsTableViewController.m */; };
+		38CCADFE1ABB38D80058125A /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF51ABB38D80058125A /* EventTableViewController.m */; };
 		38CCADFF1ABB38D80058125A /* EventDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF71ABB38D80058125A /* EventDetailController.m */; };
 		38CCAE001ABB38D80058125A /* NewEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF91ABB38D80058125A /* NewEventTableViewController.m */; };
 		38CCAE011ABB38D80058125A /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFB1ABB38D80058125A /* ParseClient.m */; };
@@ -59,8 +59,8 @@
 		38CCADE41ABB36A40058125A /* LunchBrokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LunchBrokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CCADE91ABB36A40058125A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CCADEA1ABB36A40058125A /* LunchBrokeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LunchBrokeTests.m; sourceTree = "<group>"; };
-		38CCADF41ABB38D80058125A /* LocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsTableViewController.h; sourceTree = "<group>"; };
-		38CCADF51ABB38D80058125A /* LocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsTableViewController.m; sourceTree = "<group>"; };
+		38CCADF41ABB38D80058125A /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
+		38CCADF51ABB38D80058125A /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
 		38CCADF61ABB38D80058125A /* EventDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailController.h; sourceTree = "<group>"; };
 		38CCADF71ABB38D80058125A /* EventDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailController.m; sourceTree = "<group>"; };
 		38CCADF81ABB38D80058125A /* NewEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEventTableViewController.h; sourceTree = "<group>"; };
@@ -133,8 +133,8 @@
 		38267A981ABB69A600D1EC59 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				38CCADF41ABB38D80058125A /* LocationsTableViewController.h */,
-				38CCADF51ABB38D80058125A /* LocationsTableViewController.m */,
+				38CCADF41ABB38D80058125A /* EventTableViewController.h */,
+				38CCADF51ABB38D80058125A /* EventTableViewController.m */,
 				38CCADF61ABB38D80058125A /* EventDetailController.h */,
 				38CCADF71ABB38D80058125A /* EventDetailController.m */,
 				38CCADF81ABB38D80058125A /* NewEventTableViewController.h */,
@@ -371,7 +371,7 @@
 				38267A9B1ABB6B6A00D1EC59 /* Event.m in Sources */,
 				38267A951ABB699500D1EC59 /* EventTableViewCell.m in Sources */,
 				38CCAE021ABB38D80058125A /* Locations.m in Sources */,
-				38CCADFE1ABB38D80058125A /* LocationsTableViewController.m in Sources */,
+				38CCADFE1ABB38D80058125A /* EventTableViewController.m in Sources */,
 				38CCADD71ABB36A40058125A /* LoginController.m in Sources */,
 				38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */,
 				38CCAE011ABB38D80058125A /* ParseClient.m in Sources */,

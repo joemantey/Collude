@@ -6,18 +6,18 @@
 //  Copyright (c) 2015 Ian Smith. All rights reserved.
 //
 
-#import "LocationsTableViewController.h"
+#import "EventTableViewController.h"
 #import <Parse/Parse.h>
 #import "Locations.h"
 #import <UIColor+uiGradients.h>
 #import "EventTableViewCell.h"
 
-@interface LocationsTableViewController ()
+@interface EventTableViewController ()
 - (IBAction)pullToRefresh:(id)sender;
 
 @end
 
-@implementation LocationsTableViewController
+@implementation EventTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
