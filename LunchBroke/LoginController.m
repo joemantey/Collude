@@ -29,6 +29,9 @@
     _email = self.email;
     _password = self.password;
     [self setColors];
+    
+    ParseClient *test = [[ParseClient alloc] init];
+    [test pushVoteToParseWithUser];
 }
 
 -(void)setColors

@@ -16,20 +16,23 @@
     self = [super init];
     
     if (self) {
-        // do stuffffsss (like a bawse)
+        
     }
     return self;
 }
 
--(void) pushVoteToParseWithUser:(PFObject *)currentUser andEvent:(PFObject *)event
+//-(void) pushVoteToParseWithUser:(PFObject *)currentUser andEvent:(PFObject *)event
+
+-(void) pushVoteToParseWithUser
 {
-//    //Pushing data up to Parse
-//    NSMutableArray *
-//    
-//    PFObject *voteObject = [PFObject objectWithClassName:@"Vote"];
-//    
-//    
-//    
+    //Pushing data up to Parse
+    PFObject *voteObject = [[PFObject alloc] init];
+    NSMutableArray *peopleAttending = [NSMutableArray arrayWithArray:voteObject[@"Users"]];
+    
+    NSLog(@"%@", peopleAttending);
+    
+    
+    
 //    [voteObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 //        if (succeeded) {
 //            // Some stuff should happen here.

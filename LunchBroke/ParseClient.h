@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) NSString *username;
 
--(void) pushVoteToParseWithEmail:(NSString *)email vote:(NSString *)vote;
+-(void) pushVoteToParseWithUser;
 -(void) getDataFromParse;
 -(void) addNewUserWithEmail:(NSString *)email Password:(NSString *)password;
 
