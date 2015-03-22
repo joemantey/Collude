@@ -17,7 +17,7 @@
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSDate *selectedDate;
 @property (nonatomic) BOOL datePickerIsShowing;
-@property (weak, nonatomic) IBOutlet UIButton *setEventAsBar;
+
 
 - (IBAction)cancelButton:(id)sender;
 - (IBAction)pickerDateChanged:(id)sender;
@@ -43,7 +43,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
-//    [self.tableView setBackgroundColor:[UIColor clearColor]];
+//    [self.tableView setBackgroundView:<#(UIView *)#>:[UIColor clearColor]];
 //    [self.tableView setBackgroundView:nil];
 }
 
@@ -158,6 +158,7 @@
                      completion:^(BOOL finished){
                          //when we're done animating, hide the picker
                          self.datePicker.hidden = YES;
+                         //update picker to show date
                          self.selectedDate = [self.datePicker date];
                      }];
 }

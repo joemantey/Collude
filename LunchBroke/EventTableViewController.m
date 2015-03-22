@@ -130,11 +130,5 @@
     [sender endRefreshing];
 }
 
-//    CAGradientLayer *gradient = [CAGradientLayer layer];
-//    gradient.frame = self.view.bounds;
-//    gradient.startPoint = CGPointZero;
-//    gradient.endPoint = CGPointMake(0, 1);
-//    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_shrimpyStartColor] CGColor], (id)[[UIColor uig_mangoPulpStartColor]CGColor], nil];
 
-//    [self.view.layer insertSublayer:gradient atIndex:0];
 @end

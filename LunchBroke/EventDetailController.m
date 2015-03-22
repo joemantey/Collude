@@ -8,6 +8,8 @@
 
 #import "EventDetailController.h"
 #import <Parse/Parse.h>
+#import <UIColor+uiGradients.h>
+#import "EventTableViewCell.h"
 
 @interface EventDetailController ()
 - (IBAction)dismissTapped:(id)sender;
@@ -24,7 +26,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
+
+
+-(void)setUp{
+
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    gradient.startPoint = CGPointZero;
+    gradient.endPoint = CGPointMake(0, 1);
+    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_namnStartColor] CGColor], (id)[[UIColor uig_sunriseStartColor]CGColor], nil];
+    
+        [self.containerView.layer insertSublayer:gradient atIndex:1];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -43,6 +59,20 @@
 
 - (IBAction)dismissTapped:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 25;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
+    
+    cell.textLabel.text = @"Names of attendees";
+    
+    return cell;
 }
 
 - (IBAction)saveTapped:(id)sender {
