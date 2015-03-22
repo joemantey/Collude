@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSDate *selectedDate;
 @property (nonatomic) BOOL datePickerIsShowing;
+@property (weak, nonatomic) IBOutlet UIButton *setEventAsBar;
 
 - (IBAction)cancelButton:(id)sender;
 - (IBAction)pickerDateChanged:(id)sender;
@@ -90,6 +91,12 @@
     return height;
 }
 
+//when the date picker changes, set it's input to reflect in the date picker text
+- (IBAction)pickerDateChanged:(id)sender {
+    self.timeDisplay.text =  [self.dateFormatter stringFromDate:[self.datePicker date]];
+    
+    self.selectedDate = [self.datePicker date];
+}
 
 //When the row with the date displayed is selected....
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -151,6 +158,7 @@
                      completion:^(BOOL finished){
                          //when we're done animating, hide the picker
                          self.datePicker.hidden = YES;
+                         self.selectedDate = [self.datePicker date];
                      }];
 }
 
@@ -211,8 +219,6 @@
 
 - (IBAction)cancelButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-- (IBAction)pickerDateChanged:(id)sender {
 }
 
 - (IBAction)savebutton:(id)sender {
