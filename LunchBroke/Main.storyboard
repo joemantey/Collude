@@ -114,7 +114,7 @@
                                         <rect key="frame" x="0.0" y="225" width="480" height="225"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="9pl-cP-khf" rowHeight="32" style="IBUITableViewCellStyleDefault" id="T83-l6-Q6y">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="attendeeCell" textLabel="9pl-cP-khf" rowHeight="32" style="IBUITableViewCellStyleDefault" id="T83-l6-Q6y">
                                                 <rect key="frame" x="0.0" y="0.0" width="474" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T83-l6-Q6y" id="jDR-uz-27m">
@@ -174,6 +174,7 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="og0-MS-D6F" id="6DO-Ma-Nzn"/>
+                        <outlet property="tableView" destination="VzP-2r-NV0" id="gfh-rF-IQ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcV-tm-V8f" userLabel="First Responder" sceneMemberID="firstResponder"/>

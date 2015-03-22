@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerOutlet;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -25,8 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUpGradient];
+//    [self setUpGradient];
     // Do any additional setup after loading the view.
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
     
 }
 
@@ -69,10 +72,11 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"attendeeCell" forIndexPath:indexPath];
     
     cell.textLabel.text = @"Names of attendees";
     
+    NSLog(@"This code ran");
     return cell;
 }
 
