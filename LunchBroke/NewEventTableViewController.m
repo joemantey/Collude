@@ -36,7 +36,7 @@
     //Get user location
     coreLocation *locationTest = [[coreLocation alloc] init];
     CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
-    NSLog(@"Coordinates: %@", userCoordinate);
+    NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
     
     //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
