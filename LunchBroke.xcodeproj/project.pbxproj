@@ -38,6 +38,8 @@
 		38CCAE201ABB5D440058125A /* DJ-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1A1ABB5D440058125A /* DJ-100.png */; };
 		38CCAE211ABB5D440058125A /* Groups Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1B1ABB5D440058125A /* Groups Filled-100.png */; };
 		38CCAE221ABB5D440058125A /* Restaurant-100-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1C1ABB5D440058125A /* Restaurant-100-3.png */; };
+		3C4C1C061AC084E900361979 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C051AC084E900361979 /* MapKit.framework */; };
+		3C4C1C081AC084EF00361979 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C071AC084EF00361979 /* CoreLocation.framework */; };
 		9DBCDDF2D6641C7068ED3470 /* libPods-LunchBroke.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +98,8 @@
 		38CCAE1A1ABB5D440058125A /* DJ-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DJ-100.png"; sourceTree = "<group>"; };
 		38CCAE1B1ABB5D440058125A /* Groups Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Groups Filled-100.png"; sourceTree = "<group>"; };
 		38CCAE1C1ABB5D440058125A /* Restaurant-100-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Restaurant-100-3.png"; sourceTree = "<group>"; };
+		3C4C1C051AC084E900361979 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3C4C1C071AC084EF00361979 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LunchBroke.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D1EDED09F3D1DA8CDF4CB2 /* Pods-LunchBroke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchBroke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.debug.xcconfig"; sourceTree = "<group>"; };
 		E828165CDE2157D7440DD6BE /* Pods-LunchBroke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchBroke.release.xcconfig"; path = "Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4C1C081AC084EF00361979 /* CoreLocation.framework in Frameworks */,
+				3C4C1C061AC084E900361979 /* MapKit.framework in Frameworks */,
 				9DBCDDF2D6641C7068ED3470 /* libPods-LunchBroke.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +129,8 @@
 		19B9A3C11A64D30CFA15EB7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C4C1C071AC084EF00361979 /* CoreLocation.framework */,
+				3C4C1C051AC084E900361979 /* MapKit.framework */,
 				64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */,
 			);
 			name = Frameworks;
