@@ -40,12 +40,12 @@
         
         //...change stuff!
         [self.voteButton setImage:[UIImage imageNamed:@"GreenCheck.png"] forState:UIControlStateNormal];
-        self.voteTextField.text = @"cancel";
+        self.voteTextField.text = @"";
         
     
     }else{
         [self.voteButton setImage:[UIImage imageNamed:@"mediumbluecheck.png"] forState:UIControlStateNormal];
-        self.voteTextField.text = @"vote";
+        self.voteTextField.text = @"";
     }
     
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lam-gF-aU5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lam-gF-aU5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -186,8 +186,8 @@
                                                 </mask>
                                             </variation>
                                         </imageView>
-                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Attendees:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vOf-1c-D3e">
-                                            <rect key="frame" x="64" y="42" width="350" height="18"/>
+                                        <textField opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Attendees:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vOf-1c-D3e">
+                                            <rect key="frame" x="58" y="43" width="250" height="14"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                             </accessibility>
@@ -195,19 +195,23 @@
                                                 <constraint firstAttribute="width" constant="350" id="YiL-Dy-LLg"/>
                                                 <constraint firstAttribute="height" constant="14" id="nfF-hP-fFO"/>
                                             </constraints>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="YiL-Dy-LLg"/>
+                                                </mask>
+                                            </variation>
                                             <connections>
                                                 <action selector="eventAttendees:" destination="clS-Fg-pL8" eventType="editingDidEnd" id="hnH-YC-eW1"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date: Monday at 6:30pm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d05-Gy-sOR">
-                                            <rect key="frame" x="64" y="60" width="350" height="20"/>
+                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date: Monday at 6:30pm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d05-Gy-sOR">
+                                            <rect key="frame" x="58" y="57" width="250" height="15"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                             </accessibility>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
@@ -225,20 +229,19 @@
                                             </connections>
                                         </button>
                                         <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sarah's Salwich Shop" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yX7-FI-YRY">
-                                            <rect key="frame" x="58" y="23" width="350" height="20"/>
+                                            <rect key="frame" x="58" y="23" width="250" height="20"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                             </accessibility>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="350" id="1Yg-Gm-pbY"/>
+                                                <constraint firstAttribute="width" constant="250" id="1Yg-Gm-pbY"/>
                                                 <constraint firstAttribute="height" constant="20" id="hUz-RW-WNK"/>
                                             </constraints>
-                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="vote" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-s4-xEw">
-                                            <rect key="frame" x="531" y="61" width="52" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-s4-xEw">
+                                            <rect key="frame" x="546.5" y="63" width="25" height="12"/>
                                             <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <textInputTraits key="textInputTraits"/>

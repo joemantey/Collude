@@ -34,9 +34,9 @@
     [self setupTimeDisplay];
     
     //Get user location
-    coreLocation *locationTest = [[coreLocation alloc] init];
-    CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
-    NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
+//    coreLocation *locationTest = [[coreLocation alloc] init];
+//    CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
+//    NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
     
     //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
@@ -114,6 +114,8 @@
 //When the row with the date displayed is selected....
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    
+    
     if (indexPath.row == 1){
         
         //If the datePickerIsShowing...
@@ -123,6 +125,9 @@
             [self hideDatePickerCell];
         //But if the !datePickerIsShowing
         }else {
+            coreLocation *locationTest = [[coreLocation alloc] init];
+            CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
+            NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
             //...show it!
             [self showDatePickerCell];
         }
