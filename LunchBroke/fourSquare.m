@@ -8,7 +8,7 @@
 
 #import "fourSquare.h"
 #import <CoreLocation/CoreLocation.h>
-#import "
+#import <AFNetworking/AFNetworking.h>
 
 @implementation fourSquare
 
@@ -25,12 +25,14 @@ NSString *const fourSquareClientSecret = @"DAEBFC0VKT333HMWN4HO30Q5PAWBSIE5WCHJT
     return self;
 }
 
-- locationManager {
-    return self.locationManager = [[CLLocationManager alloc] init];
+
+- (void) getFourSquareNearbyLocations {
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://example.com/resources.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
-
-- (void)
-
-
-
 @end

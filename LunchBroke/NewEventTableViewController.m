@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import <UIColor+uiGradients.h>
 #import <CoreLocation/CoreLocation.h>
-#import "coreLocation.h"
+#import "fourSquare.h"
 
 @interface NewEventTableViewController () <CLLocationManagerDelegate>
 
@@ -149,9 +149,9 @@
             [self hideDatePickerCell];
         //But if the !datePickerIsShowing
         }else {
-            coreLocation *locationTest = [[coreLocation alloc] init];
-            CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
-            NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
+//            coreLocation *locationTest = [[CLLocation alloc] init];
+//            CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
+//            NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
             //...show it!
             [self showDatePickerCell];
         }
