@@ -6,6 +6,7 @@ target 'LunchBroke' do
 pod 'UIColor+uiGradients'
 pod 'BlurryModalSegue'
 pod 'ParseUI'
+pod "AFNetworking", "~> 2.0"
 
 end
 

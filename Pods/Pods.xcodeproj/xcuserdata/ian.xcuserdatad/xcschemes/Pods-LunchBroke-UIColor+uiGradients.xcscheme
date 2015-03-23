@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "997492168F9B2776FB4E9F0D"
+               BlueprintIdentifier = "42715AC4DF403063A9602A52"
                BuildableName = "libPods-LunchBroke-UIColor+uiGradients.a"
                BlueprintName = "Pods-LunchBroke-UIColor+uiGradients"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "997492168F9B2776FB4E9F0D"
-            BuildableName = "libPods-LunchBroke-UIColor+uiGradients.a"
-            BlueprintName = "Pods-LunchBroke-UIColor+uiGradients"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -57,15 +48,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "997492168F9B2776FB4E9F0D"
-            BuildableName = "libPods-LunchBroke-UIColor+uiGradients.a"
-            BlueprintName = "Pods-LunchBroke-UIColor+uiGradients"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
