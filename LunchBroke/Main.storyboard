@@ -187,7 +187,7 @@
                                             </variation>
                                         </imageView>
                                         <textField opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Attendees:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vOf-1c-D3e">
-                                            <rect key="frame" x="58" y="43" width="250" height="14"/>
+                                            <rect key="frame" x="58" y="43" width="200" height="14"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                             </accessibility>
@@ -207,7 +207,7 @@
                                             </connections>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date: Monday at 6:30pm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d05-Gy-sOR">
-                                            <rect key="frame" x="58" y="57" width="250" height="15"/>
+                                            <rect key="frame" x="58" y="57" width="200" height="15"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                             </accessibility>
@@ -229,12 +229,12 @@
                                             </connections>
                                         </button>
                                         <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sarah's Salwich Shop" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yX7-FI-YRY">
-                                            <rect key="frame" x="58" y="23" width="250" height="20"/>
+                                            <rect key="frame" x="58" y="23" width="200" height="20"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                             </accessibility>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="250" id="1Yg-Gm-pbY"/>
+                                                <constraint firstAttribute="width" constant="200" id="1Yg-Gm-pbY"/>
                                                 <constraint firstAttribute="height" constant="20" id="hUz-RW-WNK"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
@@ -251,6 +251,7 @@
                                     <constraints>
                                         <constraint firstAttribute="centerY" secondItem="kWO-it-slH" secondAttribute="centerY" id="3Fz-5j-CsG"/>
                                         <constraint firstAttribute="centerY" secondItem="vOf-1c-D3e" secondAttribute="centerY" id="6Jg-Sn-Ryy"/>
+                                        <constraint firstItem="yX7-FI-YRY" firstAttribute="leading" secondItem="vOf-1c-D3e" secondAttribute="leading" id="FmP-R5-V5t"/>
                                         <constraint firstItem="G72-fx-5sP" firstAttribute="centerY" secondItem="oJM-zL-gH5" secondAttribute="centerY" id="GXz-EY-VZx"/>
                                         <constraint firstItem="yX7-FI-YRY" firstAttribute="leading" secondItem="vOf-1c-D3e" secondAttribute="leading" id="MKC-Ux-s8b"/>
                                         <constraint firstItem="yX7-FI-YRY" firstAttribute="bottom" secondItem="vOf-1c-D3e" secondAttribute="top" id="MTy-Da-V89"/>
@@ -263,6 +264,7 @@
                                         <constraint firstItem="KpQ-s4-xEw" firstAttribute="centerX" secondItem="kWO-it-slH" secondAttribute="centerX" id="dwE-7s-cw1"/>
                                         <constraint firstItem="G72-fx-5sP" firstAttribute="trailing" secondItem="vOf-1c-D3e" secondAttribute="leading" constant="10" id="pk5-bL-pe0"/>
                                         <constraint firstItem="KpQ-s4-xEw" firstAttribute="top" secondItem="kWO-it-slH" secondAttribute="bottom" id="qph-hn-9sy"/>
+                                        <constraint firstItem="G72-fx-5sP" firstAttribute="leading" secondItem="yX7-FI-YRY" secondAttribute="leading" constant="-30" id="s8n-cX-SHn"/>
                                         <constraint firstItem="vOf-1c-D3e" firstAttribute="leading" secondItem="G72-fx-5sP" secondAttribute="trailing" constant="12" id="vM2-4v-PCP"/>
                                         <constraint firstItem="G72-fx-5sP" firstAttribute="leading" secondItem="oJM-zL-gH5" secondAttribute="leadingMargin" constant="8" id="w45-Lu-xEg"/>
                                         <constraint firstItem="yX7-FI-YRY" firstAttribute="width" secondItem="vOf-1c-D3e" secondAttribute="width" id="wwD-o6-r1o"/>
@@ -271,6 +273,8 @@
                                     <variation key="default">
                                         <mask key="constraints">
                                             <exclude reference="pk5-bL-pe0"/>
+                                            <exclude reference="s8n-cX-SHn"/>
+                                            <exclude reference="MKC-Ux-s8b"/>
                                             <exclude reference="6Jg-Sn-Ryy"/>
                                             <exclude reference="Vnx-oL-lhP"/>
                                             <exclude reference="Wur-gb-l9K"/>
@@ -383,8 +387,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9O6-Rd-yQV" id="wTo-8F-U9X">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ng3-AF-98b">
-                                                    <rect key="frame" x="0.0" y="-8" width="600" height="162"/>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ng3-AF-98b">
+                                                    <rect key="frame" x="8" y="-4" width="584" height="162"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="448391557.28467202">
                                                         <!--2015-03-18 17:12:37 +0000-->
                                                     </date>

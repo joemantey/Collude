@@ -9,9 +9,10 @@
 #import "NewEventTableViewController.h"
 #import <Parse/Parse.h>
 #import <UIColor+uiGradients.h>
+#import <CoreLocation/CoreLocation.h>
 #import "coreLocation.h"
 
-@interface NewEventTableViewController ()
+@interface NewEventTableViewController () <CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *timeDisplay;
@@ -19,7 +20,8 @@
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSDate *selectedDate;
 @property (nonatomic) BOOL datePickerIsShowing;
-
+@property (strong, nonatomic) CLLocation *currentLocation;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 - (IBAction)cancelButton:(id)sender;
 - (IBAction)pickerDateChanged:(id)sender;
@@ -29,14 +31,16 @@
 
 @implementation NewEventTableViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupTimeDisplay];
     
+
     //Get user location
 //    coreLocation *locationTest = [[coreLocation alloc] init];
 //    CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
 //    NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
+
     
     //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
@@ -44,12 +48,30 @@
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
     
+    [self setupTimeDisplay];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self locationConfigAndInit];
+}
+
+// CLLocation Manager Delegate
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    self.currentLocation = [locations lastObject];
+}
+
+- (void) locationConfigAndInit {
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationManager.distanceFilter = 10;
+    [self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager startUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning {
