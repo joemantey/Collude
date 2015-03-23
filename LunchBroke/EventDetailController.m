@@ -13,7 +13,7 @@
 
 @interface EventDetailController ()
 - (IBAction)dismissTapped:(id)sender;
-- (IBAction)saveTapped:(id)sender;
+
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerOutlet;
@@ -31,6 +31,16 @@
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
     
+    //set the color of the bar
+    [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
+    
+    //turn the bar opaque
+    [self.navigationController.navigationBar setTranslucent:NO];
+    //set the color of the bar
+    [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
+    
+    //turn the bar opaque
+    [self.navigationController.navigationBar setTranslucent:NO];
 }
 
 
@@ -80,25 +90,25 @@
     return cell;
 }
 
-- (IBAction)saveTapped:(id)sender {
-    
-    NSString *nameField = self.nameField.text;
-    PFObject *newEvent = [PFObject objectWithClassName:@"Event"];
-    newEvent[@"location"] = nameField;
-    
-    NSDate *choosenDate = [self.datePickerOutlet date];
-    
-    newEvent[@"date"] = choosenDate;
-    
-    NSLog(@"choosenDate: %@", choosenDate);
-    
-    [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            [self dismissViewControllerAnimated:YES completion:nil];
-            NSLog(@"Save Success");
-        } else {
-            NSLog(@"%@",error.description);
-        }
-    }];
-}
+//- (IBAction)saveTapped:(id)sender {
+//    
+//    NSString *nameField = self.nameField.text;
+//    PFObject *newEvent = [PFObject objectWithClassName:@"Event"];
+//    newEvent[@"location"] = nameField;
+//    
+//    NSDate *choosenDate = [self.datePickerOutlet date];
+//    
+//    newEvent[@"date"] = choosenDate;
+//    
+//    NSLog(@"choosenDate: %@", choosenDate);
+//    
+//    [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            [self dismissViewControllerAnimated:YES completion:nil];
+//            NSLog(@"Save Success");
+//        } else {
+//            NSLog(@"%@",error.description);
+//        }
+//    }];
+//}
 @end

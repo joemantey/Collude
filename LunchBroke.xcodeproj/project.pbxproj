@@ -12,6 +12,14 @@
 		38267A9D1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267A9C1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png */; };
 		38267A9F1ABF96AA00D1EC59 /* Beer-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267A9E1ABF96AA00D1EC59 /* Beer-50.png */; };
 		38267AA11ABF972C00D1EC59 /* Beer-100-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267AA01ABF972C00D1EC59 /* Beer-100-3.png */; };
+		38267AA31ABF989C00D1EC59 /* GreenCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267AA21ABF989C00D1EC59 /* GreenCheck.png */; };
+		38267AA51ABF99B400D1EC59 /* SlateUnchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267AA41ABF99B400D1EC59 /* SlateUnchecked.png */; };
+		38267AA71ABF9B5900D1EC59 /* Save-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267AA61ABF9B5900D1EC59 /* Save-100.png */; };
+		38267AA91ABF9F8E00D1EC59 /* Back-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267AA81ABF9F8E00D1EC59 /* Back-100.png */; };
+		38267AAB1ABFA59500D1EC59 /* BrightBlueBeer.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267AAA1ABFA59500D1EC59 /* BrightBlueBeer.png */; };
+		38267AAD1ABFA5F700D1EC59 /* MediumBlueBeer.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267AAC1ABFA5F700D1EC59 /* MediumBlueBeer.png */; };
+		38267AAF1ABFA64300D1EC59 /* mediumbluecheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267AAE1ABFA64300D1EC59 /* mediumbluecheck.png */; };
+		38267AB11ABFA88100D1EC59 /* 10634.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 38267AB01ABFA88000D1EC59 /* 10634.jpg */; };
 		38CCADD11ABB36A40058125A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD01ABB36A40058125A /* main.m */; };
 		38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD31ABB36A40058125A /* AppDelegate.m */; };
 		38CCADD71ABB36A40058125A /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD61ABB36A40058125A /* LoginController.m */; };
@@ -51,6 +59,14 @@
 		38267A9C1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unchecked Checkbox-100.png"; sourceTree = "<group>"; };
 		38267A9E1ABF96AA00D1EC59 /* Beer-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beer-50.png"; sourceTree = "<group>"; };
 		38267AA01ABF972C00D1EC59 /* Beer-100-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beer-100-3.png"; sourceTree = "<group>"; };
+		38267AA21ABF989C00D1EC59 /* GreenCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenCheck.png; sourceTree = "<group>"; };
+		38267AA41ABF99B400D1EC59 /* SlateUnchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SlateUnchecked.png; sourceTree = "<group>"; };
+		38267AA61ABF9B5900D1EC59 /* Save-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Save-100.png"; sourceTree = "<group>"; };
+		38267AA81ABF9F8E00D1EC59 /* Back-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back-100.png"; sourceTree = "<group>"; };
+		38267AAA1ABFA59500D1EC59 /* BrightBlueBeer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrightBlueBeer.png; sourceTree = "<group>"; };
+		38267AAC1ABFA5F700D1EC59 /* MediumBlueBeer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MediumBlueBeer.png; sourceTree = "<group>"; };
+		38267AAE1ABFA64300D1EC59 /* mediumbluecheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mediumbluecheck.png; sourceTree = "<group>"; };
+		38267AB01ABFA88000D1EC59 /* 10634.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10634.jpg; sourceTree = "<group>"; };
 		38CCADCB1ABB36A40058125A /* LunchBroke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchBroke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CCADCF1ABB36A40058125A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CCADD01ABB36A40058125A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -181,6 +197,14 @@
 				38267A971ABB69A200D1EC59 /* Views */,
 				38267A961ABB699C00D1EC59 /* Models */,
 				38CCADDD1ABB36A40058125A /* LaunchScreen.xib */,
+				38267AB01ABFA88000D1EC59 /* 10634.jpg */,
+				38267AAE1ABFA64300D1EC59 /* mediumbluecheck.png */,
+				38267AAA1ABFA59500D1EC59 /* BrightBlueBeer.png */,
+				38267AAC1ABFA5F700D1EC59 /* MediumBlueBeer.png */,
+				38267AA81ABF9F8E00D1EC59 /* Back-100.png */,
+				38267AA61ABF9B5900D1EC59 /* Save-100.png */,
+				38267AA21ABF989C00D1EC59 /* GreenCheck.png */,
+				38267AA41ABF99B400D1EC59 /* SlateUnchecked.png */,
 				38267A9E1ABF96AA00D1EC59 /* Beer-50.png */,
 				38267AA01ABF972C00D1EC59 /* Beer-100-3.png */,
 				38CCAE171ABB5D440058125A /* Beer-100-2.png */,
@@ -315,14 +339,22 @@
 				38CCAE201ABB5D440058125A /* DJ-100.png in Resources */,
 				38CCAE1F1ABB5D440058125A /* Cupcake-100.png in Resources */,
 				38CCAE1D1ABB5D440058125A /* Beer-100-2.png in Resources */,
+				38267AA31ABF989C00D1EC59 /* GreenCheck.png in Resources */,
 				38CCAE1E1ABB5D440058125A /* Birthday Cake-100.png in Resources */,
+				38267AA51ABF99B400D1EC59 /* SlateUnchecked.png in Resources */,
+				38267AAD1ABFA5F700D1EC59 /* MediumBlueBeer.png in Resources */,
 				38267A9D1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png in Resources */,
 				38CCAE221ABB5D440058125A /* Restaurant-100-3.png in Resources */,
+				38267AAB1ABFA59500D1EC59 /* BrightBlueBeer.png in Resources */,
+				38267AAF1ABFA64300D1EC59 /* mediumbluecheck.png in Resources */,
 				38CCAE041ABB39050058125A /* Main.storyboard in Resources */,
 				38CCADDF1ABB36A40058125A /* LaunchScreen.xib in Resources */,
+				38267AA71ABF9B5900D1EC59 /* Save-100.png in Resources */,
 				38267A9F1ABF96AA00D1EC59 /* Beer-50.png in Resources */,
 				38267AA11ABF972C00D1EC59 /* Beer-100-3.png in Resources */,
 				38CCAE211ABB5D440058125A /* Groups Filled-100.png in Resources */,
+				38267AA91ABF9F8E00D1EC59 /* Back-100.png in Resources */,
+				38267AB11ABFA88100D1EC59 /* 10634.jpg in Resources */,
 				38CCADDC1ABB36A40058125A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

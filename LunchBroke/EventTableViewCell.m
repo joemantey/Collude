@@ -39,12 +39,12 @@
     if (isSelected){
         
         //...change stuff!
-        self.voteButton.backgroundColor = [UIColor redColor];
+        [self.voteButton setImage:[UIImage imageNamed:@"GreenCheck.png"] forState:UIControlStateNormal];
         self.voteTextField.text = @"cancel";
         
     
     }else{
-        self.voteButton.backgroundColor = [UIColor clearColor];
+        [self.voteButton setImage:[UIImage imageNamed:@"mediumbluecheck.png"] forState:UIControlStateNormal];
         self.voteTextField.text = @"vote";
     }
     

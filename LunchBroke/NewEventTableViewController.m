@@ -8,6 +8,7 @@
 
 #import "NewEventTableViewController.h"
 #import <Parse/Parse.h>
+#import <UIColor+uiGradients.h>
 
 @interface NewEventTableViewController ()
 
@@ -31,6 +32,12 @@
     [super viewDidLoad];
     [self setupTimeDisplay];
     
+    //set the color of the bar
+    [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
+    
+    //turn the bar opaque
+    [self.navigationController.navigationBar setTranslucent:NO];
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

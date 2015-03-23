@@ -37,6 +37,14 @@
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
 
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.tableView.bounds;
+    gradient.startPoint = CGPointZero;
+    gradient.endPoint = CGPointMake(0, 1);
+    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor whiteColor] CGColor], (id)[[UIColor uig_cloudsEndColor]CGColor], nil];
+    
+    [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
 - (void) viewWillAppear:(BOOL)animated
