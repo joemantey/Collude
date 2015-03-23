@@ -10,6 +10,8 @@
 		38267A951ABB699500D1EC59 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38267A941ABB699500D1EC59 /* EventTableViewCell.m */; };
 		38267A9B1ABB6B6A00D1EC59 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 38267A9A1ABB6B6A00D1EC59 /* Event.m */; };
 		38267A9D1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267A9C1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png */; };
+		38267A9F1ABF96AA00D1EC59 /* Beer-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267A9E1ABF96AA00D1EC59 /* Beer-50.png */; };
+		38267AA11ABF972C00D1EC59 /* Beer-100-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267AA01ABF972C00D1EC59 /* Beer-100-3.png */; };
 		38CCADD11ABB36A40058125A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD01ABB36A40058125A /* main.m */; };
 		38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD31ABB36A40058125A /* AppDelegate.m */; };
 		38CCADD71ABB36A40058125A /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD61ABB36A40058125A /* LoginController.m */; };
@@ -47,6 +49,8 @@
 		38267A991ABB6B6A00D1EC59 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		38267A9A1ABB6B6A00D1EC59 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		38267A9C1ABC99CE00D1EC59 /* Unchecked Checkbox-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unchecked Checkbox-100.png"; sourceTree = "<group>"; };
+		38267A9E1ABF96AA00D1EC59 /* Beer-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beer-50.png"; sourceTree = "<group>"; };
+		38267AA01ABF972C00D1EC59 /* Beer-100-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beer-100-3.png"; sourceTree = "<group>"; };
 		38CCADCB1ABB36A40058125A /* LunchBroke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchBroke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CCADCF1ABB36A40058125A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38CCADD01ABB36A40058125A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				38267A971ABB69A200D1EC59 /* Views */,
 				38267A961ABB699C00D1EC59 /* Models */,
 				38CCADDD1ABB36A40058125A /* LaunchScreen.xib */,
+				38267A9E1ABF96AA00D1EC59 /* Beer-50.png */,
+				38267AA01ABF972C00D1EC59 /* Beer-100-3.png */,
 				38CCAE171ABB5D440058125A /* Beer-100-2.png */,
 				38CCAE181ABB5D440058125A /* Birthday Cake-100.png */,
 				38CCAE191ABB5D440058125A /* Cupcake-100.png */,
@@ -314,6 +320,8 @@
 				38CCAE221ABB5D440058125A /* Restaurant-100-3.png in Resources */,
 				38CCAE041ABB39050058125A /* Main.storyboard in Resources */,
 				38CCADDF1ABB36A40058125A /* LaunchScreen.xib in Resources */,
+				38267A9F1ABF96AA00D1EC59 /* Beer-50.png in Resources */,
+				38267AA11ABF972C00D1EC59 /* Beer-100-3.png in Resources */,
 				38CCAE211ABB5D440058125A /* Groups Filled-100.png in Resources */,
 				38CCADDC1ABB36A40058125A /* Images.xcassets in Resources */,
 			);

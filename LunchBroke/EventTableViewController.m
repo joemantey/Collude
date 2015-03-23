@@ -13,6 +13,7 @@
 #import "EventTableViewCell.h"
 
 @interface EventTableViewController ()
+
 - (IBAction)pullToRefresh:(id)sender;
 
 @end
@@ -73,7 +74,7 @@
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
    
     Locations *location = self.locationArray[indexPath.row];
-    cell.textLabel.text = location[@"location"];
+    cell.eventName.text = location[@"location"];
     
     return cell;
 }
