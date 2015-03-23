@@ -26,6 +26,7 @@
 - (IBAction)cancelButton:(id)sender;
 - (IBAction)pickerDateChanged:(id)sender;
 - (IBAction)savebutton:(id)sender;
+- (IBAction)fourSquareSearch:(id)sender;
 
 @end
 
@@ -35,6 +36,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+
+    //Get user location
+//    coreLocation *locationTest = [[coreLocation alloc] init];
+//    CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
+//    NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
+
     
     //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
@@ -85,7 +92,7 @@
     //The date formatter will inform which time options are shown on the date picker
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateStyle:NSDateFormatterLongStyle];
-    [self.dateFormatter setTimeStyle:NSDateFormatterLongStyle];
+    [self.dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
     
     //Set's the the defailt date to today's date
     NSDate *defaultDate = [NSDate date];
@@ -103,7 +110,8 @@
 }
 
 //Since we are using a static tableview, we can use the constants to set parameters for our tableview. Using define, we can put all of our "magic numbers" in one place, in case we need to change them later.
-#define kDatePickerIndex 2
+#define kDatePickerIndex 3
+#define dateTextCellIndex 2
 #define kDatePickerCellHeight 164
 
 //If datePickerIsShowing, set the height of the cell to 164 (the hieght of a date picker). If !datePickerIsShowing, set the height of the cell to 0
@@ -130,7 +138,9 @@
 //When the row with the date displayed is selected....
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row == 1){
+    
+    
+    if (indexPath.row == dateTextCellIndex){
         
         //If the datePickerIsShowing...
         if (self.datePickerIsShowing){
@@ -139,6 +149,9 @@
             [self hideDatePickerCell];
         //But if the !datePickerIsShowing
         }else {
+            coreLocation *locationTest = [[coreLocation alloc] init];
+            CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
+            NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
             //...show it!
             [self showDatePickerCell];
         }
@@ -271,5 +284,8 @@
             NSLog(@"%@",error.description);
         }
     }];
+}
+
+- (IBAction)fourSquareSearch:(id)sender {
 }
 @end

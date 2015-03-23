@@ -25,6 +25,9 @@
     [self setColors];
     [self fetchLocations];
     [self.tableView reloadData];
+    
+    
+    
 }
 
 
@@ -42,7 +45,7 @@
     gradient.frame = self.tableView.bounds;
     gradient.startPoint = CGPointZero;
     gradient.endPoint = CGPointMake(0, 1);
-    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor whiteColor] CGColor], (id)[[UIColor uig_cloudsEndColor]CGColor], nil];
+    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor whiteColor] CGColor], (id)[[UIColor whiteColor]CGColor], nil];
     
     [self.view.layer insertSublayer:gradient atIndex:0];
 }
@@ -83,6 +86,16 @@
    
     Locations *location = self.locationArray[indexPath.row];
     cell.eventName.text = location[@"location"];
+  
+    
+    cell.eventDate.text = @"Date: April 3rd, 2015";
+    cell.eventAttendeeCount.text = @"Attendees: 10";
+    cell.eventDate.textColor = [UIColor darkGrayColor];
+    cell.eventAttendeeCount.textColor = [UIColor darkGrayColor];
+    //UIToolbar *translucentView = [[UIToolbar alloc] initWithFrame:CGRectZero];
+    
+    //cell.backgroundView = translucentView;
+    //[translucentView release]; // If you are using retain/release for memory management(non-ARC).
     
     return cell;
 }
