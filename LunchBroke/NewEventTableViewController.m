@@ -9,6 +9,7 @@
 #import "NewEventTableViewController.h"
 #import <Parse/Parse.h>
 #import <UIColor+uiGradients.h>
+#import "coreLocation.h"
 
 @interface NewEventTableViewController ()
 
@@ -32,12 +33,17 @@
     [super viewDidLoad];
     [self setupTimeDisplay];
     
+    //Get user location
+    coreLocation *locationTest = [[coreLocation alloc] init];
+    CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
+    NSLog(@"Coordinates: %@", userCoordinate);
+    
     //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
     
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
-
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
