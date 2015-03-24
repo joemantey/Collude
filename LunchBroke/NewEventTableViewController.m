@@ -9,10 +9,9 @@
 #import "NewEventTableViewController.h"
 #import <Parse/Parse.h>
 #import <UIColor+uiGradients.h>
-#import <CoreLocation/CoreLocation.h>
 #import "fourSquare.h"
 
-@interface NewEventTableViewController () <CLLocationManagerDelegate>
+@interface NewEventTableViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *timeDisplay;
@@ -20,8 +19,7 @@
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSDate *selectedDate;
 @property (nonatomic) BOOL datePickerIsShowing;
-//@property (strong, nonatomic) CLLocation *currentLocation;
-//@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) fourSquare *latAndLong;
 
 - (IBAction)cancelButton:(id)sender;
 - (IBAction)pickerDateChanged:(id)sender;
@@ -35,14 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    //Get user location
-    //    coreLocation *locationTest = [[coreLocation alloc] init];
-    //    CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
-    //    NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
-    
-    
+
     //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
     
@@ -51,35 +42,18 @@
     
     [self setupTimeDisplay];
     
+    self.latAndLong = [[fourSquare alloc] init];
+    [self.latAndLong getNearby4SquareLocations:^(NSArray *array) {}];
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    //    [self locationConfigAndInit];
+
 }
 
-// CLLocation Manager Delegate
-//- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
-//{
-//    self.currentLocation = [locations lastObject];
-//}
-//
-//- (void) locationConfigAndInit {
-//    self.locationManager = [[CLLocationManager alloc] init];
-//    self.locationManager.delegate = self;
-//    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-//    self.locationManager.distanceFilter = 10;
-//    [self.locationManager requestWhenInUseAuthorization];
-//    [self.locationManager startUpdatingLocation];
-//}
-
-- (void) getCurrentLocation {
-    fourSquare *foursquare = [[fourSquare alloc] init];
-    
-    [foursquare locationConfigAndInit];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -125,9 +99,7 @@
     CGFloat height = self.tableView.rowHeight;
     
     if (indexPath.row == kDatePickerIndex){
-        
         height = self.datePickerIsShowing ? kDatePickerCellHeight : 0.0f;
-        
     }
     
     return height;
@@ -147,14 +119,10 @@
         
         //If the datePickerIsShowing...
         if (self.datePickerIsShowing){
-            
             //...hide it!
             [self hideDatePickerCell];
             //But if the !datePickerIsShowing
         }else {
-            //            coreLocation *locationTest = [[CLLocation alloc] init];
-            //            CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
-            //            NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
             //...show it!
             [self showDatePickerCell];
         }
@@ -177,7 +145,6 @@
     self.datePicker.hidden = NO;
     //Now some setup. Turn the date picker clear so we can have it fade in during our animation.
     self.datePicker.alpha = 0.0f;
-    
     
     //Let's get our Walt Disney on and animate the appearance of this date picker.
     [UIView animateWithDuration:0.25 animations:^{
@@ -282,14 +249,11 @@
     [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             [self dismissViewControllerAnimated:YES completion:nil];
-            [self getCurrentLocation];
             NSLog(@"Save Success");
         } else {
             NSLog(@"%@",error.description);
         }
     }];
-    
-    
 }
 
 - (IBAction)fourSquareSearch:(id)sender {

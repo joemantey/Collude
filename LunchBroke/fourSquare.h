@@ -12,10 +12,10 @@
 @interface fourSquare : NSObject <CLLocationManagerDelegate>
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
-@property (strong, nonatomic) CLLocation *currentLocation;
-//@property (strong, nonatomic) NSArray *currentLocation;
+@property (nonatomic) CLLocationCoordinate2D userCoordinate;
+@property (nonatomic, strong) NSString *lat;
+@property (nonatomic, strong) NSString *lng;
 
--(void)locationConfigAndInit;
-
+-(void)getNearby4SquareLocations:(void (^)(NSArray *))completionBlock;
 
 @end

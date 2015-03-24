@@ -18,42 +18,39 @@ NSString *const fourSquareClientSecret = @"DAEBFC0VKT333HMWN4HO30Q5PAWBSIE5WCHJT
 NSString *const fourSquareAPIURL = @"https://api.foursquare.com/v2/venues/explore";
 NSString *const fourSquareV = @"20150101";
 
-- (instancetype)init {
-    if (self = [super init])
-    {
-        // Do something...
-    }
-    return self;
-}
-
-- (void) locationConfigAndInit {
+-(void)findingLocation {
     
     self.locationManager = [[CLLocationManager alloc] init];
+    
     self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    self.locationManager.distanceFilter = 10;
-    [self.locationManager requestWhenInUseAuthorization];
+    
     [self.locationManager startUpdatingLocation];
+    
+    self.userCoordinate = self.locationManager.location.coordinate;
+    
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    
+    self.lng = [NSString stringWithFormat:@"%f",self.userCoordinate.longitude];
+    self.lat = [NSString stringWithFormat:@"%f",self.userCoordinate.latitude];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+-(void)getNearby4SquareLocations:(void (^)(NSArray *))completionBlock
 {
-    self.currentLocation = [locations lastObject];
-    NSLog(@"Current Location: %@", self.currentLocation);
-}
-
-- (void)getFourSquareNearbyLocations {
+    [self findingLocation];
+    NSString *foursquareAPIURLConcatenated = [NSString stringWithFormat:@"%@?ll=%@,%@&client_id=%@&client_secret=%@&v=20150101&m=foursquare", fourSquareAPIURL, self.lat, self.lng, fourSquareClientID, fourSquareClientSecret];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    
-    
-//    NSString *fourSquareURL = [NSString stringWithFormat:@"%@?ll=%@client_id=%@&client_secret=%@", fourSquareAPIURL, ll, fourSquareClientID, fourSquareClientSecret];
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"https://api.foursquare.com/v2/venues/explore" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
+    [manager GET:foursquareAPIURLConcatenated parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        completionBlock(responseObject);
+        NSLog(@"%@", responseObject);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"Fail: %@",error.localizedDescription);
     }];
 }
+
 
 @end
