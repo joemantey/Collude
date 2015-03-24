@@ -452,6 +452,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="ng3-AF-98b" id="awN-AL-hT7"/>
+                        <outlet property="eventLocationField" destination="yOK-6v-9xE" id="5hv-DH-EZQ"/>
                         <outlet property="nameField" destination="Kas-ca-Jf0" id="ruo-xO-dsF"/>
                         <outlet property="timeDisplay" destination="WRw-vl-kav" id="ZwL-as-NUX"/>
                     </connections>

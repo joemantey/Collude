@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *timeDisplay;
+@property (weak, nonatomic) IBOutlet UITextField *eventLocationField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSDate *selectedDate;
@@ -244,6 +245,7 @@
     newEvent.eventName = nameField;
     newEvent.timeOfEvent = choosenDate;
     newEvent.manager = PFUser.currentUser;
+//  newEvent.location = SOMETHING HERE
     
     [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
