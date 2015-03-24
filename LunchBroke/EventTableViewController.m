@@ -11,6 +11,7 @@
 #import "Locations.h"
 #import <UIColor+uiGradients.h>
 #import "EventTableViewCell.h"
+#import "LoginViewController.h"
 
 @interface EventTableViewController ()
 
@@ -24,7 +25,9 @@
     [super viewDidLoad];
     [self setColors];
     [self fetchLocations];
-    [self.tableView reloadData];  
+    [self.tableView reloadData];
+    PFLogInViewController *loginViewController = [[PFLogInViewController alloc] init];
+    [self presentViewController:loginViewController animated:YES completion:nil];
 }
 
 

@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "Event.h"
+#import "User.h"
+#import "Locations.h"
+
 #import <Parse/Parse.h>
 
 @interface AppDelegate ()
@@ -27,7 +31,11 @@
     [Parse setApplicationId:@"OPqk1Y7rrZYIIipyou32exDLHiudKUeFVjc0Tip1"
                   clientKey:@"OgiyIDOqDFmMJdkyLsJOPAkPnPxTUYSgCDdMIsZf"];
     
+    [Event registerSubclass];
+    [User registerSubclass];
+    [Locations registerSubclass];
     // [Optional] Track statistics around application opens.
+    
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     return YES;

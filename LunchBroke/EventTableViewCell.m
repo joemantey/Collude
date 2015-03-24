@@ -8,9 +8,11 @@
 //
 
 #import "EventTableViewCell.h"
+#import "User.h"
+#import "Event.h"
 
 @interface EventTableViewCell ()
-
+@property (nonatomic) User *currentUser;
 @property (nonatomic) BOOL isSelected;
 
 @end
@@ -18,7 +20,13 @@
 
 
 - (void)awakeFromNib {
-    // Initialization code
+    
+    
+    User *dummy = [[User alloc] init];
+    dummy.username = @"Dumbdumb";
+    dummy.email = @"bgates@aol.com";
+    dummy.password = @"password123";
+    [dummy saveInBackground];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -33,7 +41,6 @@
    
     //override the setter and set it to isSelected
     _isSelected = isSelected;
-    
     
     //if the vote button is selected
     if (isSelected){

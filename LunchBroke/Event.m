@@ -10,5 +10,15 @@
 
 @implementation Event
 
+@dynamic eventName;
+@dynamic location;
+@dynamic timeOfEvent;
+@dynamic Attendees;
+@dynamic manager;
+
++ (NSString *)parseClassName
+{
+    return @"Event";
+}
 
 @end

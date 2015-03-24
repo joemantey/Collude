@@ -7,13 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Locations;
+#import <Parse/Parse.h>
 
-@interface Event : NSObject
+@class Locations;
+@class User;
+
+@interface Event : PFObject <PFSubclassing>
 
 @property  (strong, nonatomic) NSString *eventName;
 @property  (strong, nonatomic) Locations *location;
-@property (nonatomic) NSDate *time;
+@property (nonatomic) NSDate *timeOfEvent;
+@property (strong, nonatomic) PFRelation *Attendees;
+@property (strong, nonatomic) User *manager;
 
 
 @end

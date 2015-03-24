@@ -23,7 +23,6 @@
 		38267AB71AC0A3D300D1EC59 /* mediumBlueSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = 38267AB61AC0A3D300D1EC59 /* mediumBlueSearch.png */; };
 		38CCADD11ABB36A40058125A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD01ABB36A40058125A /* main.m */; };
 		38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD31ABB36A40058125A /* AppDelegate.m */; };
-		38CCADD71ABB36A40058125A /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD61ABB36A40058125A /* LoginController.m */; };
 		38CCADDC1ABB36A40058125A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38CCADDB1ABB36A40058125A /* Images.xcassets */; };
 		38CCADDF1ABB36A40058125A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CCADDD1ABB36A40058125A /* LaunchScreen.xib */; };
 		38CCADEB1ABB36A40058125A /* LunchBrokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADEA1ABB36A40058125A /* LunchBrokeTests.m */; };
@@ -39,6 +38,8 @@
 		38CCAE201ABB5D440058125A /* DJ-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1A1ABB5D440058125A /* DJ-100.png */; };
 		38CCAE211ABB5D440058125A /* Groups Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1B1ABB5D440058125A /* Groups Filled-100.png */; };
 		38CCAE221ABB5D440058125A /* Restaurant-100-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1C1ABB5D440058125A /* Restaurant-100-3.png */; };
+		3C2143FA1AC1DD0A00C9A678 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2143F91AC1DD0A00C9A678 /* User.m */; };
+		3C2143FD1AC1EAE200C9A678 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */; };
 		3C4C1C061AC084E900361979 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C051AC084E900361979 /* MapKit.framework */; };
 		3C4C1C081AC084EF00361979 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C071AC084EF00361979 /* CoreLocation.framework */; };
 		3CC467DA1AC0BEEC005075E8 /* fourSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC467D91AC0BEEC005075E8 /* fourSquare.m */; };
@@ -77,8 +78,6 @@
 		38CCADD01ABB36A40058125A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38CCADD21ABB36A40058125A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38CCADD31ABB36A40058125A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		38CCADD51ABB36A40058125A /* LoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
-		38CCADD61ABB36A40058125A /* LoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		38CCADDB1ABB36A40058125A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		38CCADDE1ABB36A40058125A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		38CCADE41ABB36A40058125A /* LunchBrokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LunchBrokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +100,10 @@
 		38CCAE1A1ABB5D440058125A /* DJ-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DJ-100.png"; sourceTree = "<group>"; };
 		38CCAE1B1ABB5D440058125A /* Groups Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Groups Filled-100.png"; sourceTree = "<group>"; };
 		38CCAE1C1ABB5D440058125A /* Restaurant-100-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Restaurant-100-3.png"; sourceTree = "<group>"; };
+		3C2143F81AC1DD0A00C9A678 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		3C2143F91AC1DD0A00C9A678 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		3C2143FB1AC1EAE200C9A678 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3C4C1C051AC084E900361979 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3C4C1C071AC084EF00361979 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3CC467D81AC0BEEC005075E8 /* fourSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fourSquare.h; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				38CCADFD1ABB38D80058125A /* Locations.m */,
 				38267A991ABB6B6A00D1EC59 /* Event.h */,
 				38267A9A1ABB6B6A00D1EC59 /* Event.m */,
+				3C2143F81AC1DD0A00C9A678 /* User.h */,
+				3C2143F91AC1DD0A00C9A678 /* User.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -174,8 +179,8 @@
 				38CCADF71ABB38D80058125A /* EventDetailController.m */,
 				38CCADF81ABB38D80058125A /* NewEventTableViewController.h */,
 				38CCADF91ABB38D80058125A /* NewEventTableViewController.m */,
-				38CCADD51ABB36A40058125A /* LoginController.h */,
-				38CCADD61ABB36A40058125A /* LoginController.m */,
+				3C2143FB1AC1EAE200C9A678 /* LoginViewController.h */,
+				3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -433,12 +438,13 @@
 			files = (
 				38CCADFF1ABB38D80058125A /* EventDetailController.m in Sources */,
 				38CCAE001ABB38D80058125A /* NewEventTableViewController.m in Sources */,
+				3C2143FD1AC1EAE200C9A678 /* LoginViewController.m in Sources */,
 				38267A9B1ABB6B6A00D1EC59 /* Event.m in Sources */,
 				38267A951ABB699500D1EC59 /* EventTableViewCell.m in Sources */,
 				38CCAE021ABB38D80058125A /* Locations.m in Sources */,
 				38CCADFE1ABB38D80058125A /* EventTableViewController.m in Sources */,
-				38CCADD71ABB36A40058125A /* LoginController.m in Sources */,
 				38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */,
+				3C2143FA1AC1DD0A00C9A678 /* User.m in Sources */,
 				3CC467DA1AC0BEEC005075E8 /* fourSquare.m in Sources */,
 				38CCAE011ABB38D80058125A /* ParseClient.m in Sources */,
 				38CCADD11ABB36A40058125A /* main.m in Sources */,
