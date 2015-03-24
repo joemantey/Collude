@@ -11,6 +11,7 @@
 #import "ParseClient.h"
 #import <UIColor+uiGradients.h>
 
+
 @interface LoginController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *emailAddressField;
@@ -30,8 +31,21 @@
     _password = self.password;
     [self setColors];
     
-    ParseClient *test = [[ParseClient alloc] init];
-    [test pushVoteToParseWithUser];
+    if (![PFUser currentUser]) { // No user logged in
+        // Create the log in view controller
+        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        [logInViewController setDelegate:self]; // Set ourselves as the delegate
+        
+        // Create the sign up view controller
+        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+        [signUpViewController setDelegate:self]; // Set ourselves as the delegate
+        
+        // Assign our sign up controller to be displayed from the login controller
+        [logInViewController setSignUpController:signUpViewController];
+        
+        // Present the log in view controller
+        [self presentViewController:logInViewController animated:YES completion:NULL];
+    }
 }
 
 -(void)setColors
@@ -55,8 +69,8 @@
     self.email = self.emailAddressField.text;
     self.password = self.passwordField.text;
     
-    ParseClient *newClient = [[ParseClient alloc] init];
+    ParseClient *newUser = [[ParseClient alloc] init];
     
-    [newClient addNewUserWithEmail:self.email Password:self.password];
+    [newUser addNewUserWithEmail:self.email Password:self.password];
 }
 @end

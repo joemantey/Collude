@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI.h>
 
-@interface LoginController : UIViewController
+@interface LoginController : PFLogInViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *password;
