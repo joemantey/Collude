@@ -24,10 +24,7 @@
     [super viewDidLoad];
     [self setColors];
     [self fetchLocations];
-    [self.tableView reloadData];
-    
-    
-    
+    [self.tableView reloadData];  
 }
 
 

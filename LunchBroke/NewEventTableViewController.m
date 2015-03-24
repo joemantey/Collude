@@ -20,8 +20,8 @@
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSDate *selectedDate;
 @property (nonatomic) BOOL datePickerIsShowing;
-@property (strong, nonatomic) CLLocation *currentLocation;
-@property (strong, nonatomic) CLLocationManager *locationManager;
+//@property (strong, nonatomic) CLLocation *currentLocation;
+//@property (strong, nonatomic) CLLocationManager *locationManager;
 
 - (IBAction)cancelButton:(id)sender;
 - (IBAction)pickerDateChanged:(id)sender;
@@ -36,12 +36,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    
     //Get user location
-//    coreLocation *locationTest = [[coreLocation alloc] init];
-//    CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
-//    NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
-
+    //    coreLocation *locationTest = [[coreLocation alloc] init];
+    //    CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
+    //    NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
+    
     
     //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
@@ -57,30 +57,36 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [self locationConfigAndInit];
+    //    [self locationConfigAndInit];
 }
 
 // CLLocation Manager Delegate
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
-{
-    self.currentLocation = [locations lastObject];
-}
+//- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+//{
+//    self.currentLocation = [locations lastObject];
+//}
+//
+//- (void) locationConfigAndInit {
+//    self.locationManager = [[CLLocationManager alloc] init];
+//    self.locationManager.delegate = self;
+//    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+//    self.locationManager.distanceFilter = 10;
+//    [self.locationManager requestWhenInUseAuthorization];
+//    [self.locationManager startUpdatingLocation];
+//}
 
-- (void) locationConfigAndInit {
-    self.locationManager = [[CLLocationManager alloc] init];
-    self.locationManager.delegate = self;
-    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    self.locationManager.distanceFilter = 10;
-    [self.locationManager requestWhenInUseAuthorization];
-    [self.locationManager startUpdatingLocation];
+- (void) getCurrentLocation {
+    fourSquare *foursquare = [[fourSquare alloc] init];
+    
+    [foursquare locationConfigAndInit];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
-//    [self.tableView setBackgroundView:<#(UIView *)#>:[UIColor clearColor]];
-//    [self.tableView setBackgroundView:nil];
+    //    [self.tableView setBackgroundView:<#(UIView *)#>:[UIColor clearColor]];
+    //    [self.tableView setBackgroundView:nil];
 }
 
 #pragma mark - Table view data source
@@ -96,7 +102,6 @@
     
     //Set's the the defailt date to today's date
     NSDate *defaultDate = [NSDate date];
-    
     
     //set the text and tint of the date formatter
     self.timeDisplay.text = [self.dateFormatter stringFromDate:defaultDate];
@@ -138,8 +143,6 @@
 //When the row with the date displayed is selected....
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    
     if (indexPath.row == dateTextCellIndex){
         
         //If the datePickerIsShowing...
@@ -147,11 +150,11 @@
             
             //...hide it!
             [self hideDatePickerCell];
-        //But if the !datePickerIsShowing
+            //But if the !datePickerIsShowing
         }else {
-//            coreLocation *locationTest = [[CLLocation alloc] init];
-//            CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
-//            NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
+            //            coreLocation *locationTest = [[CLLocation alloc] init];
+            //            CLLocationCoordinate2D userCoordinate = locationTest.locationManager.location.coordinate;
+            //            NSLog(@"Coordinates:\n Latitude:%f\n Longitude:%f", userCoordinate.latitude, userCoordinate.longitude);
             //...show it!
             [self showDatePickerCell];
         }
@@ -207,58 +210,58 @@
 
 
 /*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+ 
+ // Configure the cell...
+ 
+ return cell;
+ }
+ */
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)cancelButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -279,11 +282,14 @@
     [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             [self dismissViewControllerAnimated:YES completion:nil];
+            [self getCurrentLocation];
             NSLog(@"Save Success");
         } else {
             NSLog(@"%@",error.description);
         }
     }];
+    
+    
 }
 
 - (IBAction)fourSquareSearch:(id)sender {
