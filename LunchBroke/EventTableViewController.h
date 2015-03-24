@@ -10,6 +10,6 @@
 
 @interface EventTableViewController : UITableViewController <UITextFieldDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) NSMutableArray *locationArray;
+@property (strong, nonatomic) NSMutableArray *eventsArray;
 
 @end

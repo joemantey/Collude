@@ -8,26 +8,15 @@
 //
 
 #import "EventTableViewCell.h"
-#import "User.h"
 #import "Event.h"
 
 @interface EventTableViewCell ()
-@property (nonatomic) User *currentUser;
+@property (nonatomic) PFUser *currentUser;
 @property (nonatomic) BOOL isSelected;
 
 @end
 @implementation EventTableViewCell
 
-
-- (void)awakeFromNib {
-    
-    
-    User *dummy = [[User alloc] init];
-    dummy.username = @"Dumbdumb";
-    dummy.email = @"bgates@aol.com";
-    dummy.password = @"password123";
-    [dummy saveInBackground];
-}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
@@ -39,6 +28,22 @@
 //method for toggling voting buttons which overrides the setter
 -(void)setIsSelected:(BOOL)isSelected{
    
+    self.currentUser = [PFUser currentUser];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+
+    [query whereKey:@"Attendees" equalTo:self.currentUser];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        PFRelation *relation = [self.event relationForKey:@"Attendees"];
+        if (objects.count > 0) {
+            [relation removeObject:self.currentUser];
+        } else {
+            [relation addObject:self.currentUser];
+        }
+        [self.event saveInBackground];
+    }];
+    
     //override the setter and set it to isSelected
     _isSelected = isSelected;
     

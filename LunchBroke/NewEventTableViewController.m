@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <UIColor+uiGradients.h>
 #import "fourSquare.h"
+#import "Event.h"
 
 @interface NewEventTableViewController ()
 
@@ -235,16 +236,14 @@
 }
 
 - (IBAction)savebutton:(id)sender {
-    
-    NSString *nameField = self.nameField.text;
-    PFObject *newEvent = [PFObject objectWithClassName:@"Event"];
-    newEvent[@"location"] = nameField;
-    
     NSDate *choosenDate = [self.datePicker date];
     
-    newEvent[@"date"] = choosenDate;
     
-    NSLog(@"choosenDate: %@", choosenDate);
+    NSString *nameField = self.nameField.text;
+    Event *newEvent = [[Event alloc] init];
+    newEvent.eventName = nameField;
+    newEvent.timeOfEvent = choosenDate;
+    newEvent.manager = PFUser.currentUser;
     
     [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {

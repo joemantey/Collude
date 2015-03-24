@@ -197,7 +197,7 @@
                                                 <action selector="voteButtonTapped:" destination="clS-Fg-pL8" eventType="touchUpInside" id="ZTM-YE-jfX"/>
                                             </connections>
                                         </button>
-                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sarah's Salwich Shop" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yX7-FI-YRY">
+                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sarah's Salwich Shop" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yX7-FI-YRY">
                                             <rect key="frame" x="58" y="23" width="200" height="20"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>

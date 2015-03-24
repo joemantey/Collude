@@ -13,7 +13,7 @@
 #import "EventTableViewCell.h"
 #import "LoginViewController.h"
 
-@interface EventTableViewController ()
+@interface EventTableViewController () <PFLogInViewControllerDelegate>
 
 - (IBAction)pullToRefresh:(id)sender;
 
@@ -24,12 +24,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setColors];
-    [self fetchLocations];
+    [self fetchEvents];
     [self.tableView reloadData];
+    
+    
     PFLogInViewController *loginViewController = [[PFLogInViewController alloc] init];
+    loginViewController.delegate = self;
     [self presentViewController:loginViewController animated:YES completion:nil];
 }
 
+// Sent to the delegate when a PFUser is logged in.
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+// Sent to the delegate when the log in attempt fails.
+- (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
+    NSLog(@"Failed to log in...");
+}
+
+// Sent to the delegate when the log in screen is dismissed.
+- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 -(void)setColors
@@ -52,28 +69,22 @@
 
 - (void) viewWillAppear:(BOOL)animated
 {
-    [self fetchLocations];
+    [self fetchEvents];
 }
 
--(void) fetchLocations
+-(void) fetchEvents
 {
-    PFQuery *locationCount = [PFQuery queryWithClassName:@"Event"];
-    [locationCount findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.locationArray = [NSMutableArray arrayWithArray:objects];
+    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
+    [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.eventsArray = [NSMutableArray arrayWithArray:objects];
         [self.tableView reloadData];
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Table view delegate
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.locationArray count];
+    return [self.eventsArray count];
 }
 
 //makes cells taller
@@ -84,18 +95,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
    
-    Locations *location = self.locationArray[indexPath.row];
-    cell.eventName.text = location[@"location"];
-  
-    
-    cell.eventDate.text = @"Date: April 3rd, 2015";
-    cell.eventAttendeeCount.text = @"Attendees: 10";
-    cell.eventDate.textColor = [UIColor darkGrayColor];
-    cell.eventAttendeeCount.textColor = [UIColor darkGrayColor];
-    //UIToolbar *translucentView = [[UIToolbar alloc] initWithFrame:CGRectZero];
-    
-    //cell.backgroundView = translucentView;
-    //[translucentView release]; // If you are using retain/release for memory management(non-ARC).
+    Event *event = self.eventsArray[indexPath.row];
+    cell.event = event;
     
     return cell;
 }
@@ -145,10 +146,8 @@
 }
 */
 
-
-
 - (IBAction)pullToRefresh:(id)sender {
-    [self fetchLocations];
+    [self fetchEvents];
     [sender endRefreshing];
 }
 

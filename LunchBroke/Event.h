@@ -18,7 +18,7 @@
 @property  (strong, nonatomic) Locations *location;
 @property (nonatomic) NSDate *timeOfEvent;
 @property (strong, nonatomic) PFRelation *Attendees;
-@property (strong, nonatomic) User *manager;
+@property (strong, nonatomic) PFUser *manager;
 
 
 @end

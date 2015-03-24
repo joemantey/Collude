@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "Event.h"
-#import "User.h"
 #import "Locations.h"
 
 #import <Parse/Parse.h>
@@ -32,7 +31,6 @@
                   clientKey:@"OgiyIDOqDFmMJdkyLsJOPAkPnPxTUYSgCDdMIsZf"];
     
     [Event registerSubclass];
-    [User registerSubclass];
     [Locations registerSubclass];
     // [Optional] Track statistics around application opens.
     

@@ -29,7 +29,6 @@
 		38CCADFE1ABB38D80058125A /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF51ABB38D80058125A /* EventTableViewController.m */; };
 		38CCADFF1ABB38D80058125A /* EventDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF71ABB38D80058125A /* EventDetailController.m */; };
 		38CCAE001ABB38D80058125A /* NewEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADF91ABB38D80058125A /* NewEventTableViewController.m */; };
-		38CCAE011ABB38D80058125A /* ParseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFB1ABB38D80058125A /* ParseClient.m */; };
 		38CCAE021ABB38D80058125A /* Locations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFD1ABB38D80058125A /* Locations.m */; };
 		38CCAE041ABB39050058125A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE031ABB39050058125A /* Main.storyboard */; };
 		38CCAE1D1ABB5D440058125A /* Beer-100-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE171ABB5D440058125A /* Beer-100-2.png */; };
@@ -38,7 +37,6 @@
 		38CCAE201ABB5D440058125A /* DJ-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1A1ABB5D440058125A /* DJ-100.png */; };
 		38CCAE211ABB5D440058125A /* Groups Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1B1ABB5D440058125A /* Groups Filled-100.png */; };
 		38CCAE221ABB5D440058125A /* Restaurant-100-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1C1ABB5D440058125A /* Restaurant-100-3.png */; };
-		3C2143FA1AC1DD0A00C9A678 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2143F91AC1DD0A00C9A678 /* User.m */; };
 		3C2143FD1AC1EAE200C9A678 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */; };
 		3C4C1C061AC084E900361979 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C051AC084E900361979 /* MapKit.framework */; };
 		3C4C1C081AC084EF00361979 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C071AC084EF00361979 /* CoreLocation.framework */; };
@@ -89,8 +87,6 @@
 		38CCADF71ABB38D80058125A /* EventDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailController.m; sourceTree = "<group>"; };
 		38CCADF81ABB38D80058125A /* NewEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewEventTableViewController.h; sourceTree = "<group>"; };
 		38CCADF91ABB38D80058125A /* NewEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewEventTableViewController.m; sourceTree = "<group>"; };
-		38CCADFA1ABB38D80058125A /* ParseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseClient.h; sourceTree = "<group>"; };
-		38CCADFB1ABB38D80058125A /* ParseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseClient.m; sourceTree = "<group>"; };
 		38CCADFC1ABB38D80058125A /* Locations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locations.h; sourceTree = "<group>"; };
 		38CCADFD1ABB38D80058125A /* Locations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locations.m; sourceTree = "<group>"; };
 		38CCAE031ABB39050058125A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -100,8 +96,6 @@
 		38CCAE1A1ABB5D440058125A /* DJ-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DJ-100.png"; sourceTree = "<group>"; };
 		38CCAE1B1ABB5D440058125A /* Groups Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Groups Filled-100.png"; sourceTree = "<group>"; };
 		38CCAE1C1ABB5D440058125A /* Restaurant-100-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Restaurant-100-3.png"; sourceTree = "<group>"; };
-		3C2143F81AC1DD0A00C9A678 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		3C2143F91AC1DD0A00C9A678 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3C2143FB1AC1EAE200C9A678 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3C4C1C051AC084E900361979 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -149,14 +143,10 @@
 			children = (
 				3CC467D81AC0BEEC005075E8 /* fourSquare.h */,
 				3CC467D91AC0BEEC005075E8 /* fourSquare.m */,
-				38CCADFA1ABB38D80058125A /* ParseClient.h */,
-				38CCADFB1ABB38D80058125A /* ParseClient.m */,
 				38CCADFC1ABB38D80058125A /* Locations.h */,
 				38CCADFD1ABB38D80058125A /* Locations.m */,
 				38267A991ABB6B6A00D1EC59 /* Event.h */,
 				38267A9A1ABB6B6A00D1EC59 /* Event.m */,
-				3C2143F81AC1DD0A00C9A678 /* User.h */,
-				3C2143F91AC1DD0A00C9A678 /* User.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -444,9 +434,7 @@
 				38CCAE021ABB38D80058125A /* Locations.m in Sources */,
 				38CCADFE1ABB38D80058125A /* EventTableViewController.m in Sources */,
 				38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */,
-				3C2143FA1AC1DD0A00C9A678 /* User.m in Sources */,
 				3CC467DA1AC0BEEC005075E8 /* fourSquare.m in Sources */,
-				38CCAE011ABB38D80058125A /* ParseClient.m in Sources */,
 				38CCADD11ABB36A40058125A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
