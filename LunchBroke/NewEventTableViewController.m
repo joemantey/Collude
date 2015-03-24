@@ -21,6 +21,7 @@
 @property (strong, nonatomic) NSDate *selectedDate;
 @property (nonatomic) BOOL datePickerIsShowing;
 @property (strong, nonatomic) fourSquare *latAndLong;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 - (IBAction)cancelButton:(id)sender;
 - (IBAction)pickerDateChanged:(id)sender;
@@ -257,4 +258,7 @@
 
 - (IBAction)fourSquareSearch:(id)sender {
 }
+
+
+
 @end
