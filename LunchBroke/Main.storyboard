@@ -315,19 +315,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Orb-W5-6ck" id="h9F-if-Jon">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L07-GQ-pBB">
-                                                    <rect key="frame" x="566" y="15" width="26" height="26"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="20" id="XfB-ig-Oqu"/>
-                                                        <constraint firstAttribute="width" secondItem="L07-GQ-pBB" secondAttribute="height" multiplier="1:1" id="jdU-Ql-j0a"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="mediumBlueSearch.png">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="fourSquareSearch:" destination="yAl-eb-v5B" eventType="touchUpInside" id="IZV-Mm-NSa"/>
-                                                    </connections>
-                                                </button>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter event name..." textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kas-ca-Jf0">
                                                     <rect key="frame" x="8" y="4" width="301" height="47"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -336,10 +323,8 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="L07-GQ-pBB" secondAttribute="centerY" id="KTS-11-rbw"/>
                                                 <constraint firstAttribute="centerY" secondItem="Kas-ca-Jf0" secondAttribute="centerY" id="cDN-DT-g7k"/>
                                                 <constraint firstItem="Kas-ca-Jf0" firstAttribute="leading" secondItem="h9F-if-Jon" secondAttribute="leadingMargin" constant="8" id="xul-6a-Xqn"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="L07-GQ-pBB" secondAttribute="trailing" id="yGj-Mn-ndf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -355,8 +340,25 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L07-GQ-pBB">
+                                                    <rect key="frame" x="559" y="17" width="26" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="XfB-ig-Oqu"/>
+                                                        <constraint firstAttribute="width" secondItem="L07-GQ-pBB" secondAttribute="height" multiplier="1:1" id="jdU-Ql-j0a"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="mediumBlueSearch.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="fourSquareSearch:" destination="yAl-eb-v5B" eventType="touchUpInside" id="IZV-Mm-NSa"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="L07-GQ-pBB" secondAttribute="centerY" constant="-0.25" id="7Lb-SN-GmP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="L07-GQ-pBB" secondAttribute="trailing" constant="7" id="R3B-Yr-Yh2"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
