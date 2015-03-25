@@ -28,20 +28,21 @@
     [self fetchEvents];
     [self.tableView reloadData];
     
+    if (![PFUser currentUser]) { // No user logged in
     PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
     logInViewController.delegate = self;
     [self presentViewController:logInViewController animated:YES completion:nil];
     
-//    PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
-//    signUpViewController.delegate = self;
-//    [self presentViewController:signUpViewController animated:YES completion:nil];
+    PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+    signUpViewController.delegate = self;
+    logInViewController.signUpController = signUpViewController;
+    }
 }
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
-
 // Sent to the delegate when the log in attempt fails.
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
     NSLog(@"Failed to log in...");
@@ -53,19 +54,19 @@
 }
 
 // Sent to the delegate when a PFUser is signed up.
-//- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
-//    [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
-//}
-//
-//// Sent to the delegate when the sign up attempt fails.
-//- (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error {
-//    NSLog(@"Failed to sign up...");
-//}
-//
-//// Sent to the delegate when the sign up screen is dismissed.
-//- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
-//    NSLog(@"User dismissed the signUpViewController");
-//}
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
+}
+
+// Sent to the delegate when the sign up attempt fails.
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error {
+    NSLog(@"Failed to sign up...");
+}
+
+// Sent to the delegate when the sign up screen is dismissed.
+- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
+    NSLog(@"User dismissed the signUpViewController");
+}
 
 -(void)setColors
 {

@@ -23,7 +23,7 @@
         
         // Create the sign up view controller
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
-        [signUpViewController setDelegate:self]; // Set ourselves as the delegate
+        [signUpViewController setDelegate:signUpViewController]; // Set ourselves as the delegate
         
         // Assign our sign up controller to be displayed from the login controller
         [logInViewController setSignUpController:signUpViewController];
@@ -32,5 +32,7 @@
         [self presentViewController:logInViewController animated:YES completion:NULL];
     }
 }
+
+
 
 @end

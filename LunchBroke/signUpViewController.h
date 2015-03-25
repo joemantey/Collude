@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <ParseUI.h>
 
-@interface signUpViewController : PFSignUpViewController
+@interface signUpViewController : PFSignUpViewController <PFSignUpViewControllerDelegate>
 
 @end
