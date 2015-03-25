@@ -15,6 +15,7 @@
 @dynamic timeOfEvent;
 @dynamic Attendees;
 @dynamic manager;
+@dynamic objectId;
 
 + (NSString *)parseClassName
 {

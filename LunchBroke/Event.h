@@ -10,7 +10,6 @@
 #import <Parse/Parse.h>
 
 @class Locations;
-@class User;
 
 @interface Event : PFObject <PFSubclassing>
 
@@ -19,6 +18,7 @@
 @property (nonatomic) NSDate *timeOfEvent;
 @property (strong, nonatomic) PFRelation *Attendees;
 @property (strong, nonatomic) PFUser *manager;
+@property  (strong, nonatomic) NSString *objectId;
 
 
 @end

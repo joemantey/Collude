@@ -240,12 +240,12 @@
 - (IBAction)savebutton:(id)sender {
     NSDate *choosenDate = [self.datePicker date];
     
-    
     NSString *nameField = self.nameField.text;
     Event *newEvent = [[Event alloc] init];
     newEvent.eventName = nameField;
     newEvent.timeOfEvent = choosenDate;
     newEvent.manager = PFUser.currentUser;
+    [newEvent.Attendees addObject:PFUser.currentUser];
 //  newEvent.location = SOMETHING HERE
     
     [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

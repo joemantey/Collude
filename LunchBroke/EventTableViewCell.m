@@ -27,19 +27,17 @@
 
 //method for toggling voting buttons which overrides the setter
 -(void)setIsSelected:(BOOL)isSelected{
-   
-    self.currentUser = [PFUser currentUser];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
 
-    [query whereKey:@"Attendees" equalTo:self.currentUser];
+//    [query whereKey:@"Attendees" equalTo:PFUser.currentUser];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         PFRelation *relation = [self.event relationForKey:@"Attendees"];
         if (objects.count > 0) {
-            [relation removeObject:self.currentUser];
+            [relation removeObject:PFUser.currentUser];
         } else {
-            [relation addObject:self.currentUser];
+            [relation addObject:PFUser.currentUser];
         }
         [self.event saveInBackground];
     }];
@@ -63,7 +61,6 @@
 }
 
 - (IBAction)voteButtonTapped:(id)sender {
-    
     self.isSelected = !self.isSelected;
 }
 @end

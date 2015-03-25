@@ -11,5 +11,6 @@
 @interface EventTableViewController : UITableViewController <UITextFieldDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSMutableArray *eventsArray;
+@property (strong, nonatomic) NSString *selectedObjectID;
 
 @end
