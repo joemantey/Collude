@@ -13,7 +13,7 @@ GUI:
 Parse:
 
 - Save Locations to Event
-- Sign Up saves data but does not dismiss view
+- ~~Sign Up saves data but does not dismiss view~~
 - If user is a manager of event they should also be an attendee
 
 
