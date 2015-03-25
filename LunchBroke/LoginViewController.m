@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "signUpViewController.h"
+#import "EventTableViewController.h"
 #import <Parse/Parse.h>
 
 @implementation LoginViewController

@@ -12,8 +12,9 @@
 #import <UIColor+uiGradients.h>
 #import "EventTableViewCell.h"
 #import "LoginViewController.h"
+#import "signUpViewController.h"
 
-@interface EventTableViewController () <PFLogInViewControllerDelegate>
+@interface EventTableViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 - (IBAction)pullToRefresh:(id)sender;
 
@@ -27,10 +28,13 @@
     [self fetchEvents];
     [self.tableView reloadData];
     
+    PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+    logInViewController.delegate = self;
+    [self presentViewController:logInViewController animated:YES completion:nil];
     
-    PFLogInViewController *loginViewController = [[PFLogInViewController alloc] init];
-    loginViewController.delegate = self;
-    [self presentViewController:loginViewController animated:YES completion:nil];
+    PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+    signUpViewController.delegate = self;
+    [self presentViewController:signUpViewController animated:YES completion:nil];
 }
 
 // Sent to the delegate when a PFUser is logged in.
@@ -48,6 +52,20 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+// Sent to the delegate when a PFUser is signed up.
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
+    [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
+}
+
+// Sent to the delegate when the sign up attempt fails.
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error {
+    NSLog(@"Failed to sign up...");
+}
+
+// Sent to the delegate when the sign up screen is dismissed.
+- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
+    NSLog(@"User dismissed the signUpViewController");
+}
 
 -(void)setColors
 {

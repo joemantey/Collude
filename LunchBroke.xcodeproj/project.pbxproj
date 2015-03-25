@@ -38,6 +38,7 @@
 		38CCAE211ABB5D440058125A /* Groups Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1B1ABB5D440058125A /* Groups Filled-100.png */; };
 		38CCAE221ABB5D440058125A /* Restaurant-100-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE1C1ABB5D440058125A /* Restaurant-100-3.png */; };
 		3C2143FD1AC1EAE200C9A678 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */; };
+		3C2144001AC22CA700C9A678 /* signUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2143FF1AC22CA700C9A678 /* signUpViewController.m */; };
 		3C4C1C061AC084E900361979 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C051AC084E900361979 /* MapKit.framework */; };
 		3C4C1C081AC084EF00361979 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C071AC084EF00361979 /* CoreLocation.framework */; };
 		3CC467DA1AC0BEEC005075E8 /* fourSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC467D91AC0BEEC005075E8 /* fourSquare.m */; };
@@ -98,6 +99,8 @@
 		38CCAE1C1ABB5D440058125A /* Restaurant-100-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Restaurant-100-3.png"; sourceTree = "<group>"; };
 		3C2143FB1AC1EAE200C9A678 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3C2143FE1AC22CA700C9A678 /* signUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = signUpViewController.h; sourceTree = "<group>"; };
+		3C2143FF1AC22CA700C9A678 /* signUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = signUpViewController.m; sourceTree = "<group>"; };
 		3C4C1C051AC084E900361979 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3C4C1C071AC084EF00361979 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3CC467D81AC0BEEC005075E8 /* fourSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fourSquare.h; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				38CCADF91ABB38D80058125A /* NewEventTableViewController.m */,
 				3C2143FB1AC1EAE200C9A678 /* LoginViewController.h */,
 				3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */,
+				3C2143FE1AC22CA700C9A678 /* signUpViewController.h */,
+				3C2143FF1AC22CA700C9A678 /* signUpViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 				38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */,
 				3CC467DA1AC0BEEC005075E8 /* fourSquare.m in Sources */,
 				38CCADD11ABB36A40058125A /* main.m in Sources */,
+				3C2144001AC22CA700C9A678 /* signUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
