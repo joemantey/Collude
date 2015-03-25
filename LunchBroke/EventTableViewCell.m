@@ -11,6 +11,7 @@
 #import "Event.h"
 
 @interface EventTableViewCell ()
+
 @property (nonatomic) PFUser *currentUser;
 @property (nonatomic) BOOL isSelected;
 

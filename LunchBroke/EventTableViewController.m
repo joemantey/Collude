@@ -12,6 +12,7 @@
 #import <UIColor+uiGradients.h>
 #import "EventTableViewCell.h"
 #import "LoginViewController.h"
+#import "EventDetailController.h"
 
 @interface EventTableViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
@@ -105,9 +106,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
+//    PFObject *myObject = [self.eventsArray objectAtIndex:indexPath.row];
+//    self.selectedObjectID = [myObject objectId];
     Event *event = self.eventsArray[indexPath.row];
-    PFObject *myObject = [self.eventsArray objectAtIndex:indexPath.row];
-    self.selectedObjectID = [myObject objectId];
     cell.event = event;
     return cell;
 }
@@ -115,6 +116,16 @@
 - (IBAction)pullToRefresh:(id)sender {
     [self fetchEvents];
     [sender endRefreshing];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"tableViewToDetailSegue"]){
+        PFObject *myObject = [self.eventsArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        self.selectedObjectID = [myObject objectId];
+        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        EventDetailController *controller = (EventDetailController *)navController.topViewController;
+        controller.selectedObjectID = [myObject objectId];
+    }
 }
 
 

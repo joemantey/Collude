@@ -30,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"ObjectID: %@", self.selectedObjectID);
 
     // Do any additional setup after loading the view.
     [self.tableView setDelegate:self];

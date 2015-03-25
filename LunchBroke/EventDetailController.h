@@ -10,4 +10,6 @@
 
 @interface EventDetailController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic) NSString *selectedObjectID;
+
 @end

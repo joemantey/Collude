@@ -258,7 +258,7 @@
                                     <outlet property="eventName" destination="yX7-FI-YRY" id="zkF-bk-LYK"/>
                                     <outlet property="voteButton" destination="kWO-it-slH" id="Knp-8B-KRo"/>
                                     <outlet property="voteTextField" destination="KpQ-s4-xEw" id="HCJ-ip-aCC"/>
-                                    <segue destination="4jn-lH-IJD" kind="custom" customClass="BlurryModalSegue" id="otn-j3-4Kt"/>
+                                    <segue destination="4jn-lH-IJD" kind="custom" identifier="tableViewToDetailSegue" customClass="BlurryModalSegue" id="otn-j3-4Kt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -282,7 +282,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aZK-X8-xbv">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="kTM-Di-An2" kind="custom" customClass="BlurryModalSegue" id="2Ca-GB-gY4"/>
+                                <segue destination="kTM-Di-An2" kind="custom" identifier="tableViewToNewEventSegue" customClass="BlurryModalSegue" id="2Ca-GB-gY4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
