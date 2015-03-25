@@ -1,12 +1,13 @@
 GUI:
 
 - Brand Sign Up and Log In Views
+	- Hide X on login views
+	- Remove username and only take email addresses
 - NoMoFoMo
 - ~~New Event - What does the magnify glass do?~~ (in Other now)
 - Name, Attendees, Date need to show real info, not hardcoded stuffs
 - Sign out ?
     -Should we do this hotel California Style? You can log in but you can never log out
-- Hide X on login views
 
 
 Parse:
