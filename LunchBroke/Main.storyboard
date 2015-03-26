@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lam-gF-aU5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lam-gF-aU5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -133,7 +133,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="separatorColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="3" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell opaque="NO" alpha="0.5" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="locationCell" rowHeight="100" id="clS-Fg-pL8" customClass="EventTableViewCell">
@@ -276,7 +276,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aZK-X8-xbv">
@@ -315,8 +315,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Orb-W5-6ck" id="h9F-if-Jon">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter event name..." textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kas-ca-Jf0">
-                                                    <rect key="frame" x="8" y="4" width="301" height="47"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event name..." textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kas-ca-Jf0">
+                                                    <rect key="frame" x="16" y="25" width="540" height="30"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -324,6 +325,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="Kas-ca-Jf0" secondAttribute="centerY" id="cDN-DT-g7k"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Kas-ca-Jf0" secondAttribute="trailing" constant="36" id="uaH-0l-C9h"/>
                                                 <constraint firstItem="Kas-ca-Jf0" firstAttribute="leading" secondItem="h9F-if-Jon" secondAttribute="leadingMargin" constant="8" id="xul-6a-Xqn"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -335,13 +337,14 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RTs-Lv-KrD" id="09i-zn-O7A">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter event location..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yOK-6v-9xE">
-                                                    <rect key="frame" x="16" y="7" width="569" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event location or search with Foursquare..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yOK-6v-9xE">
+                                                    <rect key="frame" x="16" y="15" width="540" height="30"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L07-GQ-pBB">
-                                                    <rect key="frame" x="559" y="17" width="26" height="26"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L07-GQ-pBB">
+                                                    <rect key="frame" x="564" y="20" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="XfB-ig-Oqu"/>
                                                         <constraint firstAttribute="width" secondItem="L07-GQ-pBB" secondAttribute="height" multiplier="1:1" id="jdU-Ql-j0a"/>
@@ -357,7 +360,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="L07-GQ-pBB" secondAttribute="centerY" constant="-0.25" id="7Lb-SN-GmP"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="L07-GQ-pBB" secondAttribute="trailing" constant="7" id="R3B-Yr-Yh2"/>
+                                                <constraint firstItem="yOK-6v-9xE" firstAttribute="leading" secondItem="09i-zn-O7A" secondAttribute="leadingMargin" constant="8" id="8nr-Yc-zmI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="L07-GQ-pBB" secondAttribute="trailing" constant="8" id="R3B-Yr-Yh2"/>
+                                                <constraint firstAttribute="centerY" secondItem="yOK-6v-9xE" secondAttribute="centerY" id="TQH-xg-CAy"/>
+                                                <constraint firstItem="L07-GQ-pBB" firstAttribute="leading" secondItem="yOK-6v-9xE" secondAttribute="trailing" constant="8" id="eeK-aO-rp1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -367,24 +373,22 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="78h-TW-Ov8" id="KCi-kI-Vzd">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRw-vl-kav">
-                                                    <rect key="frame" x="96" y="8" width="487" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRw-vl-kav">
+                                                    <rect key="frame" x="16" y="8" width="540" height="30"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" none="YES" updatesFrequently="YES"/>
                                                     </accessibility>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Event time:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rfh-T2-vuG">
-                                                    <rect key="frame" x="13" y="8" width="92" height="30"/>
-                                                    <accessibility key="accessibilityConfiguration">
-                                                        <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                                    </accessibility>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="WRw-vl-kav" secondAttribute="centerY" id="2Lt-ri-sVm"/>
+                                                <constraint firstItem="WRw-vl-kav" firstAttribute="leading" secondItem="KCi-kI-Vzd" secondAttribute="leadingMargin" constant="8" id="GTv-MI-Bt5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WRw-vl-kav" secondAttribute="trailing" constant="36" id="NyV-Vr-etu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
@@ -393,7 +397,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9O6-Rd-yQV" id="wTo-8F-U9X">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ng3-AF-98b">
+                                                <datePicker clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ng3-AF-98b">
                                                     <rect key="frame" x="8" y="-4" width="584" height="162"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="448391557.28467202">
                                                         <!--2015-03-18 17:12:37 +0000-->
@@ -413,41 +417,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" rowHeight="159" id="Bzf-2g-1d6">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="Bzf-2g-1d6" id="CqS-mZ-bdc">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gOM-mF-6H6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="609" height="173"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="niN-9k-92J">
-                                                        <size key="itemSize" width="50" height="50"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    </collectionViewFlowLayout>
-                                                    <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kUu-th-j6Z">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            </view>
-                                                        </collectionViewCell>
-                                                    </cells>
-                                                </collectionView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="centerX" secondItem="gOM-mF-6H6" secondAttribute="centerX" id="1cp-nd-fEn"/>
-                                                <constraint firstAttribute="centerY" secondItem="gOM-mF-6H6" secondAttribute="centerY" id="9AD-cN-Mh7"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.20000000000000001" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="297" id="51I-7x-qvB">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51I-7x-qvB" id="hEd-1e-rfL">
@@ -465,12 +434,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="PwJ-yD-OaU">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="18J-qm-yAT">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cancelButton:" destination="yAl-eb-v5B" id="Yco-PD-WMz"/>
                             </connections>
                         </barButtonItem>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Create" textAlignment="center" minimumFontSize="17" id="DgC-56-dqy">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="DmH-Pu-eVf">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -479,7 +456,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="gOM-mF-6H6" id="WE1-8y-gvC"/>
                         <outlet property="datePicker" destination="ng3-AF-98b" id="awN-AL-hT7"/>
                         <outlet property="eventLocationField" destination="yOK-6v-9xE" id="5hv-DH-EZQ"/>
                         <outlet property="nameField" destination="Kas-ca-Jf0" id="ruo-xO-dsF"/>
