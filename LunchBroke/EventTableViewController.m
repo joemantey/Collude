@@ -70,7 +70,7 @@
 
 -(void)setColors {
     //set the color of the bar
-    [self.navigationController.navigationBar setBarTintColor:[UIColor uig_namnStartColor]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor uig_kyotoEndColor]];
     
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
