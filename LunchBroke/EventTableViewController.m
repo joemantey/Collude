@@ -13,6 +13,7 @@
 #import "EventTableViewCell.h"
 #import "LoginViewController.h"
 #import "EventDetailController.h"
+#import "Event.h"
 
 @interface EventTableViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
@@ -25,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setColors];
-    [self fetchEvents];
+    [self fetchEventData];
     [self.tableView reloadData];
     
     if (![PFUser currentUser]) { // No user logged in
@@ -85,11 +86,22 @@
     [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
--(void) fetchEvents {
-    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
-    [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.eventsArray = [NSMutableArray arrayWithArray:objects];
+//-(void) fetchEvents {
+//    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
+//    [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        self.eventsArray = [NSMutableArray arrayWithArray:objects];
+//        [self.tableView reloadData];
+//    }];
+//}
+
+-(void) fetchEventData {
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
+        Event *eventStuff = (Event *)eventData;
+        self.eventName = eventStuff.eventName;
+        self.timeOfEvent = eventStuff.timeOfEvent;
         [self.tableView reloadData];
+        NSLog(@"Name: %@ Time of Event: %@", self.eventName, self.timeOfEvent);
     }];
 }
 
@@ -106,15 +118,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
-//    PFObject *myObject = [self.eventsArray objectAtIndex:indexPath.row];
-//    self.selectedObjectID = [myObject objectId];
-    Event *event = self.eventsArray[indexPath.row];
+    
+    Event *event = self.eventName[indexPath.row];
     cell.event = event;
     return cell;
 }
 
 - (IBAction)pullToRefresh:(id)sender {
-    [self fetchEvents];
+    [self fetchEventData];
     [sender endRefreshing];
 }
 

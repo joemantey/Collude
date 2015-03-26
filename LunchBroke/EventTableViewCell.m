@@ -16,12 +16,14 @@
 @property (nonatomic) BOOL isSelected;
 
 @end
+
 @implementation EventTableViewCell
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     [self setRestorationIdentifier:@"locationCell"];
+    
     // Configure the view for the selected state
 }
 
@@ -30,8 +32,6 @@
 -(void)setIsSelected:(BOOL)isSelected{
     
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-
-//    [query whereKey:@"Attendees" equalTo:PFUser.currentUser];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         PFRelation *relation = [self.event relationForKey:@"Attendees"];

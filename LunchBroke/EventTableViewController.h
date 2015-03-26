@@ -13,4 +13,7 @@
 @property (strong, nonatomic) NSMutableArray *eventsArray;
 @property (strong, nonatomic) NSString *selectedObjectID;
 
+@property (strong, nonatomic) NSString *eventName;
+@property (strong, nonatomic) NSDate *timeOfEvent;
+
 @end
