@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewEventTableViewController : UITableViewController <UITextFieldDelegate>
+@interface NewEventTableViewController : UITableViewController <UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+
 
 @end
