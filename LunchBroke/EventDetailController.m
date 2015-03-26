@@ -11,6 +11,8 @@
 #import <UIColor+uiGradients.h>
 #import "EventTableViewCell.h"
 #import "EventTableViewController.h"
+#import "Event.h"
+#import "User.h"
 
 @interface EventDetailController ()
 - (IBAction)dismissTapped:(id)sender;
@@ -24,6 +26,10 @@
 @property (strong, nonatomic) NSMutableArray *eventDataArray;
 @property (strong, nonatomic) NSString *eventObjectId;
 
+@property (strong, nonatomic) NSString *eventName;
+@property (strong, nonatomic) NSDate *timeOfEvent;
+@property (strong, nonatomic) NSArray *attendees;
+
 @end
 
 @implementation EventDetailController
@@ -31,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"ObjectID: %@", self.selectedObjectID);
-
+    
     // Do any additional setup after loading the view.
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
@@ -47,12 +53,14 @@
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
     
-//    [self fetchEventData];
+    [self fetchEventData];
+    [self fetchEventAttendees];
+    [self.tableView reloadData];
 }
 
 
 -(void)setUpGradient{
-
+    
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.containerView.bounds;
     gradient.startPoint = CGPointZero;
@@ -68,38 +76,44 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) fetchEventData
-{
+-(void) fetchEventData {
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    //[query whereKey:@"objectId" equalTo:selectedObjectID];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
-            // Do something with the found objects
-            for (PFObject *object in objects) {
-                NSLog(@"%@", object.objectId);
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
+    [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
+        Event *eventStuff = (Event *)eventData;
+        self.eventName = eventStuff.eventName;
+        self.timeOfEvent = eventStuff.timeOfEvent;
+        [self.tableView reloadData];
+        NSLog(@"Name: %@ Time of Event: %@", self.eventName, self.timeOfEvent);
     }];
 }
 
+- (void) fetchEventAttendees {
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
+        Event *eventStuff = (Event *)eventData;
+        
+        PFQuery *attendeeQuery = [eventStuff.Attendees query];
+        
+        [attendeeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            self.attendees = objects;
+            [self.tableView reloadData];
+        }];
+    }];
+}
 - (IBAction)dismissTapped:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return [self.attendees count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"attendeeCell" forIndexPath:indexPath];
-    cell.textLabel.text = @"Names of attendees";
+    User *user = self.attendees[indexPath.row];
+    cell.textLabel.text = user.email;
     return cell;
 }
 

@@ -2,17 +2,16 @@
 //  User.h
 //  LunchBroke
 //
-//  Created by Ian Smith on 3/24/15.
+//  Created by Ian Smith on 3/26/15.
 //  Copyright (c) 2015 Joseph Smalls-Mantey. All rights reserved.
 //
 
-#import <Parse/Parse.h>
+#import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface User : PFObject <PFSubclassing>
+@interface User : PFUser <PFSubclassing>
 
-@property (strong, nonatomic) NSString *email;
-@property (strong, nonatomic) NSString *username;
-@property (strong, nonatomic) NSString *password;
+@property  (strong, nonatomic) NSString *email;
+@property  (strong, nonatomic) NSString *username;
 
 @end
