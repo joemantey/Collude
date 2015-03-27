@@ -11,6 +11,8 @@
 #import <UIColor+uiGradients.h>
 #import "fourSquare.h"
 #import "Event.h"
+#import "EventIcon.h"
+#import "EventIconCollectionViewCell.h"
 
 @interface NewEventTableViewController ()
 
@@ -23,6 +25,8 @@
 @property (nonatomic) BOOL datePickerIsShowing;
 @property (strong, nonatomic) fourSquare *latAndLong;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) NSMutableArray *iconArray;
+
 
 - (IBAction)cancelButton:(id)sender;
 - (IBAction)pickerDateChanged:(id)sender;
@@ -36,10 +40,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self iconArray];
+    
 
     //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_kyotoEndColor]];
-    
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
     
@@ -47,6 +52,9 @@
     
     self.latAndLong = [[fourSquare alloc] init];
     [self.latAndLong getNearby4SquareLocations:^(NSArray *array) {}];
+    
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -95,6 +103,7 @@
 #define kDatePickerIndex 3
 #define dateTextCellIndex 2
 #define kDatePickerCellHeight 162
+#define collectionViewCellIndex 4
 
 //If datePickerIsShowing, set the height of the cell to 164 (the hieght of a date picker). If !datePickerIsShowing, set the height of the cell to 0
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -103,6 +112,8 @@
     
     if (indexPath.row == kDatePickerIndex){
         height = self.datePickerIsShowing ? kDatePickerCellHeight : 0.0f;
+    }else if (indexPath.row == collectionViewCellIndex){
+        height = kDatePickerCellHeight;
     }
     
     return height;
@@ -261,6 +272,52 @@
 - (IBAction)fourSquareSearch:(id)sender {
 }
 
+#pragma mark CollectionView Delegate
 
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(50, 50);
+}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    
+    return UIEdgeInsetsMake( 8, 8, 8, 8);
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [self.iconArray count];
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    EventIconCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"eventIcon" forIndexPath:indexPath];
+    
+    EventIcon *currentIcon = self.iconArray[indexPath.row];
+    
+    NSLog(@"Icon location text ran");
+    
+    cell.iconImage.image = currentIcon.iconImage;
+    
+    return cell;
+}
+
+#pragma mark Images and Icons
+
+-(NSMutableArray *)iconArray{
+    if (! _iconArray) {
+        EventIcon *bar = [[EventIcon alloc]initWithLabel:@"Bar" andImage:[UIImage imageNamed:@"Bar.png"]];
+        EventIcon *meal = [[EventIcon alloc]initWithLabel:@"Meal" andImage:[UIImage imageNamed:@"Meal.png"]];
+        EventIcon *snack = [[EventIcon alloc]initWithLabel:@"Snack" andImage:[UIImage imageNamed:@"Snack.png"]];
+        EventIcon *birthday = [[EventIcon alloc]initWithLabel:@"Birthday" andImage:[UIImage imageNamed:@"Birthday.png"]];
+        EventIcon *club = [[EventIcon alloc]initWithLabel:@"Club" andImage:[UIImage imageNamed:@"Club.png"]];
+        EventIcon *sports = [[EventIcon alloc]initWithLabel:@"Sports" andImage:[UIImage imageNamed:@"Sports.png"]];
+        EventIcon *study = [[EventIcon alloc]initWithLabel:@"Study" andImage:[UIImage imageNamed:@"Study.png"]];
+        EventIcon *other = [[EventIcon alloc]initWithLabel:@"Other" andImage:[UIImage imageNamed:@"Other.png"]];
+        
+        _iconArray = [[NSMutableArray alloc] initWithArray:@[bar, meal, snack, birthday, club, sports, study, other]];
+    }
+    
+    return _iconArray;
+}
 
 @end

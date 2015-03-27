@@ -13,11 +13,17 @@
 #import "EventTableViewCell.h"
 #import "LoginViewController.h"
 #import "EventDetailController.h"
+<<<<<<< HEAD
 #import "Event.h"
+=======
+#import "EventIconCollectionViewCell.h"
+#import "EventIcon.h"
+>>>>>>> 4e9d4cc1d0593986e852208b5cbe7b3a19d9b3be
 
 @interface EventTableViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 - (IBAction)pullToRefresh:(id)sender;
+
 
 @end
 
@@ -28,6 +34,7 @@
     [self setColors];
     [self fetchEventData];
     [self.tableView reloadData];
+    
     
     if (![PFUser currentUser]) { // No user logged in
     PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
@@ -138,6 +145,8 @@
         controller.selectedObjectID = [myObject objectId];
     }
 }
+
+
 
 
 @end

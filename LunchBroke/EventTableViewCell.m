@@ -55,7 +55,7 @@
         
     
     }else{
-        [self.voteButton setImage:[UIImage imageNamed:@"mediumbluecheck.png"] forState:UIControlStateNormal];
+        [self.voteButton setImage:[UIImage imageNamed:@"Unchecked.png"] forState:UIControlStateNormal];
         self.voteTextField.text = @"";
     }
     
