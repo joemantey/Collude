@@ -121,9 +121,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
-    
-    Event *event = self.eventName[indexPath.row];
-    cell.event = event;
+
 //    PFObject *myObject = [self.eventsArray objectAtIndex:indexPath.row];
 //    self.selectedObjectID = [myObject objectId];
     Event *currentEvent = self.eventsArray[indexPath.row];

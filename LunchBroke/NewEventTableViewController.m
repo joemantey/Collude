@@ -77,8 +77,8 @@
     
     NSString *nameField = self.nameField.text;
     Event *newEvent = [[Event alloc] init];
-    newEvent.name = nameField;
-    newEvent.date = choosenDate;
+    newEvent.eventName = nameField;
+    newEvent.timeOfEvent = choosenDate;
     newEvent.manager = PFUser.currentUser;
     newEvent.imageLabel =  self.eventIcon.iconLabel;
     

@@ -17,7 +17,6 @@
 @interface EventDetailController ()
 - (IBAction)dismissTapped:(id)sender;
 
-
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerOutlet;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
@@ -77,8 +76,8 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
         Event *eventStuff = (Event *)eventData;
-        self.eventName = eventStuff.name;
-        self.timeOfEvent = eventStuff.date;
+        self.eventName = eventStuff.eventName;
+        self.timeOfEvent = eventStuff.timeOfEvent;
         [self.tableView reloadData];
         NSLog(@"Name: %@ Time of Event: %@", self.eventName, self.timeOfEvent);
     }];
