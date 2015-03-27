@@ -33,6 +33,7 @@
     [self.tableView reloadData];
     
     
+    
     if (![PFUser currentUser]) { // No user logged in
     PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
     logInViewController.delegate = self;
@@ -79,15 +80,17 @@
     
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
+    
+    
 
     
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.tableView.bounds;
-    gradient.startPoint = CGPointZero;
-    gradient.endPoint = CGPointMake(0, 1);
-    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor whiteColor] CGColor], (id)[[UIColor whiteColor]CGColor], nil];
-    
-    [self.view.layer insertSublayer:gradient atIndex:0];
+//    CAGradientLayer *gradient = [CAGradientLayer layer];
+//    gradient.frame = self.tableView.bounds;
+//    gradient.startPoint = CGPointZero;
+//    gradient.endPoint = CGPointMake(0, 1);
+//    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor whiteColor] CGColor], (id)[[UIColor whiteColor]CGColor], nil];
+//    
+//    [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
 -(void) fetchEvents {
@@ -101,6 +104,7 @@
 #pragma mark - Table view delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+   
     return [self.eventsArray count];
 }
 
@@ -111,7 +115,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
-//    PFObject *myObject = [self.eventsArray objectAtIndex:indexPath.row];
+    
+    //    PFObject *myObject = [self.eventsArray objectAtIndex:indexPath.row];
 //    self.selectedObjectID = [myObject objectId];
     Event *currentEvent = self.eventsArray[indexPath.row];
     
@@ -125,7 +130,7 @@
         NSDate *curentEventDate = currentEvent.date;
         NSString *dateString = [NSDateFormatter localizedStringFromDate:curentEventDate
                                                               dateStyle:NSDateFormatterShortStyle
-                                                              timeStyle:NSDateFormatterFullStyle];
+                                                              timeStyle:NSDateFormatterShortStyle];
         cell.eventDate.text = [NSString stringWithFormat:@"%@", dateString];
     }
     
