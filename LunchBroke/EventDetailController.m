@@ -37,9 +37,16 @@
     [super viewDidLoad];
     NSLog(@"ObjectID: %@", self.selectedObjectID);
     
+    [self fetchEventData];
+    [self fetchEventAttendees];
+    [self.tableView reloadData];
+    
     // Do any additional setup after loading the view.
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
+    
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+
     
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
@@ -48,10 +55,6 @@
     
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
-    
-    [self fetchEventData];
-    [self fetchEventAttendees];
-    [self.tableView reloadData];
 }
 
 
@@ -78,6 +81,8 @@
         Event *eventStuff = (Event *)eventData;
         self.eventName = eventStuff.eventName;
         self.timeOfEvent = eventStuff.timeOfEvent;
+        self.title = [[NSString stringWithFormat:@"%@ Details", self.eventName] capitalizedString];
+        NSLog(@"FETCH DATA TITLE: %@ Details", self.eventName);
         [self.tableView reloadData];
         NSLog(@"Name: %@ Time of Event: %@", self.eventName, self.timeOfEvent);
     }];

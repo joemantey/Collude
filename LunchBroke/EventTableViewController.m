@@ -34,7 +34,6 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchEvents) name:@"fetchEventsNotification" object:nil];
     
-    
     if (![PFUser currentUser]) { // No user logged in
     PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
     logInViewController.delegate = self;
@@ -86,9 +85,6 @@
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
     
-    
-
-    
 //    CAGradientLayer *gradient = [CAGradientLayer layer];
 //    gradient.frame = self.tableView.bounds;
 //    gradient.startPoint = CGPointZero;
@@ -132,9 +128,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
     
-    //    PFObject *myObject = [self.eventsArray objectAtIndex:indexPath.row];
-
-//    self.selectedObjectID = [myObject objectId];
     Event *currentEvent = self.eventsArray[indexPath.row];
     
     //get the name
@@ -150,7 +143,6 @@
                                                               timeStyle:NSDateFormatterShortStyle];
         cell.eventDate.text = [NSString stringWithFormat:@"%@", dateString];
     }
-    
     
     //get the images
     if (currentEvent.imageLabel) {
