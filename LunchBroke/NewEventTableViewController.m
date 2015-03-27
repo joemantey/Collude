@@ -17,15 +17,19 @@
 @interface NewEventTableViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
+
 @property (weak, nonatomic) IBOutlet UITextField *timeDisplay;
 @property (weak, nonatomic) IBOutlet UITextField *eventLocationField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UITextField *iconField;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSDate *selectedDate;
 @property (nonatomic) BOOL datePickerIsShowing;
 @property (strong, nonatomic) fourSquare *latAndLong;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong, nonatomic) NSMutableArray *iconArray;
+@property (strong, nonatomic) NSArray *iconArray;
+@property (strong, nonatomic) EventIcon *eventIcon;
+
 
 
 - (IBAction)cancelButton:(id)sender;
@@ -45,6 +49,7 @@
 
     //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_kyotoEndColor]];
+    
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
     
@@ -53,26 +58,46 @@
     self.latAndLong = [[fourSquare alloc] init];
     [self.latAndLong getNearby4SquareLocations:^(NSArray *array) {}];
     
+
+    //collectionView Delegate
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    
-    //    [self.tableView setBackgroundView:<#(UIView *)#>:[UIColor clearColor]];
-    //    [self.tableView setBackgroundView:nil];
+#pragma mark Buttons
+
+- (IBAction)cancelButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)savebutton:(id)sender {
+    NSDate *choosenDate = [self.datePicker date];
+    
+    NSString *nameField = self.nameField.text;
+    Event *newEvent = [[Event alloc] init];
+    newEvent.eventName = nameField;
+    newEvent.timeOfEvent = choosenDate;
+    newEvent.manager = PFUser.currentUser;
+    newEvent.imageLabel =  self.eventIcon.iconLabel;
+    
+    [newEvent.Attendees addObject:PFUser.currentUser];
+    //  newEvent.location = SOMETHING HERE
+    
+    [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+            NSLog(@"Save Success");
+        } else {
+            NSLog(@"%@",error.description);
+        }
+    }];
+}
+
+- (IBAction)fourSquareSearch:(id)sender {
+}
+
 
 #pragma mark - Table view data source
 
@@ -90,7 +115,7 @@
     
     //set the text and tint of the date formatter
     self.timeDisplay.text = [self.dateFormatter stringFromDate:defaultDate];
-    self.timeDisplay.textColor = [self.tableView tintColor];
+    self.timeDisplay.textColor = [self.timeDisplay tintColor];
     
     //set's the default state for the date picker to today's date
     self.selectedDate = defaultDate;
@@ -102,8 +127,9 @@
 //Since we are using a static tableview, we can use the constants to set parameters for our tableview. Using define, we can put all of our "magic numbers" in one place, in case we need to change them later.
 #define kDatePickerIndex 3
 #define dateTextCellIndex 2
-#define kDatePickerCellHeight 162
-#define collectionViewCellIndex 4
+#define collectionViewCellIndex 5
+#define tallCellHeight 162
+
 
 //If datePickerIsShowing, set the height of the cell to 164 (the hieght of a date picker). If !datePickerIsShowing, set the height of the cell to 0
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -111,9 +137,9 @@
     CGFloat height = self.tableView.rowHeight;
     
     if (indexPath.row == kDatePickerIndex){
-        height = self.datePickerIsShowing ? kDatePickerCellHeight : 0.0f;
+        height = self.datePickerIsShowing ? tallCellHeight : 0.0f;
     }else if (indexPath.row == collectionViewCellIndex){
-        height = kDatePickerCellHeight;
+        height = tallCellHeight;
     }
     
     return height;
@@ -157,6 +183,7 @@
     
     //...seems like a good time to stop hiding the date picker...
     self.datePicker.hidden = NO;
+    
     //Now some setup. Turn the date picker clear so we can have it fade in during our animation.
     self.datePicker.alpha = 0.0f;
     
@@ -178,6 +205,7 @@
     
     //Animation time again. This time were turning the date picker clear.
     [UIView animateWithDuration:0.25
+     
                      animations:^{
                          self.datePicker.alpha = 0.0f;
                      }
@@ -190,87 +218,6 @@
 }
 
 
-/*
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
- 
- // Configure the cell...
- 
- return cell;
- }
- */
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
-- (IBAction)cancelButton:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (IBAction)savebutton:(id)sender {
-    NSDate *choosenDate = [self.datePicker date];
-    
-    NSString *nameField = self.nameField.text;
-    Event *newEvent = [[Event alloc] init];
-    newEvent.eventName = nameField;
-    newEvent.timeOfEvent = choosenDate;
-    newEvent.manager = PFUser.currentUser;
-    [newEvent.Attendees addObject:PFUser.currentUser];
-//  newEvent.location = SOMETHING HERE
-    
-    [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            [self dismissViewControllerAnimated:YES completion:nil];
-            NSLog(@"Save Success");
-        } else {
-            NSLog(@"%@",error.description);
-        }
-    }];
-}
-
-- (IBAction)fourSquareSearch:(id)sender {
-}
 
 #pragma mark CollectionView Delegate
 
@@ -292,32 +239,57 @@
 {
     EventIconCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"eventIcon" forIndexPath:indexPath];
     
-    EventIcon *currentIcon = self.iconArray[indexPath.row];
+    EventIcon *currentIcon = self.iconArray[indexPath.item];
     
     NSLog(@"Icon location text ran");
     
     cell.iconImage.image = currentIcon.iconImage;
     
+    self.eventIcon = currentIcon;
+    
+    
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSLog(@"%@", self.iconArray[indexPath.item]);
+    
+    self.eventIcon = self.iconArray[indexPath.item];
+    
+    self.iconField.text = self.eventIcon.iconLabel;
+    
+}
+
+
 #pragma mark Images and Icons
 
--(NSMutableArray *)iconArray{
+
+//IMPORTANT- The tags here are set to the filenames for a reason. There is no convenient way to get filenames of images once they are compiled.
+-(NSArray *)iconArray{
     if (! _iconArray) {
         EventIcon *bar = [[EventIcon alloc]initWithLabel:@"Bar" andImage:[UIImage imageNamed:@"Bar.png"]];
         EventIcon *meal = [[EventIcon alloc]initWithLabel:@"Meal" andImage:[UIImage imageNamed:@"Meal.png"]];
         EventIcon *snack = [[EventIcon alloc]initWithLabel:@"Snack" andImage:[UIImage imageNamed:@"Snack.png"]];
-        EventIcon *birthday = [[EventIcon alloc]initWithLabel:@"Birthday" andImage:[UIImage imageNamed:@"Birthday.png"]];
-        EventIcon *club = [[EventIcon alloc]initWithLabel:@"Club" andImage:[UIImage imageNamed:@"Club.png"]];
+        EventIcon *celebration = [[EventIcon alloc]initWithLabel:@"Celebration" andImage:[UIImage imageNamed:@"Celebration.png"]];
+        EventIcon *nightlife = [[EventIcon alloc]initWithLabel:@"Nightlife" andImage:[UIImage imageNamed:@"Nightlife.png"]];
         EventIcon *sports = [[EventIcon alloc]initWithLabel:@"Sports" andImage:[UIImage imageNamed:@"Sports.png"]];
         EventIcon *study = [[EventIcon alloc]initWithLabel:@"Study" andImage:[UIImage imageNamed:@"Study.png"]];
         EventIcon *other = [[EventIcon alloc]initWithLabel:@"Other" andImage:[UIImage imageNamed:@"Other.png"]];
         
-        _iconArray = [[NSMutableArray alloc] initWithArray:@[bar, meal, snack, birthday, club, sports, study, other]];
+        _iconArray = [[NSMutableArray alloc] initWithArray:@[bar, meal, snack, celebration, nightlife, sports, study, other]];
     }
     
     return _iconArray;
+}
+
+#pragma mark Other helper methods
+
+- (UIColor *)UIColorFromRGB:(NSInteger)rgbValue {
+    return [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0
+                           green:((float)((rgbValue & 0xFF00) >> 8))/255.0
+                            blue:((float)(rgbValue & 0xFF))/255.0
+                           alpha:1.0];
 }
 
 @end

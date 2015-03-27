@@ -19,6 +19,10 @@
 @property (strong, nonatomic) PFRelation *Attendees;
 @property (strong, nonatomic) PFUser *manager;
 @property  (strong, nonatomic) NSString *objectId;
+@property (strong, nonatomic) NSString *imageName;
+@property (strong, nonatomic) NSString *imageLabel;
+
+
 
 
 @end

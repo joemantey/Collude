@@ -16,6 +16,10 @@
 @dynamic Attendees;
 @dynamic manager;
 @dynamic objectId;
+@dynamic imageName;
+@dynamic imageLabel;
+
+
 
 + (NSString *)parseClassName
 {
