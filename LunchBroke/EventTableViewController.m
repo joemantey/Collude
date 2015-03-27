@@ -13,17 +13,13 @@
 #import "EventTableViewCell.h"
 #import "LoginViewController.h"
 #import "EventDetailController.h"
-<<<<<<< HEAD
 #import "Event.h"
-=======
 #import "EventIconCollectionViewCell.h"
 #import "EventIcon.h"
->>>>>>> 4e9d4cc1d0593986e852208b5cbe7b3a19d9b3be
 
 @interface EventTableViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 - (IBAction)pullToRefresh:(id)sender;
-
 
 @end
 
@@ -128,6 +124,30 @@
     
     Event *event = self.eventName[indexPath.row];
     cell.event = event;
+//    PFObject *myObject = [self.eventsArray objectAtIndex:indexPath.row];
+//    self.selectedObjectID = [myObject objectId];
+    Event *currentEvent = self.eventsArray[indexPath.row];
+    
+    //get the name
+    if (currentEvent.name) {
+        cell.eventName.text = currentEvent.name;
+    }
+    
+    //get the date
+    if (currentEvent.date) {
+        NSDate *curentEventDate = currentEvent.date;
+        NSString *dateString = [NSDateFormatter localizedStringFromDate:curentEventDate
+                                                              dateStyle:NSDateFormatterShortStyle
+                                                              timeStyle:NSDateFormatterFullStyle];
+        cell.eventDate.text = [NSString stringWithFormat:@"%@", dateString];
+    }
+    
+    
+    //get the images
+    if (currentEvent.imageLabel) {
+        cell.eventIcon.image =  [UIImage imageNamed:currentEvent.imageLabel];
+    }
+
     return cell;
 }
 

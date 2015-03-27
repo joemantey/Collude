@@ -77,8 +77,8 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
     [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
         Event *eventStuff = (Event *)eventData;
-        self.eventName = eventStuff.eventName;
-        self.timeOfEvent = eventStuff.timeOfEvent;
+        self.eventName = eventStuff.name;
+        self.timeOfEvent = eventStuff.date;
         [self.tableView reloadData];
         NSLog(@"Name: %@ Time of Event: %@", self.eventName, self.timeOfEvent);
     }];

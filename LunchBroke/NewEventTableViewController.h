@@ -11,5 +11,4 @@
 @interface NewEventTableViewController : UITableViewController <UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 
-
 @end
