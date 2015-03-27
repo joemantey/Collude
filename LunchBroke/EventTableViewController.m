@@ -13,14 +13,13 @@
 #import "EventTableViewCell.h"
 #import "LoginViewController.h"
 #import "EventDetailController.h"
+#import "Event.h"
 #import "EventIconCollectionViewCell.h"
 #import "EventIcon.h"
-#import "Event.h"
 
 @interface EventTableViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 - (IBAction)pullToRefresh:(id)sender;
-
 
 @end
 
@@ -29,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setColors];
-    [self fetchEvents];
+    [self fetchEventData];
     [self.tableView reloadData];
     
     
@@ -93,11 +92,22 @@
 //    [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
--(void) fetchEvents {
-    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
-    [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.eventsArray = [NSMutableArray arrayWithArray:objects];
+//-(void) fetchEvents {
+//    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
+//    [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        self.eventsArray = [NSMutableArray arrayWithArray:objects];
+//        [self.tableView reloadData];
+//    }];
+//}
+
+-(void) fetchEventData {
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
+        Event *eventStuff = (Event *)eventData;
+        self.eventName = eventStuff.eventName;
+        self.timeOfEvent = eventStuff.timeOfEvent;
         [self.tableView reloadData];
+        NSLog(@"Name: %@ Time of Event: %@", self.eventName, self.timeOfEvent);
     }];
 }
 
@@ -117,17 +127,18 @@
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
     
     //    PFObject *myObject = [self.eventsArray objectAtIndex:indexPath.row];
+
 //    self.selectedObjectID = [myObject objectId];
     Event *currentEvent = self.eventsArray[indexPath.row];
     
     //get the name
-    if (currentEvent.name) {
-        cell.eventName.text = currentEvent.name;
+    if (currentEvent.eventName) {
+        cell.eventName.text = currentEvent.eventName;
     }
     
     //get the date
-    if (currentEvent.date) {
-        NSDate *curentEventDate = currentEvent.date;
+    if (currentEvent.timeOfEvent) {
+        NSDate *curentEventDate = currentEvent.timeOfEvent;
         NSString *dateString = [NSDateFormatter localizedStringFromDate:curentEventDate
                                                               dateStyle:NSDateFormatterShortStyle
                                                               timeStyle:NSDateFormatterShortStyle];
@@ -144,7 +155,7 @@
 }
 
 - (IBAction)pullToRefresh:(id)sender {
-    [self fetchEvents];
+    [self fetchEventData];
     [sender endRefreshing];
 }
 

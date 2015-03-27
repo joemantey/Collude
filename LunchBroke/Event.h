@@ -13,16 +13,13 @@
 
 @interface Event : PFObject <PFSubclassing>
 
-@property  (strong, nonatomic) NSString *name;
-@property  (strong, nonatomic) Locations *location;
-@property (nonatomic) NSDate *date;
+@property (strong, nonatomic) NSString *eventName;
+@property (strong, nonatomic) Locations *location;
+@property (nonatomic) NSDate *timeOfEvent;
 @property (strong, nonatomic) PFRelation *Attendees;
 @property (strong, nonatomic) PFUser *manager;
-@property  (strong, nonatomic) NSString *objectId;
+@property (strong, nonatomic) NSString *objectId;
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSString *imageLabel;
-
-
-
 
 @end

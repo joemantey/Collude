@@ -10,9 +10,9 @@
 
 @implementation Event
 
-@dynamic name;
+@dynamic eventName;
 @dynamic location;
-@dynamic date;
+@dynamic timeOfEvent;
 @dynamic Attendees;
 @dynamic manager;
 @dynamic objectId;
