@@ -133,9 +133,10 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="3" maxY="0.0"/>
-                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="0.02" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="locationCell" rowHeight="100" id="clS-Fg-pL8" customClass="EventTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -187,7 +188,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWO-it-slH">
-                                            <rect key="frame" x="546" y="33" width="26" height="26"/>
+                                            <rect key="frame" x="564" y="33" width="26" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="kWO-it-slH" secondAttribute="height" multiplier="1:1" id="Hsi-oh-1Ta"/>
                                                 <constraint firstAttribute="width" constant="26" id="bln-QV-XDx"/>
@@ -213,7 +214,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="rsvp" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KpQ-s4-xEw">
-                                            <rect key="frame" x="547" y="59" width="25" height="12"/>
+                                            <rect key="frame" x="565" y="59" width="25" height="12"/>
                                             <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -228,7 +229,7 @@
                                         <constraint firstItem="yX7-FI-YRY" firstAttribute="leading" secondItem="vOf-1c-D3e" secondAttribute="leading" id="MKC-Ux-s8b"/>
                                         <constraint firstItem="yX7-FI-YRY" firstAttribute="bottom" secondItem="vOf-1c-D3e" secondAttribute="top" id="MTy-Da-V89"/>
                                         <constraint firstItem="vOf-1c-D3e" firstAttribute="bottom" secondItem="d05-Gy-sOR" secondAttribute="top" id="Rew-Wv-QG9"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="kWO-it-slH" secondAttribute="trailing" constant="20" id="TY0-6x-eVt"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="kWO-it-slH" secondAttribute="trailing" constant="2" id="TY0-6x-eVt"/>
                                         <constraint firstAttribute="centerX" secondItem="vOf-1c-D3e" secondAttribute="centerX" id="Vnx-oL-lhP"/>
                                         <constraint firstAttribute="centerY" secondItem="vOf-1c-D3e" secondAttribute="centerY" id="Wub-pK-pjj"/>
                                         <constraint firstAttribute="centerX" secondItem="vOf-1c-D3e" secondAttribute="centerX" id="Wur-gb-l9K"/>

@@ -91,13 +91,7 @@
     
 
     
-//    CAGradientLayer *gradient = [CAGradientLayer layer];
-//    gradient.frame = self.tableView.bounds;
-//    gradient.startPoint = CGPointZero;
-//    gradient.endPoint = CGPointMake(0, 1);
-//    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor whiteColor] CGColor], (id)[[UIColor whiteColor]CGColor], nil];
-//    
-//    [self.view.layer insertSublayer:gradient atIndex:0];
+
 }
 
 -(void) fetchEvents {
