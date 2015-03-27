@@ -10,6 +10,8 @@
 #import "signUpViewController.h"
 #import "EventTableViewController.h"
 #import <Parse/Parse.h>
+#import <QuartzCore/QuartzCore.h>
+#import <UIColor+uiGradients.h>
 
 @implementation LoginViewController
 
@@ -30,7 +32,25 @@
         
         // Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
+        
     }
+    
+    
+    //Time for some formatting... YEEAAHHHHH
+    
+    
+    //Backround color
+    [self.logInView setBackgroundColor:[UIColor clearColor]];
+    NSLog(@"Front page code ran");
+    
+    //Gradient Layer
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.logInView.bounds;
+    gradient.startPoint = CGPointZero;
+    gradient.endPoint = CGPointMake(0, 1);
+    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_facebookMessengerStartColor] CGColor], (id)[[UIColor uig_facebookMessengerEndColor]CGColor], nil];
+    
+    [self.logInView.layer insertSublayer:gradient atIndex:0];
 }
 
 

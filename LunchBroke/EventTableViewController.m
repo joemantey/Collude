@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setColors];
-    [self fetchEvents];
+    [self fetchEvents]; 
     [self fetchEventData];
     [self.tableView reloadData];
     
@@ -84,14 +84,6 @@
     
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
-    
-//    CAGradientLayer *gradient = [CAGradientLayer layer];
-//    gradient.frame = self.tableView.bounds;
-//    gradient.startPoint = CGPointZero;
-//    gradient.endPoint = CGPointMake(0, 1);
-//    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor whiteColor] CGColor], (id)[[UIColor whiteColor]CGColor], nil];
-//    
-//    [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
 -(void) fetchEvents {
@@ -118,6 +110,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
    
     return [self.eventsArray count];
+    NSLog(@"%lu", (unsigned long)[self.eventsArray count ]);
 }
 
 //makes cells taller
@@ -134,7 +127,7 @@
     if (currentEvent.eventName) {
         cell.eventName.text = currentEvent.eventName;
     }
-    
+    NSLog(@"Tableview Delegate ran");
     //get the date
     if (currentEvent.timeOfEvent) {
         NSDate *curentEventDate = currentEvent.timeOfEvent;
