@@ -16,4 +16,6 @@
 @property (strong, nonatomic) NSString *eventName;
 @property (strong, nonatomic) NSDate *timeOfEvent;
 
+-(void) fetchEvents;
+
 @end

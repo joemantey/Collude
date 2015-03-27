@@ -13,6 +13,7 @@
 #import "Event.h"
 #import "EventIcon.h"
 #import "EventIconCollectionViewCell.h"
+#import "EventTableViewController.h"
 
 @interface NewEventTableViewController ()
 
@@ -85,14 +86,19 @@
     [newEvent.Attendees addObject:PFUser.currentUser];
     //  newEvent.location = SOMETHING HERE
     
+    
     [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [self dismissViewControllerAnimated:YES completion:^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"fetchEventsNotification" object:nil userInfo:nil];
+            }];
+            
             NSLog(@"Save Success");
         } else {
             NSLog(@"%@",error.description);
         }
     }];
+    
 }
 
 - (IBAction)fourSquareSearch:(id)sender {

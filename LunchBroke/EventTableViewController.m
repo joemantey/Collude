@@ -32,6 +32,7 @@
     [self fetchEventData];
     [self.tableView reloadData];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchEvents) name:@"fetchEventsNotification" object:nil];
     
     
     
@@ -45,6 +46,10 @@
     signUpViewController.delegate = self;
     logInViewController.signUpController = signUpViewController;
     }
+}
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 // Sent to the delegate when a PFUser is logged in.
@@ -159,7 +164,7 @@
 }
 
 - (IBAction)pullToRefresh:(id)sender {
-    [self fetchEventData];
+    [self fetchEvents];
     [sender endRefreshing];
 }
 
