@@ -115,7 +115,7 @@
 //    self.selectedObjectID = [myObject objectId];
     Event *currentEvent = self.eventsArray[indexPath.row];
     
-    //get the datexrxr
+    //get the name
     if (currentEvent.name) {
         cell.eventName.text = currentEvent.name;
     }
@@ -130,7 +130,10 @@
     }
     
     
-    //get the
+    //get the images
+    if (currentEvent.imageLabel) {
+        cell.eventIcon.image =  [UIImage imageNamed:currentEvent.imageLabel];
+    }
 
     return cell;
 }

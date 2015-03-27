@@ -133,8 +133,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="3" maxY="0.0"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="0.040000000000000001" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell opaque="NO" alpha="0.5" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="locationCell" rowHeight="100" id="clS-Fg-pL8" customClass="EventTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
