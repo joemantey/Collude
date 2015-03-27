@@ -129,13 +129,13 @@
     Event *currentEvent = self.eventsArray[indexPath.row];
     
     //get the name
-    if (currentEvent.name) {
-        cell.eventName.text = currentEvent.name;
+    if (currentEvent.eventName) {
+        cell.eventName.text = currentEvent.eventName;
     }
     
     //get the date
-    if (currentEvent.date) {
-        NSDate *curentEventDate = currentEvent.date;
+    if (currentEvent.timeOfEvent) {
+        NSDate *curentEventDate = currentEvent.timeOfEvent;
         NSString *dateString = [NSDateFormatter localizedStringFromDate:curentEventDate
                                                               dateStyle:NSDateFormatterShortStyle
                                                               timeStyle:NSDateFormatterFullStyle];
