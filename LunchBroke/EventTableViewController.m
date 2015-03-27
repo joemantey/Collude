@@ -28,8 +28,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setColors];
+    [self fetchEvents]; 
     [self fetchEventData];
     [self.tableView reloadData];
+    
+    
     
     
     
@@ -92,13 +95,13 @@
 //    [self.view.layer insertSublayer:gradient atIndex:0];
 }
 
-//-(void) fetchEvents {
-//    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
-//    [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        self.eventsArray = [NSMutableArray arrayWithArray:objects];
-//        [self.tableView reloadData];
-//    }];
-//}
+-(void) fetchEvents {
+    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
+    [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.eventsArray = [NSMutableArray arrayWithArray:objects];
+        [self.tableView reloadData];
+    }];
+}
 
 -(void) fetchEventData {
     PFQuery *query = [PFQuery queryWithClassName:@"Event"];
@@ -116,6 +119,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
    
     return [self.eventsArray count];
+    NSLog(@"%lu", (unsigned long)[self.eventsArray count ]);
 }
 
 //makes cells taller
@@ -135,7 +139,7 @@
     if (currentEvent.eventName) {
         cell.eventName.text = currentEvent.eventName;
     }
-    
+    NSLog(@"Tableview Delegate ran");
     //get the date
     if (currentEvent.timeOfEvent) {
         NSDate *curentEventDate = currentEvent.timeOfEvent;
