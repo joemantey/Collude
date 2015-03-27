@@ -15,6 +15,7 @@
 #import "EventDetailController.h"
 #import "EventIconCollectionViewCell.h"
 #import "EventIcon.h"
+#import "Event.h"
 
 @interface EventTableViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
@@ -112,8 +113,25 @@
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
 //    PFObject *myObject = [self.eventsArray objectAtIndex:indexPath.row];
 //    self.selectedObjectID = [myObject objectId];
-    Event *event = self.eventsArray[indexPath.row];
-    cell.event = event;
+    Event *currentEvent = self.eventsArray[indexPath.row];
+    
+    //get the datexrxr
+    if (currentEvent.name) {
+        cell.eventName.text = currentEvent.name;
+    }
+    
+    //get the date
+    if (currentEvent.date) {
+        NSDate *curentEventDate = currentEvent.date;
+        NSString *dateString = [NSDateFormatter localizedStringFromDate:curentEventDate
+                                                              dateStyle:NSDateFormatterShortStyle
+                                                              timeStyle:NSDateFormatterFullStyle];
+        cell.eventDate.text = [NSString stringWithFormat:@"%@", dateString];
+    }
+    
+    
+    //get the
+
     return cell;
 }
 
