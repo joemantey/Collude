@@ -12,6 +12,7 @@
 #import <UIColor+uiGradients.h>
 #import "EventTableViewCell.h"
 #import "LoginViewController.h"
+#import "SignUpViewController.h"
 #import "EventDetailController.h"
 #import "Event.h"
 #import "EventIconCollectionViewCell.h"
@@ -34,16 +35,18 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchEvents) name:@"fetchEventsNotification" object:nil];
     
-    
+
     
     
     if (![PFUser currentUser]) { // No user logged in
-    PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        
+    LoginViewController *logInViewController = [[LoginViewController alloc] init];
     logInViewController.delegate = self;
     [self presentViewController:logInViewController animated:YES completion:nil];
     
-    PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+    SignUpViewController *signUpViewController = [[SignUpViewController alloc] init];
     signUpViewController.delegate = self;
+    signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
     logInViewController.signUpController = signUpViewController;
     }
 }

@@ -610,7 +610,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="10634.jpg" width="490" height="280"/>
+        <image name="10634.jpg" width="374" height="117"/>
         <image name="Bar" width="100" height="100"/>
         <image name="Other.png" width="100" height="100"/>
         <image name="Unchecked.png" width="100" height="100"/>

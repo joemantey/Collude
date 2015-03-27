@@ -22,7 +22,7 @@
 		38CCAE021ABB38D80058125A /* Locations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADFD1ABB38D80058125A /* Locations.m */; };
 		38CCAE041ABB39050058125A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38CCAE031ABB39050058125A /* Main.storyboard */; };
 		3C2143FD1AC1EAE200C9A678 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */; };
-		3C2144001AC22CA700C9A678 /* signUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2143FF1AC22CA700C9A678 /* signUpViewController.m */; };
+		3C2144001AC22CA700C9A678 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2143FF1AC22CA700C9A678 /* SignUpViewController.m */; };
 		3C23828C1AC43FBE005F739E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C23828B1AC43FBE005F739E /* User.m */; };
 		3C4C1C061AC084E900361979 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C051AC084E900361979 /* MapKit.framework */; };
 		3C4C1C081AC084EF00361979 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C071AC084EF00361979 /* CoreLocation.framework */; };
@@ -70,8 +70,8 @@
 		38CCAE031ABB39050058125A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3C2143FB1AC1EAE200C9A678 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		3C2143FE1AC22CA700C9A678 /* signUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = signUpViewController.h; sourceTree = "<group>"; };
-		3C2143FF1AC22CA700C9A678 /* signUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = signUpViewController.m; sourceTree = "<group>"; };
+		3C2143FE1AC22CA700C9A678 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		3C2143FF1AC22CA700C9A678 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		3C23828A1AC43FBE005F739E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		3C23828B1AC43FBE005F739E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3C4C1C051AC084E900361979 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -153,8 +153,8 @@
 				38CCADF91ABB38D80058125A /* NewEventTableViewController.m */,
 				3C2143FB1AC1EAE200C9A678 /* LoginViewController.h */,
 				3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */,
-				3C2143FE1AC22CA700C9A678 /* signUpViewController.h */,
-				3C2143FF1AC22CA700C9A678 /* signUpViewController.m */,
+				3C2143FE1AC22CA700C9A678 /* SignUpViewController.h */,
+				3C2143FF1AC22CA700C9A678 /* SignUpViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -379,7 +379,7 @@
 				3833267F1AC48FE60014EC86 /* EventIconCollectionViewCell.m in Sources */,
 				3CC467DA1AC0BEEC005075E8 /* fourSquare.m in Sources */,
 				38CCADD11ABB36A40058125A /* main.m in Sources */,
-				3C2144001AC22CA700C9A678 /* signUpViewController.m in Sources */,
+				3C2144001AC22CA700C9A678 /* SignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
