@@ -6,11 +6,24 @@
 //  Copyright (c) 2015 Joseph Smalls-Mantey. All rights reserved.
 //
 
-#import "signUpViewController.h"
+#import "SignUpViewController.h"
 #import <Parse/Parse.h>
+#import <UIColor+uiGradients.h>
 
-@implementation signUpViewController
 
+@implementation SignUpViewController
+
+-(void)viewDidLoad{
+    
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.signUpView.bounds;
+    gradient.startPoint = CGPointZero;
+    gradient.endPoint = CGPointMake(0, 1);
+    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_facebookMessengerStartColor] CGColor], (id)[[UIColor uig_facebookMessengerEndColor]CGColor], nil];
+    
+    [self.signUpView.layer insertSublayer:gradient atIndex:0];
+}
 // Sent to the PFSignUpViewControllere whether the sign up request should be submitted to the server.
 - (BOOL)signUpViewController:(PFSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info {
     BOOL informationComplete = YES;

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <ParseUI.h>
 
-@interface signUpViewController : PFSignUpViewController <PFSignUpViewControllerDelegate>
+@interface SignUpViewController : PFSignUpViewController
 
 
 @end
