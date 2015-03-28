@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) NSString *eventName;
 @property (strong, nonatomic) NSDate *timeOfEvent;
+@property (nonatomic) NSUInteger numberOfEventAttendees;
 
 -(void) fetchEvents;
 

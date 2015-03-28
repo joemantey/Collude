@@ -30,6 +30,7 @@
     [self setColors];
     [self fetchEvents]; 
     [self fetchEventData];
+    [self fetchEventAttendees];
     [self.tableView reloadData];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchEvents) name:@"fetchEventsNotification" object:nil];
@@ -108,9 +109,7 @@
 #pragma mark - Table view delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-   
     return [self.eventsArray count];
-    NSLog(@"%lu", (unsigned long)[self.eventsArray count ]);
 }
 
 //makes cells taller

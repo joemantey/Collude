@@ -247,7 +247,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="0.029999999999999999" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="eventAttendeeCount" destination="vOf-1c-D3e" id="frD-CP-bkP"/>
                                     <outlet property="eventDate" destination="d05-Gy-sOR" id="PK3-1b-Ejx"/>
@@ -292,6 +292,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo6-ZF-sIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2063" y="467"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kOy-XX-OVW">
+            <objects>
+                <viewController id="NvR-yZ-hkI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nOF-A3-O3l"/>
+                        <viewControllerLayoutGuide type="bottom" id="2yt-3n-yX2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pPR-ya-FPM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8h-Ct-mwU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="2qj-D6-bLh"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I8h-Ct-mwU" firstAttribute="top" secondItem="nOF-A3-O3l" secondAttribute="bottom" id="J2V-74-K7y"/>
+                            <constraint firstItem="I8h-Ct-mwU" firstAttribute="leading" secondItem="pPR-ya-FPM" secondAttribute="leadingMargin" constant="10" id="Mcw-Tz-Mov"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I8h-Ct-mwU" secondAttribute="trailing" constant="14" id="R0X-IM-M6a"/>
+                            <constraint firstAttribute="centerX" secondItem="I8h-Ct-mwU" secondAttribute="centerX" constant="-26" id="c4D-V9-bIa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yhu-R4-b1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3596" y="-215"/>
         </scene>
         <!--New Event Table View Controller-->
         <scene sceneID="gZf-z2-sZJ">
@@ -352,6 +384,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="fourSquareSearch:" destination="yAl-eb-v5B" eventType="touchUpInside" id="IZV-Mm-NSa"/>
+                                                        <segue destination="NvR-yZ-hkI" kind="showDetail" id="tJS-Qu-uTt"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
