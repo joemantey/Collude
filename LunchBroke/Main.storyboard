@@ -108,13 +108,6 @@
                                 <action selector="dismissTapped:" destination="oVT-n3-LyI" id="3VX-Hp-CCG"/>
                             </connections>
                         </barButtonItem>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Event Details" textAlignment="center" minimumFontSize="17" id="tzB-cn-tTG">
-                            <rect key="frame" x="180" y="7" width="240" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
                     </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="og0-MS-D6F" id="6DO-Ma-Nzn"/>
