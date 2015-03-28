@@ -140,7 +140,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
+    
+    UIView *separator = [[UIView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1.0, cell.contentView.frame.size.width, 1)];
+    separator.backgroundColor = [UIColor whiteColor];
+    [cell.contentView addSubview:separator];
     
     Event *currentEvent = self.eventsArray[indexPath.row];
     
