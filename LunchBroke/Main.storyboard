@@ -122,14 +122,14 @@
         <scene sceneID="PZU-JC-lNQ">
             <objects>
                 <tableViewController id="8HW-5v-KwZ" customClass="EventTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FrA-vE-MFj">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" id="FrA-vE-MFj">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96566480398178101" green="0.98174625635147095" blue="0.99977767467498779" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="0.029999999999999999" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="3" maxY="0.0"/>
-                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.97338110208511353" green="0.9909815788269043" blue="0.99993222951889038" alpha="0.029999999999999999" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="locationCell" rowHeight="100" id="clS-Fg-pL8" customClass="EventTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -247,7 +247,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94354540109634399" green="0.97088074684143066" blue="0.99985319375991821" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="eventAttendeeCount" destination="vOf-1c-D3e" id="frD-CP-bkP"/>
                                     <outlet property="eventDate" destination="d05-Gy-sOR" id="PK3-1b-Ejx"/>
