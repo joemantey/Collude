@@ -1,5 +1,5 @@
 //
-//  signUpViewController.h
+//  LoginViewController.h
 //  LunchBroke
 //
 //  Created by Ian Smith on 3/24/15.
@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 #import <ParseUI.h>
 
-@interface SignUpViewController : PFSignUpViewController
-
-
+@interface MyLoginViewController : PFLogInViewController 
 @end

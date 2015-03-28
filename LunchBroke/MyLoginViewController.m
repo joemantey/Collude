@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Joseph Smalls-Mantey. All rights reserved.
 //
 
-#import "LoginViewController.h"
-#import "SignUpViewController.h"
+#import "MyLoginViewController.h"
+#import "MySignUpViewController.h"
 #import "EventTableViewController.h"
 #import <Parse/Parse.h>
 #import <QuartzCore/QuartzCore.h>
 #import <UIColor+uiGradients.h>
 
-@implementation LoginViewController
+@implementation MyLoginViewController
 
 
 -(void)viewWillAppear:(BOOL)animated {

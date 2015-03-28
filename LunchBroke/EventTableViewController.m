@@ -11,15 +11,14 @@
 #import "Locations.h"
 #import <UIColor+uiGradients.h>
 #import "EventTableViewCell.h"
-#import "LoginViewController.h"
-#import "SignUpViewController.h"
+#import "MyLoginViewController.h"
+#import "MySignUpViewController.h"
 #import "EventDetailController.h"
 #import "Event.h"
 #import "EventIconCollectionViewCell.h"
 #import "EventIcon.h"
 
-@interface EventTableViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
-
+@interface EventTableViewController () 
 - (IBAction)pullToRefresh:(id)sender;
 
 @end
@@ -40,20 +39,23 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchEvents) name:@"fetchEventsNotification" object:nil];
     
+    
  
     if (![PFUser currentUser]) { // No user logged in
         
-    LoginViewController *logInViewController = [[LoginViewController alloc] init];
+    MyLoginViewController *logInViewController = [[MyLoginViewController alloc] init];
     logInViewController.delegate = self;
 
     
     
-    SignUpViewController *signUpViewController = [[SignUpViewController alloc] init];
+    MySignUpViewController *signUpViewController = [[MySignUpViewController alloc] init];
     signUpViewController.delegate = self;
     signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsDismissButton;
     logInViewController.signUpController = signUpViewController;
         
-    [self presentViewController:logInViewController animated:YES completion:nil];
+        
+        
+    [self presentViewController:logInViewController animated:YES completion:NULL];
         
     }
 }
@@ -123,17 +125,8 @@
 // Sent to the delegate when the sign up screen is dismissed.
 - (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
     NSLog(@"User dismissed the signUpViewController");
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
