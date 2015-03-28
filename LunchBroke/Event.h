@@ -22,4 +22,6 @@
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSString *imageLabel;
 
+@property (nonatomic) NSInteger attendeeCount;
+
 @end

@@ -14,6 +14,7 @@
 
 @property (nonatomic) PFUser *currentUser;
 @property (nonatomic) BOOL isSelected;
+@property (nonatomic)  NSInteger attendeeCount;
 
 @end
 
@@ -26,22 +27,6 @@
     
     // Configure the view for the selected state
 }
-
-- (void) fetchEventAttendees {
-    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
-        Event *eventStuff = (Event *)eventData;
-        
-        PFQuery *attendeeQuery = [eventStuff.Attendees query];
-        
-        [attendeeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            self.numberOfEventAttendees = [objects count];
-            
-            [self.tableView reloadData];
-        }];
-    }];
-}
-
 
 //method for toggling voting buttons which overrides the setter
 -(void)setIsSelected:(BOOL)isSelected{

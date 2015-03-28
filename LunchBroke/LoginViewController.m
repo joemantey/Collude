@@ -36,8 +36,6 @@
     gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_facebookMessengerStartColor] CGColor], (id)[[UIColor uig_facebookMessengerEndColor]CGColor], nil];
     
     [self.logInView.layer insertSublayer:gradient atIndex:0];
-
-    
 }
     
 

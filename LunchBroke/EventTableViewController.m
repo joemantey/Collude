@@ -22,6 +22,8 @@
 
 - (IBAction)pullToRefresh:(id)sender;
 
+@property (nonatomic) NSInteger attendeeCount;
+
 @end
 
 @implementation EventTableViewController
@@ -30,8 +32,8 @@
     [super viewDidLoad];
     [self setColors];
     [self fetchEvents]; 
-    [self fetchEventData];
-    [self fetchEventAttendees];
+//    [self fetchEventData];
+//    [self fetchEventAttendees];
     [self.tableView reloadData];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchEvents) name:@"fetchEventsNotification" object:nil];
@@ -99,16 +101,32 @@
     }];
 }
 
--(void) fetchEventData {
-    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
-        Event *eventStuff = (Event *)eventData;
-        self.eventName = eventStuff.eventName;
-        self.timeOfEvent = eventStuff.timeOfEvent;
-        [self.tableView reloadData];
-        NSLog(@"Name: %@ Time of Event: %@", self.eventName, self.timeOfEvent);
-    }];
-}
+//- (void) fetchEventAttendees {
+//    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *eventData, NSError *error) {
+//        Event *eventStuff = (Event *)eventData;
+//        
+//        PFQuery *attendeeQuery = [eventStuff.Attendees query];
+//        
+//        [attendeeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//            self.attendeeCount = [objects count];
+//            NSLog(@"Count: %ld", self.attendeeCount);
+//            [self.tableView reloadData];
+//        }];
+//    }];
+//    [self.tableView reloadData];
+//}
+
+//-(void) fetchEventData {
+//    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+//    [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
+//        Event *eventStuff = (Event *)eventData;
+//        self.eventName = eventStuff.eventName;
+//        self.timeOfEvent = eventStuff.timeOfEvent;
+//        [self.tableView reloadData];
+//        NSLog(@"Name: %@ Time of Event: %@", self.eventName, self.timeOfEvent);
+//    }];
+//}
 
 #pragma mark - Table view delegate
 
@@ -143,6 +161,15 @@
     //get the images
     if (currentEvent.imageLabel) {
         cell.eventIcon.image =  [UIImage imageNamed:currentEvent.imageLabel];
+    }
+    
+    //get attendee count
+    if (self.attendeeCount) {
+        currentEvent.attendeeCount = self.attendeeCount;
+        cell.eventAttendeeCount.text = [NSString stringWithFormat:@"Count %ld", (long)self.attendeeCount];
+        NSLog(@"%ld", (long)self.attendeeCount);
+        NSLog(@"%ld", (long)currentEvent.attendeeCount);
+        NSLog(@"%@", cell.eventAttendeeCount.text);
     }
 
     return cell;
