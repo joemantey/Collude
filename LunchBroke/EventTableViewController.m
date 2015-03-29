@@ -44,7 +44,7 @@
     
     SignUpViewController *signUpViewController = [[SignUpViewController alloc] init];
     signUpViewController.delegate = self;
-    signUpViewController.fields = PFSignUpFieldsDefault git com  ;
+    signUpViewController.fields = PFSignUpFieldsDefault;
     logInViewController.signUpController = signUpViewController;
     }
 }
@@ -145,7 +145,11 @@
     if (currentEvent.imageLabel) {
         cell.eventIcon.image =  [UIImage imageNamed:currentEvent.imageLabel];
     }
-
+    
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1.0, cell.contentView.frame.size.width, 1)];
+    
+    lineView.backgroundColor = [UIColor whiteColor];
+    [cell.contentView addSubview:lineView];
     return cell;
 }
 
