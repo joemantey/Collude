@@ -18,16 +18,12 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:NO];
-    
-    
-    
-    //Backround color
    }
 
 -(void)viewWillLayoutSubviews
 {
     [self.logInView setBackgroundColor:[UIColor clearColor]];
-    NSLog(@"View Will Appear");
+    NSLog(@"View Will Appear layout subiews");
     
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.logInView.bounds;
@@ -36,6 +32,10 @@
     gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_facebookMessengerStartColor] CGColor], (id)[[UIColor uig_facebookMessengerEndColor]CGColor], nil];
     
     [self.logInView.layer insertSublayer:gradient atIndex:0];
+    
+    self.logInView.dismissButton.hidden = YES;
+    self.logInView.logo.hidden = YES;
+    self.logInView.logInButton.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.4];
 
     
 }
@@ -46,36 +46,8 @@
     [super viewDidAppear:animated];
     NSLog(@"View did appear");
 
- 
-    //Gradient Layer
-   
-
-    
-//    if (![PFUser currentUser]) { // No user logged in
-//        // Create the log in view controller
-//        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
-//        [logInViewController setDelegate:self]; // Set ourselves as the delegate
-//        
-//        // Create the sign up view controller
-//        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
-//        [signUpViewController setDelegate:signUpViewController]; // Set ourselves as the delegate
-//        
-//        // Assign our sign up controller to be displayed from the login controller
-//        [logInViewController setSignUpController:signUpViewController];
-//        
-//        // Present the log in view controller
-//        [self presentViewController:logInViewController animated:YES completion:NULL];
-//        
-//    }
-    
-    
-    //Time for some formatting... YEEAAHHHHH
-    
-    
-   
 }
 
-
-
+    
 
 @end

@@ -18,7 +18,7 @@
 #import "EventIconCollectionViewCell.h"
 #import "EventIcon.h"
 
-@interface EventTableViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface EventTableViewController () 
 
 - (IBAction)pullToRefresh:(id)sender;
 

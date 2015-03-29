@@ -6,8 +6,11 @@
 //  Copyright (c) 2015 Joseph Smalls-Mantey. All rights reserved.
 //
 
+#import "LoginViewController.h"
 #import "SignUpViewController.h"
+#import "EventTableViewController.h"
 #import <Parse/Parse.h>
+#import <QuartzCore/QuartzCore.h>
 #import <UIColor+uiGradients.h>
 
 
@@ -15,53 +18,34 @@
 
 -(void)viewDidLoad{
     
+    [super viewDidLoad];
     
+}
+
+-(void)viewDidLayoutSubviews{
+    
+    NSLog(@"View Will Appear layout subiews xxxxx");
+    
+    [self.signUpView setBackgroundColor:[UIColor clearColor]];
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.signUpView.bounds;
     gradient.startPoint = CGPointZero;
     gradient.endPoint = CGPointMake(0, 1);
-    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_facebookMessengerStartColor] CGColor], (id)[[UIColor uig_facebookMessengerEndColor]CGColor], nil];
+    gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_mangoPulpEndColor] CGColor], (id)[[UIColor uig_mangoPulpStartColor]CGColor], nil];
     
     [self.signUpView.layer insertSublayer:gradient atIndex:0];
-}
-// Sent to the PFSignUpViewControllere whether the sign up request should be submitted to the server.
-- (BOOL)signUpViewController:(PFSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info {
-    BOOL informationComplete = YES;
     
-    // loop through all of the submitted data
-    for (id key in info) {
-        NSString *field = [info objectForKey:key];
-        if (!field || field.length == 0) { // check completion
-            informationComplete = NO;
-            break;
-        }
-    }
+    self.signUpView.logo.hidden = YES;
+    NSLog(@"View Will Appear layout xxxx");
     
-    // Display an alert if a field wasn't completed
-    if (!informationComplete) {
-        [[[UIAlertView alloc] initWithTitle:@"Missing Information"
-                                    message:@"Make sure you fill out all of the information!"
-                                   delegate:nil
-                          cancelButtonTitle:@"ok"
-                          otherButtonTitles:nil] show];
-    }
-    
-    return informationComplete;
 }
 
-// Sent to the delegate when a PFUser is signed up.
-- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
-    [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"View did appear sign up");
+    
+    
 }
 
-// Sent to the delegate when the sign up attempt fails.
-- (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error {
-    NSLog(@"Failed to sign up...");
-}
-
-// Sent to the delegate when the sign up screen is dismissed.
-- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
-    NSLog(@"User dismissed the signUpViewController");
-}
 
 @end

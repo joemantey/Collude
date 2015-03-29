@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import "LoginViewController.h"
+#import "SignUpViewController.h"
 
-@interface EventTableViewController : UITableViewController <UITextFieldDelegate, UITableViewDataSource>
+@interface EventTableViewController : UITableViewController <UITextFieldDelegate, UITableViewDataSource, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @property (strong, nonatomic) NSMutableArray *eventsArray;
 @property (strong, nonatomic) NSString *selectedObjectID;
