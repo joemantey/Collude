@@ -114,7 +114,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
    
     return [self.eventsArray count];
-    NSLog(@"%lu", (unsigned long)[self.eventsArray count ]);
 }
 
 //makes cells taller
@@ -146,7 +145,8 @@
         cell.eventIcon.image =  [UIImage imageNamed:currentEvent.imageLabel];
     }
     
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1.0, cell.contentView.frame.size.width, 1)];
+    //add line for the bottom of the tableview cell
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1.0, cell.contentView.frame.size.width, 2)];
     
     lineView.backgroundColor = [UIColor whiteColor];
     [cell.contentView addSubview:lineView];
