@@ -44,7 +44,7 @@
     
     SignUpViewController *signUpViewController = [[SignUpViewController alloc] init];
     signUpViewController.delegate = self;
-    signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
+    signUpViewController.fields = PFSignUpFieldsDefault git com  ;
     logInViewController.signUpController = signUpViewController;
     }
 }
