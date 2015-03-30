@@ -35,6 +35,8 @@
     
     [self.signUpView.layer insertSublayer:gradient atIndex:0];
     
+//    [self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nomofomo.png"]]];
+
     self.signUpView.logo.hidden = YES;
     self.signUpView.signUpButton.backgroundColor= [UIColor redColor];
     NSLog(@"View Will Appear layout xxxx");

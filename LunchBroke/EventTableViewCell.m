@@ -14,11 +14,42 @@
 
 @property (nonatomic) PFUser *currentUser;
 @property (nonatomic) BOOL isSelected;
+@property (weak, nonatomic) IBOutlet UITextField *voteTextField;
+@property (weak, nonatomic) IBOutlet UITextField *eventName;
+@property (weak, nonatomic) IBOutlet UITextField *eventAttendeeCount;
+@property (weak, nonatomic) IBOutlet UITextField *eventDate;
+@property (weak, nonatomic) IBOutlet UIImageView *eventIcon;
+@property (weak, nonatomic) IBOutlet UIButton *voteButton;
 
 @end
 
 @implementation EventTableViewCell
 
+- (void)updateUI{
+    if (self.event.eventName) {
+        self.eventName.text = self.event.eventName;
+    }
+    
+    if (self.event.timeOfEvent) {
+        //create a string from the event property's time
+        NSDate *curentEventDate = self.event.timeOfEvent;
+        
+        //create a date string using the nsdate formatter using the event property's time
+        NSString *dateString = [NSDateFormatter localizedStringFromDate:curentEventDate
+                                                              dateStyle:NSDateFormatterShortStyle
+                                                              timeStyle:NSDateFormatterShortStyle];
+        
+        //set the the display text to the date string from the date picker
+        self.eventDate.text = [NSString stringWithFormat:@"%@", dateString];
+        
+    }
+    
+    if (self.event.imageLabel) {
+        self.eventIcon.image = [UIImage imageNamed:self.event.imageLabel];
+    }
+
+    
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
