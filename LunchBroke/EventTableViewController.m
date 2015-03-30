@@ -156,6 +156,19 @@
 }
 
 
+- (void) fetchEventAttendees{
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
+        Event *eventStuff = (Event *)eventData;
+        
+        PFQuery *attendeeQuery = [eventStuff.Attendees query];
+        
+        [attendeeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            eventStuff.attendeesArray =[NSMutableArray arrayWithArray:objects];
+            [self.tableView reloadData];
+        }];
+    }];
+}
 
 
 @end

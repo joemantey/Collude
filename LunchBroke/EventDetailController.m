@@ -17,8 +17,7 @@
 @interface EventDetailController ()
 - (IBAction)dismissTapped:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UITextField *nameField;
-@property (weak, nonatomic) IBOutlet UIDatePicker *datePickerOutlet;
+
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

@@ -21,5 +21,6 @@
 @property (strong, nonatomic) NSString *objectId;
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSString *imageLabel;
+@property (strong, nonatomic) NSMutableArray *attendeesArray;
 
 @end

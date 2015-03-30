@@ -18,6 +18,7 @@
 @dynamic objectId;
 @dynamic imageName;
 @dynamic imageLabel;
+@synthesize attendeesArray;
 
 
 

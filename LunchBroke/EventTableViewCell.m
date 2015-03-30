@@ -9,6 +9,8 @@
 
 #import "EventTableViewCell.h"
 #import "Event.h"
+#import <Parse/Parse.h>
+#import "EventTableViewController.h"
 
 @interface EventTableViewCell ()
 
@@ -20,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *eventDate;
 @property (weak, nonatomic) IBOutlet UIImageView *eventIcon;
 @property (weak, nonatomic) IBOutlet UIButton *voteButton;
+@property (strong, nonatomic) NSString *eventObjectId;
 
 @end
 
@@ -46,6 +49,8 @@
     if (self.event.imageLabel) {
         self.eventIcon.image = [UIImage imageNamed:self.event.imageLabel];
     }
+    
+    
     
     
 }
@@ -93,5 +98,19 @@
 
 - (IBAction)voteButtonTapped:(id)sender {
     self.isSelected = !self.isSelected;
+}
+
+- (void) fetchEventAttendees{
+    self.eventObjectId = [self.event objectId];
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query getObjectInBackgroundWithId:self.eventObjectId block:^(PFObject *eventData, NSError *error) {
+        Event *eventStuff = (Event *)eventData;
+        
+        PFQuery *attendeeQuery = [eventStuff.Attendees query];
+        
+        [attendeeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            eventStuff.attendeesArray =[NSMutableArray arrayWithArray:objects];
+        }];
+    }];
 }
 @end
