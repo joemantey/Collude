@@ -40,10 +40,9 @@ NSString *const fourSquareV = @"20150101";
 
 
 
--(void)getNearby4SquareLocations:(void (^)(NSArray *))completionBlock
-{
+-(void)getNearby4SquareLocationsWithQuery:(NSString *)query completionBlock:(void (^)(NSArray *))completionBlock {
     [self findingLocation];
-    NSString *foursquareAPIURLConcatenated = [NSString stringWithFormat:@"%@?ll=%@,%@&client_id=%@&client_secret=%@&v=20150101&m=foursquare", fourSquareAPIURL, self.lat, self.lng, fourSquareClientID, fourSquareClientSecret];
+    NSString *foursquareAPIURLConcatenated = [NSString stringWithFormat:@"%@?ll=%@,%@&client_id=%@&client_secret=%@&v=20150101&m=foursquare&query=%@", fourSquareAPIURL, self.lat, self.lng, fourSquareClientID, fourSquareClientSecret, query];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     [manager GET:foursquareAPIURLConcatenated parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
