@@ -38,6 +38,8 @@ NSString *const fourSquareV = @"20150101";
     self.lat = [NSString stringWithFormat:@"%f",self.userCoordinate.latitude];
 }
 
+
+
 -(void)getNearby4SquareLocations:(void (^)(NSArray *))completionBlock
 {
     [self findingLocation];
