@@ -35,6 +35,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchEvents) name:@"fetchEventsNotification" object:nil];
     
+    
  
     if (![PFUser currentUser]) { // No user logged in
         

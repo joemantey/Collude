@@ -51,7 +51,7 @@
         self.eventIcon.image = [UIImage imageNamed:self.event.imageLabel];
     }
     
-    [self fetchEventAttendees];
+  [self fetchEventAttendees];
     self.eventAttendeeCount.text = [NSString stringWithFormat:@"Attendees: %lu", (unsigned long)[self.eventAttendeesArray count]];
     
     
@@ -118,7 +118,7 @@
             self.eventAttendeesArray =[NSMutableArray arrayWithArray:objects];
         
             [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTable" object:nil userInfo:nil];
-            [self updateUI];
+//            [self updateUI];
         }];
     }];
 }
