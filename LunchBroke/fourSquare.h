@@ -16,6 +16,6 @@
 @property (nonatomic, strong) NSString *lat;
 @property (nonatomic, strong) NSString *lng;
 
--(void)getNearby4SquareLocations:(void (^)(NSArray *))completionBlock;
+-(void)getNearby4SquareLocationsWithQuery:(NSString *)query completionBlock:(void (^)(NSArray *))completionBlock;
 
 @end

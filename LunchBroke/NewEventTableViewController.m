@@ -32,7 +32,6 @@
 @property (strong, nonatomic) EventIcon *eventIcon;
 
 
-
 - (IBAction)cancelButton:(id)sender;
 - (IBAction)pickerDateChanged:(id)sender;
 - (IBAction)savebutton:(id)sender;
@@ -55,10 +54,6 @@
     
     [self setupTimeDisplay];
     
-    self.latAndLong = [[fourSquare alloc] init];
-    [self.latAndLong getNearby4SquareLocations:^(NSArray *array) {}];
-    
-
     //collectionView Delegate
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -101,8 +96,7 @@
 }
 
 - (IBAction)fourSquareSearch:(id)sender {
-    NSLog(@"%@", self.latAndLong.lat);
-    
+    self.query = self.eventLocationField.text;
 }
 
 

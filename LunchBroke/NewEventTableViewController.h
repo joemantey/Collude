@@ -11,4 +11,7 @@
 @interface NewEventTableViewController : UITableViewController <UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 
+@property (strong, nonatomic) NSString *query;
+
+
 @end
