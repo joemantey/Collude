@@ -153,6 +153,7 @@
         UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
         EventDetailController *controller = (EventDetailController *)navController.topViewController;
         controller.selectedObjectID = [myObject objectId];
+        controller.event = [self.eventsArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
 }
 

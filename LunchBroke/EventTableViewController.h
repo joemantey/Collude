@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
+#import "Event.h"
 
 @interface EventTableViewController : UITableViewController <UITextFieldDelegate, UITableViewDataSource, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
