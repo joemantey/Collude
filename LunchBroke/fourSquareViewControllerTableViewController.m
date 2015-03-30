@@ -25,6 +25,10 @@
     fourSquare *fourSq = [[fourSquare alloc] init];
     NewEventTableViewController *eventQuery = [[NewEventTableViewController alloc] init];
     
+
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+
     
     [fourSq getNearby4SquareLocationsWithQuery:eventQuery.query completionBlock:^(NSArray *results) {
         self.fourSquareResults = [results mutableCopy];

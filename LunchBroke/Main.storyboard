@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hl7-MU-nlR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hl7-MU-nlR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -22,15 +22,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="og0-MS-D6F" userLabel="ContainerView">
                                 <rect key="frame" x="60" y="75" width="480" height="450"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCM-e2-a2e">
-                                        <rect key="frame" x="0.0" y="113" width="480" height="113"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCM-e2-a2e">
+                                        <rect key="frame" x="0.0" y="105" width="480" height="113"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VzP-2r-NV0">
-                                        <rect key="frame" x="0.0" y="225" width="480" height="225"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VzP-2r-NV0">
+                                        <rect key="frame" x="0.0" y="313" width="480" height="135"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -53,34 +53,52 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10634.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gbD-MG-UpD">
-                                        <rect key="frame" x="0.0" y="0.0" width="480" height="113"/>
-                                    </imageView>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-s2-d0g">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="480" id="Eq0-cB-HX8"/>
+                                            <constraint firstAttribute="height" constant="128" id="VY1-sk-gRM"/>
+                                            <constraint firstAttribute="height" constant="128" id="nAg-li-XGf"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Eq0-cB-HX8"/>
+                                                <exclude reference="VY1-sk-gRM"/>
+                                                <exclude reference="nAg-li-XGf"/>
+                                            </mask>
+                                        </variation>
+                                    </mapView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="gbD-MG-UpD" firstAttribute="bottom" secondItem="BCM-e2-a2e" secondAttribute="top" id="7DY-p0-DMp"/>
                                     <constraint firstItem="BCM-e2-a2e" firstAttribute="width" secondItem="og0-MS-D6F" secondAttribute="width" id="NBn-OK-JAz"/>
                                     <constraint firstItem="VzP-2r-NV0" firstAttribute="centerX" secondItem="og0-MS-D6F" secondAttribute="centerX" id="Suf-OV-B8V"/>
-                                    <constraint firstItem="gbD-MG-UpD" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.25" id="Tdc-Cr-sQv"/>
-                                    <constraint firstItem="gbD-MG-UpD" firstAttribute="centerX" secondItem="og0-MS-D6F" secondAttribute="centerX" id="YPQ-Dv-diM"/>
+                                    <constraint firstAttribute="trailing" secondItem="1zh-s2-d0g" secondAttribute="trailing" id="UcH-FC-puR"/>
                                     <constraint firstItem="VzP-2r-NV0" firstAttribute="top" secondItem="BCM-e2-a2e" secondAttribute="bottom" id="cUQ-qI-Sb0"/>
                                     <constraint firstItem="BCM-e2-a2e" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.25" id="dcc-IX-kct"/>
                                     <constraint firstItem="BCM-e2-a2e" firstAttribute="centerX" secondItem="og0-MS-D6F" secondAttribute="centerX" id="dk7-Fi-yRs"/>
-                                    <constraint firstItem="gbD-MG-UpD" firstAttribute="width" secondItem="og0-MS-D6F" secondAttribute="width" id="nnm-v8-Txz"/>
+                                    <constraint firstItem="1zh-s2-d0g" firstAttribute="top" secondItem="og0-MS-D6F" secondAttribute="top" constant="20" symbolic="YES" id="iSs-gf-USr"/>
+                                    <constraint firstItem="BCM-e2-a2e" firstAttribute="top" secondItem="1zh-s2-d0g" secondAttribute="bottom" id="mPs-RQ-4Sq"/>
+                                    <constraint firstItem="1zh-s2-d0g" firstAttribute="leading" secondItem="og0-MS-D6F" secondAttribute="leading" id="osJ-mz-bjK"/>
+                                    <constraint firstItem="1zh-s2-d0g" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.4" id="r7h-aY-oIR"/>
                                     <constraint firstItem="VzP-2r-NV0" firstAttribute="width" secondItem="og0-MS-D6F" secondAttribute="width" id="v1r-RG-iQf"/>
-                                    <constraint firstItem="VzP-2r-NV0" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.5" id="x1Y-Nu-10c"/>
-                                    <constraint firstItem="gbD-MG-UpD" firstAttribute="top" secondItem="og0-MS-D6F" secondAttribute="top" id="z2u-dz-Q5t"/>
+                                    <constraint firstItem="VzP-2r-NV0" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.3" id="x1Y-Nu-10c"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="og0-MS-D6F" firstAttribute="width" secondItem="fBU-9n-Byz" secondAttribute="width" multiplier="0.8" id="1Rr-DM-Cnq"/>
+                            <constraint firstAttribute="height" secondItem="1zh-s2-d0g" secondAttribute="height" id="MhF-na-SjW"/>
                             <constraint firstAttribute="centerX" secondItem="og0-MS-D6F" secondAttribute="centerX" id="NWU-9Y-ehY"/>
                             <constraint firstItem="og0-MS-D6F" firstAttribute="height" secondItem="fBU-9n-Byz" secondAttribute="height" multiplier="0.75" id="SYQ-Iy-Tcn"/>
                             <constraint firstAttribute="centerY" secondItem="og0-MS-D6F" secondAttribute="centerY" id="vH3-o3-HMZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MhF-na-SjW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="vBz-AU-w5x">
                         <nil key="title"/>
@@ -93,12 +111,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="containerView" destination="og0-MS-D6F" id="6DO-Ma-Nzn"/>
+                        <outlet property="mapView" destination="1zh-s2-d0g" id="Sr7-9f-zKh"/>
                         <outlet property="tableView" destination="VzP-2r-NV0" id="gfh-rF-IQ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcV-tm-V8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2865" y="1203"/>
+            <point key="canvasLocation" x="4437" y="1183"/>
         </scene>
         <!--NoMoFoMo-->
         <scene sceneID="PZU-JC-lNQ">
@@ -460,7 +479,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51I-7x-qvB" id="hEd-1e-rfL">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4xw-LE-T71">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4xw-LE-T71">
                                                     <rect key="frame" x="8" y="8" width="584" height="281"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JFt-Tc-NPe">
@@ -594,7 +613,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4h-dR-xX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2053" y="1203"/>
+            <point key="canvasLocation" x="3719" y="1183"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Dvh-YU-CQy">
@@ -635,7 +654,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="10634.jpg" width="374" height="117"/>
         <image name="Bar" width="100" height="100"/>
         <image name="Other.png" width="100" height="100"/>
         <image name="Unchecked.png" width="100" height="100"/>
