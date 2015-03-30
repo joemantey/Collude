@@ -41,13 +41,12 @@
         
         //set the the display text to the date string from the date picker
         self.eventDate.text = [NSString stringWithFormat:@"%@", dateString];
-        
     }
     
     if (self.event.imageLabel) {
         self.eventIcon.image = [UIImage imageNamed:self.event.imageLabel];
     }
-
+    
     
 }
 
@@ -66,10 +65,10 @@
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         PFRelation *relation = [self.event relationForKey:@"Attendees"];
-        if (objects.count > 0) {
-            [relation removeObject:PFUser.currentUser];
-        } else {
+        if (_isSelected) {
             [relation addObject:PFUser.currentUser];
+        } else {
+            [relation removeObject:PFUser.currentUser];
         }
         [self.event saveInBackground];
     }];
@@ -84,7 +83,7 @@
         [self.voteButton setImage:[UIImage imageNamed:@"GreenCheck.png"] forState:UIControlStateNormal];
         self.voteTextField.text = @"";
         
-    
+        
     }else{
         [self.voteButton setImage:[UIImage imageNamed:@"Unchecked.png"] forState:UIControlStateNormal];
         self.voteTextField.text = @"rsvp";
