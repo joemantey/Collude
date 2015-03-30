@@ -13,13 +13,16 @@
 #import "EventTableViewController.h"
 #import "Event.h"
 #import "User.h"
+#import <MapKit/MapKit.h> 
 
-@interface EventDetailController ()
+
+@interface EventDetailController () <MKMapViewDelegate>;
 - (IBAction)dismissTapped:(id)sender;
 
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (strong, nonatomic) NSMutableArray *eventDataArray;
 @property (strong, nonatomic) NSString *eventObjectId;
@@ -32,9 +35,27 @@
 
 @implementation EventDetailController
 
+#define METERS_PER_MILE 1609.344
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"ObjectID: %@", self.selectedObjectID);
+    
+    self.mapView.delegate = self;
+    
+    //dummy data
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = 39.281516;
+    zoomLocation.longitude= -76.580806;
+    //make annotiation
+    //add annotation to map
+    //set the center of the map to the annotation
+    //se the region of the map
+    // 2
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+    
+    // 3
+    [_mapView setRegion:viewRegion animated:YES];
     
     [self fetchEventData];
     [self fetchEventAttendees];
@@ -54,8 +75,19 @@
     
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
+    
+    
+    
 }
 
+
+
+-(void)setupMap{
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+//    annotation.coordinate = item.placemark.coordinate;
+    
+    [self.mapView addAnnotation: annotation];
+}
 
 -(void)setUpGradient{
     
