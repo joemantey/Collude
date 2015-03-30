@@ -114,7 +114,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"attendeeCell" forIndexPath:indexPath];
     User *user = self.attendees[indexPath.row];
-    cell.textLabel.text = user.email;
+    cell.textLabel.text = user.username;
     return cell;
 }
 

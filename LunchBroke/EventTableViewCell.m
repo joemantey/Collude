@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *eventIcon;
 @property (weak, nonatomic) IBOutlet UIButton *voteButton;
 @property (strong, nonatomic) NSString *eventObjectId;
+@property (strong, nonatomic) NSArray *eventAttendeesArray;
 
 @end
 
@@ -50,7 +51,8 @@
         self.eventIcon.image = [UIImage imageNamed:self.event.imageLabel];
     }
     
-    
+    [self fetchEventAttendees];
+    self.eventAttendeeCount.text = [NSString stringWithFormat:@"Attendees: %lu", (unsigned long)[self.eventAttendeesArray count]];
     
     
 }
@@ -108,8 +110,15 @@
         
         PFQuery *attendeeQuery = [eventStuff.Attendees query];
         
+//        [attendeeQuery countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
+//            NSLog(@"%d",number);
+//        }];
+        
         [attendeeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            eventStuff.attendeesArray =[NSMutableArray arrayWithArray:objects];
+            self.eventAttendeesArray =[NSMutableArray arrayWithArray:objects];
+        
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTable" object:nil userInfo:nil];
+            [self updateUI];
         }];
     }];
 }

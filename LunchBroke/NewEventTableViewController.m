@@ -45,7 +45,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Event *newEvent = [[Event alloc] init];
     [self iconArray];
 
     //set the color of the bar
