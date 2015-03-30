@@ -132,24 +132,7 @@
     
     [cell updateUI];
     
-    
-    //get the name
-//    if (currentEvent.eventName) {
-//        cell.eventName.text = currentEvent.eventName;
-//    }
-//    NSLog(@"Tableview Delegate ran");
-    //get the date
-//    if (currentEvent.timeOfEvent) {
-//        NSDate *curentEventDate = currentEvent.timeOfEvent;
-//        NSString *dateString = [NSDateFormatter localizedStringFromDate:curentEventDate
-//                                                              dateStyle:NSDateFormatterShortStyle
-//                                                              timeStyle:NSDateFormatterShortStyle];
-//        cell.eventDate.text = [NSString stringWithFormat:@"%@", dateString];
-//    }
-    
-    //get the images
 
-    //add line for the bottom of the tableview cell
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1.0, cell.contentView.frame.size.width, 2)];
     
     lineView.backgroundColor = [UIColor whiteColor];
