@@ -26,6 +26,7 @@
 		3C23828C1AC43FBE005F739E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C23828B1AC43FBE005F739E /* User.m */; };
 		3C4C1C061AC084E900361979 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C051AC084E900361979 /* MapKit.framework */; };
 		3C4C1C081AC084EF00361979 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C071AC084EF00361979 /* CoreLocation.framework */; };
+		3C89EEC11AC8A78000EA9BCD /* ParseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C89EEC01AC8A78000EA9BCD /* ParseAPI.m */; };
 		3CC467DA1AC0BEEC005075E8 /* fourSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC467D91AC0BEEC005075E8 /* fourSquare.m */; };
 		9DBCDDF2D6641C7068ED3470 /* libPods-LunchBroke.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,8 @@
 		3C23828B1AC43FBE005F739E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3C4C1C051AC084E900361979 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3C4C1C071AC084EF00361979 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3C89EEBF1AC8A78000EA9BCD /* ParseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseAPI.h; sourceTree = "<group>"; };
+		3C89EEC01AC8A78000EA9BCD /* ParseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseAPI.m; sourceTree = "<group>"; };
 		3CC467D81AC0BEEC005075E8 /* fourSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fourSquare.h; sourceTree = "<group>"; };
 		3CC467D91AC0BEEC005075E8 /* fourSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fourSquare.m; sourceTree = "<group>"; };
 		64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LunchBroke.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +130,8 @@
 				38267A9A1ABB6B6A00D1EC59 /* Event.m */,
 				3C23828A1AC43FBE005F739E /* User.h */,
 				3C23828B1AC43FBE005F739E /* User.m */,
+				3C89EEBF1AC8A78000EA9BCD /* ParseAPI.h */,
+				3C89EEC01AC8A78000EA9BCD /* ParseAPI.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				38CCAE021ABB38D80058125A /* Locations.m in Sources */,
 				38CCADFE1ABB38D80058125A /* EventTableViewController.m in Sources */,
 				38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */,
+				3C89EEC11AC8A78000EA9BCD /* ParseAPI.m in Sources */,
 				3C23828C1AC43FBE005F739E /* User.m in Sources */,
 				383326941AC49A7D0014EC86 /* EventIcon.m in Sources */,
 				3833267F1AC48FE60014EC86 /* EventIconCollectionViewCell.m in Sources */,

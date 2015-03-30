@@ -17,10 +17,14 @@
 #import "Event.h"
 #import "EventIconCollectionViewCell.h"
 #import "EventIcon.h"
+#import "ParseAPI.h"
 
 @interface EventTableViewController () 
 
 - (IBAction)pullToRefresh:(id)sender;
+
+@property (strong, nonatomic) NSNumber *numberOfAttendees;
+@property (strong, nonatomic) NSMutableArray *attendeesPerEvent;
 
 @end
 
@@ -29,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setColors];
+    
     [self fetchEvents]; 
     [self fetchEventData];
     [self.tableView reloadData];
@@ -94,6 +99,9 @@
     PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
     [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.eventsArray = [NSMutableArray arrayWithArray:objects];
+        for (NSInteger i = 0; i < [self.eventsArray count]; i++) {
+            [self.attendeesPerEvent addObject:[self.eventsArray[i] objectId]];
+        }
         [self.tableView reloadData];
     }];
 }
@@ -103,7 +111,7 @@
     [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
         Event *eventStuff = (Event *)eventData;
         self.eventName = eventStuff.eventName;
-        self.timeOfEvent = eventStuff.timeOfEvent;
+        self.timeOfEvent = eventStuff.timeOfEvent;  
         [self.tableView reloadData];
         NSLog(@"Name: %@ Time of Event: %@", self.eventName, self.timeOfEvent);
     }];
@@ -165,7 +173,6 @@
         UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
         EventDetailController *controller = (EventDetailController *)navController.topViewController;
         controller.selectedObjectID = [myObject objectId];
-    }
 }
 
 

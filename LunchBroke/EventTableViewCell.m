@@ -13,12 +13,62 @@
 @interface EventTableViewCell ()
 
 @property (nonatomic) PFUser *currentUser;
+- (IBAction)voteButtonTapped:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *voteTextField;
+@property (weak, nonatomic) IBOutlet UITextField *eventName;
+@property (weak, nonatomic) IBOutlet UITextField *eventAttendeeCount;
+@property (weak, nonatomic) IBOutlet UITextField *eventDate;
+@property (weak, nonatomic) IBOutlet UIImageView *eventIcon;
+@property (weak, nonatomic) IBOutlet UIButton *voteButton;
+
+
 @property (nonatomic) BOOL isSelected;
+
+
 
 @end
 
 @implementation EventTableViewCell
 
++ (UITableViewCell) updateUI {
+    EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell" forIndexPath:indexPath];
+    
+    Event *currentEvent = self.eventsArray[indexPath.row];
+    
+    //get the name
+    if (currentEvent.eventName) {
+        cell.eventName.text = currentEvent.eventName;
+    }
+    NSLog(@"Tableview Delegate ran");
+    //get the date
+    if (currentEvent.timeOfEvent) {
+        NSDate *curentEventDate = currentEvent.timeOfEvent;
+        NSString *dateString = [NSDateFormatter localizedStringFromDate:curentEventDate
+                                                              dateStyle:NSDateFormatterShortStyle
+                                                              timeStyle:NSDateFormatterShortStyle];
+        cell.eventDate.text = [NSString stringWithFormat:@"%@", dateString];
+    }
+    
+    //get the images
+    if (currentEvent.imageLabel) {
+        cell.eventIcon.image =  [UIImage imageNamed:currentEvent.imageLabel];
+    }
+    
+    //add line for the bottom of the tableview cell
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1.0, cell.contentView.frame.size.width, 2)];
+    
+    lineView.backgroundColor = [UIColor whiteColor];
+    [cell.contentView addSubview:lineView];
+    return cell;
+}
+
+- (void)setEvent:(Event *)event
+{
+    _event = event;
+    
+    //[self updateUI];
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
