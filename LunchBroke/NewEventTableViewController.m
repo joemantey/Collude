@@ -45,7 +45,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Event *newEvent = [[Event alloc] init];
     [self iconArray];
 
     //set the color of the bar
@@ -102,6 +101,7 @@
 }
 
 - (IBAction)fourSquareSearch:(id)sender {
+    NSLog(@"%@", self.latAndLong.lat);
     
 }
 
@@ -111,7 +111,6 @@
 
 - (void)setupTimeDisplay
 {
-    
     //The date formatter will inform which time options are shown on the date picker
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setDateStyle:NSDateFormatterLongStyle];
