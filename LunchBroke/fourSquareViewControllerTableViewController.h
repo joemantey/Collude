@@ -10,6 +10,6 @@
 
 @interface fourSquareViewControllerTableViewController : UITableViewController
 
-
+@property (strong, nonatomic) NSString *fourSqQuery;
 
 @end

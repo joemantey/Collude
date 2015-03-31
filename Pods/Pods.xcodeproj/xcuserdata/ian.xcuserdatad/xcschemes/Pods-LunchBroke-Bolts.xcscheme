@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "39683A82C7537F2D8B58DFF3"
+               BlueprintIdentifier = "E3D82D237FEAD817125D661D"
                BuildableName = "libPods-LunchBroke-Bolts.a"
                BlueprintName = "Pods-LunchBroke-Bolts"
                ReferencedContainer = "container:Pods.xcodeproj">

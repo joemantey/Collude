@@ -17,6 +17,7 @@
 #import "fourSquareViewControllerTableViewController.h"
 #import <UINavigationBar+Addition.h>
 
+
 @interface NewEventTableViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
@@ -101,10 +102,16 @@
 }
 
 - (IBAction)fourSquareSearch:(id)sender {
-    fourSquare *fourSq = [[fourSquare alloc] initWithQuery:self.eventLocationField.text];
-    [fourSq getNearby4SquareLocationsWithCompletionBlock:^(id results) {
-        [self.tableView reloadData];
-    }];
+//    fourSquare *fourSq = [[fourSquare alloc] initWithQuery:self.eventLocationField.text];
+//    [fourSq getNearby4SquareLocationsWithCompletionBlock:^(id results) {
+//        NSLog(@"1. Results: %@", results);
+//    }];
+    
+    fourSquareViewControllerTableViewController *FSTVC = [[fourSquareViewControllerTableViewController alloc] init];
+    
+    FSTVC.fourSqQuery = self.eventLocationField.text;
+    
+    [self presentViewController:FSTVC animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source

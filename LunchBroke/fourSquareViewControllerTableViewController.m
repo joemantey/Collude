@@ -14,13 +14,13 @@
 #import <AFNetworking/AFNetworking.h>
 
 @interface fourSquareViewControllerTableViewController ()
+
 - (IBAction)cancelTapped:(id)sender;
 
 @property (strong, nonatomic) NSArray *fourSquareResults;
-@property(nonatomic)CLLocationManager *locationManager;
+@property (nonatomic)CLLocationManager *locationManager;
 @property (nonatomic, strong) NSString *lat;
 @property (nonatomic, strong) NSString *lng;
-
 
 @end
 
@@ -30,6 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"fourSquareCell"];
+
+    
     _locationManager =[[CLLocationManager alloc]init];
     [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager startUpdatingLocation];
@@ -37,9 +40,9 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    fourSquare *fourSq = [[fourSquare alloc] init];
+    fourSquare *fourSq = [[fourSquare alloc] initWithQuery:self.fourSqQuery];
     [fourSq getNearby4SquareLocationsWithCompletionBlock:^(id results) {
-        (NSDictionary *)results;
+        (NSDictionary *) results;
         self.fourSquareResults = [NSArray arrayWithArray:results[@"response"][@"groups"][0][@"items"]];
         [self.tableView reloadData];
     }];
@@ -71,6 +74,8 @@
     
     return cell;
 }
+
+-
 
 
 /*

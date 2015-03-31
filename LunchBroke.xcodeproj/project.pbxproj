@@ -31,6 +31,7 @@
 		3C4C1C061AC084E900361979 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C051AC084E900361979 /* MapKit.framework */; };
 		3C4C1C081AC084EF00361979 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C071AC084EF00361979 /* CoreLocation.framework */; };
 		3CC467DA1AC0BEEC005075E8 /* fourSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC467D91AC0BEEC005075E8 /* fourSquare.m */; };
+		3CD2B2091ACAFB22000A6B1C /* FourSquareTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2B2081ACAFB22000A6B1C /* FourSquareTableViewCell.m */; };
 		3CE5040B1AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5040A1AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.m */; };
 		3CE5040E1ACA06AF00DFA4E1 /* fourSquareVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5040D1ACA06AF00DFA4E1 /* fourSquareVenue.m */; };
 		9DBCDDF2D6641C7068ED3470 /* libPods-LunchBroke.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */; };
@@ -88,6 +89,8 @@
 		3C4C1C071AC084EF00361979 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3CC467D81AC0BEEC005075E8 /* fourSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fourSquare.h; sourceTree = "<group>"; };
 		3CC467D91AC0BEEC005075E8 /* fourSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fourSquare.m; sourceTree = "<group>"; };
+		3CD2B2071ACAFB22000A6B1C /* FourSquareTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquareTableViewCell.h; sourceTree = "<group>"; };
+		3CD2B2081ACAFB22000A6B1C /* FourSquareTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareTableViewCell.m; sourceTree = "<group>"; };
 		3CE504091AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fourSquareViewControllerTableViewController.h; sourceTree = "<group>"; };
 		3CE5040A1AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fourSquareViewControllerTableViewController.m; sourceTree = "<group>"; };
 		3CE5040C1ACA06AF00DFA4E1 /* fourSquareVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fourSquareVenue.h; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 				3833267E1AC48FE60014EC86 /* EventIconCollectionViewCell.m */,
 				38267A931ABB699500D1EC59 /* EventTableViewCell.h */,
 				38267A941ABB699500D1EC59 /* EventTableViewCell.m */,
+				3CD2B2071ACAFB22000A6B1C /* FourSquareTableViewCell.h */,
+				3CD2B2081ACAFB22000A6B1C /* FourSquareTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -399,6 +404,7 @@
 				38267A951ABB699500D1EC59 /* EventTableViewCell.m in Sources */,
 				3CE5040B1AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.m in Sources */,
 				38CCAE021ABB38D80058125A /* Locations.m in Sources */,
+				3CD2B2091ACAFB22000A6B1C /* FourSquareTableViewCell.m in Sources */,
 				38CCADFE1ABB38D80058125A /* EventTableViewController.m in Sources */,
 				38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */,
 				3C23828C1AC43FBE005F739E /* User.m in Sources */,

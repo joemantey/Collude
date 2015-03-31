@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-LunchBroke-UINavigationBar+Addition.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LunchBroke.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,47 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04264032CBA84B6428D68F21</key>
+		<key>10A278CDB8B3ADB2ABC4B43F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>07C6007D6693A33217C80B4E</key>
+		<key>3BDADD0EEA72634CB21CD931</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>39683A82C7537F2D8B58DFF3</key>
+		<key>3FF88F69E50DBFFFE0E47FF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>40FBDD106861B1A13F4044EB</key>
+		<key>4ACA5E4CA5087F11941F9C66</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>42715AC4DF403063A9602A52</key>
+		<key>5C6D7D90F54C08F6CF7370CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A030C312276F2E2942A20D6B</key>
+		<key>627ADCECF3DB46A1A8B313FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5BE8305450D503F9E1DA99A</key>
+		<key>91A3490C8DC36C2E7B80E6C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BBDFC47E563BF3391F9FE46E</key>
+		<key>E3D82D237FEAD817125D661D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB6675D9DCED5024B2D9796F</key>
+		<key>FB188975B9A5DD8867548D88</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCF16ED55A30BF372E1B35A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
