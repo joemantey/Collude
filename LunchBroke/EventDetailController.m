@@ -67,7 +67,7 @@
     // 3
     [_mapView setRegion:viewRegion animated:YES];
     
-    [self fetchEventData];
+//    [self fetchEventData];
     [self fetchEventAttendees];
     [self.tableView reloadData];
     
