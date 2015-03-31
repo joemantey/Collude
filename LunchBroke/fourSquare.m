@@ -48,7 +48,7 @@ NSString *const fourSquareV = @"20150101";
     self.lat = [NSString stringWithFormat:@"%f",self.userCoordinate.latitude];
 }
 
--(void)getNearby4SquareLocationsWithCompletionBlock:(void (^)(NSArray *))completionBlock {
+-(void)getNearby4SquareLocationsWithCompletionBlock:(void (^)(id ))completionBlock {
     [self findingLocation];
     
     NSString *foursquareAPIURLConcatenated = [NSString stringWithFormat:@"%@?ll=%@,%@&client_id=%@&client_secret=%@&v=20150101&m=foursquare&query=%@", fourSquareAPIURL, self.lat, self.lng, fourSquareClientID, fourSquareClientSecret, self.query];

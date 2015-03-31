@@ -38,8 +38,9 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     fourSquare *fourSq = [[fourSquare alloc] init];
-    [fourSq getNearby4SquareLocationsWithCompletionBlock:^(NSArray *results) {
-        self.fourSquareResults = [NSArray arrayWithArray:results];
+    [fourSq getNearby4SquareLocationsWithCompletionBlock:^(id results) {
+        (NSDictionary *)results;
+        self.fourSquareResults = [NSArray arrayWithArray:results[@"response"][@"groups"][0][@"items"]];
         [self.tableView reloadData];
     }];
 }
@@ -66,7 +67,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fourSquareCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.fourSquareResults;
+    cell.textLabel.text = self.fourSquareResults[indexPath.row][@"venue"][@"name"];
     
     return cell;
 }

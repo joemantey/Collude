@@ -96,15 +96,10 @@
 
 - (IBAction)fourSquareSearch:(id)sender {
     fourSquare *fourSq = [[fourSquare alloc] initWithQuery:self.eventLocationField.text];
-    [fourSq getNearby4SquareLocationsWithCompletionBlock:^(NSArray *result) {
-        NSLog(@"%@", result);
+    [fourSq getNearby4SquareLocationsWithCompletionBlock:^(id results) {
+        [self.tableView reloadData];
     }];
 }
-
--(void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
 
 #pragma mark - Table view data source
 
