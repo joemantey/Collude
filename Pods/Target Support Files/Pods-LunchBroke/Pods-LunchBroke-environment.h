@@ -102,3 +102,9 @@
 #define COCOAPODS_VERSION_MINOR_UIImage_BlurredFrame 0
 #define COCOAPODS_VERSION_PATCH_UIImage_BlurredFrame 4
 
+// UINavigationBar+Addition
+#define COCOAPODS_POD_AVAILABLE_UINavigationBar_Addition
+#define COCOAPODS_VERSION_MAJOR_UINavigationBar_Addition 1
+#define COCOAPODS_VERSION_MINOR_UINavigationBar_Addition 0
+#define COCOAPODS_VERSION_PATCH_UINavigationBar_Addition 0
+

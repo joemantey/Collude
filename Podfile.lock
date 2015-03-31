@@ -37,23 +37,26 @@ PODS:
     - ParseFacebookUtils (~> 1.6)
   - UIColor+uiGradients (0.1.0)
   - UIImage+BlurredFrame (0.0.4)
+  - UINavigationBar+Addition (1.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - BlurryModalSegue
   - ParseUI
   - UIColor+uiGradients
+  - UINavigationBar+Addition
 
 SPEC CHECKSUMS:
-  AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
-  BlurryModalSegue: 5775612771e4b6a162043a535d157b9503b0031e
-  Bolts: dd9fb8433d67f5acc3b6b4d1379bbc5513d716c1
-  Facebook-iOS-SDK: 89dae50e975ebab95a01b0962d27277fc9cf08fd
-  MZAppearance: c88502c0c2345120630c34e09d5ff09e2969ba30
+  AFNetworking: 10e85a00bb0f475124e4ff2677bf15693b2c1523
+  BlurryModalSegue: 35cdad34eba31228e4d84073033a9ea7d6537aa4
+  Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
+  Facebook-iOS-SDK: d5a50d5ac6b1da948fd98c18dd8beeae854f2b3e
+  MZAppearance: c2937318234fd782e900fb178942278881ac5490
   Parse: a21db4037d70a68a4ec64ecc0f327ed475cc14f8
   ParseFacebookUtils: 4d58d0f133fa1af52f3a8d5caaa55cd435118ac4
-  ParseUI: f7e9e0e5271f75a19c74ead8fdd95d36160e268e
-  UIColor+uiGradients: a914f0f8554a99883e7dabc41b9acf448b7b0e78
-  UIImage+BlurredFrame: 0c38f5760d72125c47d16001a88faaac573bd35d
+  ParseUI: e38bbbc3784006ab4ffaa6ef292e23c5fa9119dc
+  UIColor+uiGradients: 0e540aa2d8c75254aaebb6c92f20c1aa43be5f05
+  UIImage+BlurredFrame: ad2f7195c6947ea3117c7d202f75a51958d5061a
+  UINavigationBar+Addition: c633d66af2245dfdc97a917c3b20a6db02089f2b
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.35.0

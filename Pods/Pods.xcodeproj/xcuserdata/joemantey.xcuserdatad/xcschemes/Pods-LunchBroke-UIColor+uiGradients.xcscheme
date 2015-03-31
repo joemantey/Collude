@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "997492168F9B2776FB4E9F0D"
+               BlueprintIdentifier = "0C9B2232883561CA8062C866"
                BuildableName = "libPods-LunchBroke-UIColor+uiGradients.a"
                BlueprintName = "Pods-LunchBroke-UIColor+uiGradients"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -17,6 +17,7 @@
 #import "Event.h"
 #import "EventIconCollectionViewCell.h"
 #import "EventIcon.h"
+#import <UINavigationBar+Addition.h>
 
 @interface EventTableViewController () 
 
@@ -33,6 +34,9 @@
     [self fetchEventData];
     [self.tableView reloadData];
     
+    UINavigationBar *navigationBar = self.navigationController.navigationBar;
+    [navigationBar hideBottomHairline];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchEvents) name:@"fetchEventsNotification" object:nil];
     
     
@@ -48,6 +52,12 @@
     signUpViewController.fields = PFSignUpFieldsDefault;
     logInViewController.signUpController = signUpViewController;
     }
+    
+    UIButton *logoView = [[UIButton alloc] initWithFrame:CGRectMake(0,0,10,50)];
+    [logoView setBackgroundImage:[UIImage imageNamed:@"Raccoon.png"] forState:UIControlStateNormal];
+    [logoView setUserInteractionEnabled:NO];
+    
+    self.navigationItem.titleView = logoView;
 }
 
 

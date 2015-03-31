@@ -177,7 +177,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"attendeeCell" forIndexPath:indexPath];
     User *user = self.attendees[indexPath.row];
     cell.textLabel.text = user.username;
-    
+
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1.0, cell.contentView.frame.size.width, 2)];
     
     lineView.backgroundColor = [UIColor whiteColor];

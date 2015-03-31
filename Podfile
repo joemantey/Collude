@@ -7,6 +7,8 @@ pod 'UIColor+uiGradients'
 pod 'BlurryModalSegue'
 pod 'ParseUI'
 pod "AFNetworking", "~> 2.0"
+pod "UINavigationBar+Addition"
+
 
 end
 

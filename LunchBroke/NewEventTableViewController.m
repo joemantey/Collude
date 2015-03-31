@@ -57,6 +57,8 @@
     //collectionView Delegate
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    
+    
 }
 
 
@@ -172,6 +174,8 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+
+
 //when this method is called...
 - (void)showDatePickerCell {
     
@@ -246,6 +250,10 @@
     
     self.eventIcon = currentIcon;
     
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1.0, cell.contentView.frame.size.width, 2)];
+    
+    lineView.backgroundColor = [UIColor whiteColor];
+    [cell.contentView addSubview:lineView];
     
     return cell;
 }
