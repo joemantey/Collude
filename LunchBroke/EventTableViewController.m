@@ -50,9 +50,22 @@
     }
 }
 
+
+//Obligatory dealloc for the NSNotificationCenter
 -(void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
+
+-(void)setColors {
+    //set the color of the bar
+    [self.navigationController.navigationBar setBarTintColor:[UIColor uig_kyotoEndColor]];
+    
+    //turn the bar opaque
+    [self.navigationController.navigationBar setTranslucent:NO];
+}
+
+#pragma mark The delegate for the login and signUp view controllers
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
@@ -83,15 +96,10 @@
     NSLog(@"User dismissed the signUpViewController");
 }
 
--(void)setColors {
-    //set the color of the bar
-    [self.navigationController.navigationBar setBarTintColor:[UIColor uig_kyotoEndColor]];
-    
-    //turn the bar opaque
-    [self.navigationController.navigationBar setTranslucent:NO];
-}
 
--(void) fetchEvents {
+
+#pragma mark - Parse methods
+-(void)fetchEvents{
     PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
     [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.eventsArray = [NSMutableArray arrayWithArray:objects];
@@ -141,18 +149,35 @@
     return cell;
 }
 
+
+#pragma mark - Other functionality
+
 - (IBAction)pullToRefresh:(id)sender {
     [self fetchEvents];
     [sender endRefreshing];
 }
 
+#pragma mark - Data methods
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"tableViewToDetailSegue"]){
+        
+        //set a PFObject equal to the selected event...
         PFObject *myObject = [self.eventsArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        //...and get it's object ID
         self.selectedObjectID = [myObject objectId];
+        
+        //PREPARE FOR SEGUE!
+        //Create a nav controller and cast it as a destinationViewController
         UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        
+        //create an instance of the event detail controller and cast is at a topViewController
         EventDetailController *controller = (EventDetailController *)navController.topViewController;
+        
+        //pass the controller data to the object ID property
         controller.selectedObjectID = [myObject objectId];
+        
+        //pass along the event to the event property on the destination VC while you are at it
         controller.event = [self.eventsArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hl7-MU-nlR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A379b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hl7-MU-nlR">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -22,39 +22,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="og0-MS-D6F" userLabel="ContainerView">
                                 <rect key="frame" x="60" y="75" width="480" height="450"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCM-e2-a2e">
-                                        <rect key="frame" x="0.0" y="105" width="480" height="113"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCM-e2-a2e">
+                                        <rect key="frame" x="0.0" y="253" width="480" height="90"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </string>
+                                        <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VzP-2r-NV0">
-                                        <rect key="frame" x="0.0" y="303" width="480" height="135"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="attendeeCell" textLabel="9pl-cP-khf" rowHeight="32" style="IBUITableViewCellStyleDefault" id="T83-l6-Q6y">
-                                                <rect key="frame" x="0.0" y="0.0" width="474" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T83-l6-Q6y" id="jDR-uz-27m">
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Attendee Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9pl-cP-khf">
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-s2-d0g">
-                                        <rect key="frame" x="0.0" y="0.0" width="480" height="128"/>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-s2-d0g">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="248"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="480" id="Eq0-cB-HX8"/>
                                             <constraint firstAttribute="height" constant="128" id="VY1-sk-gRM"/>
@@ -68,21 +45,45 @@
                                             </mask>
                                         </variation>
                                     </mapView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VzP-2r-NV0">
+                                        <rect key="frame" x="-8" y="330" width="480" height="112"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="separatorColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="attendeeCell" textLabel="9pl-cP-khf" rowHeight="32" style="IBUITableViewCellStyleDefault" id="T83-l6-Q6y">
+                                                <rect key="frame" x="0.0" y="0.0" width="474" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T83-l6-Q6y" id="jDR-uz-27m">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Attendee Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9pl-cP-khf">
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="BCM-e2-a2e" firstAttribute="width" secondItem="og0-MS-D6F" secondAttribute="width" id="NBn-OK-JAz"/>
                                     <constraint firstItem="VzP-2r-NV0" firstAttribute="centerX" secondItem="og0-MS-D6F" secondAttribute="centerX" id="Suf-OV-B8V"/>
                                     <constraint firstAttribute="trailing" secondItem="1zh-s2-d0g" secondAttribute="trailing" id="UcH-FC-puR"/>
                                     <constraint firstItem="VzP-2r-NV0" firstAttribute="top" secondItem="BCM-e2-a2e" secondAttribute="bottom" id="cUQ-qI-Sb0"/>
-                                    <constraint firstItem="BCM-e2-a2e" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.25" id="dcc-IX-kct"/>
+                                    <constraint firstItem="BCM-e2-a2e" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.2" id="dcc-IX-kct"/>
                                     <constraint firstItem="BCM-e2-a2e" firstAttribute="centerX" secondItem="og0-MS-D6F" secondAttribute="centerX" id="dk7-Fi-yRs"/>
                                     <constraint firstItem="1zh-s2-d0g" firstAttribute="top" secondItem="og0-MS-D6F" secondAttribute="top" id="iSs-gf-USr"/>
-                                    <constraint firstItem="BCM-e2-a2e" firstAttribute="top" secondItem="1zh-s2-d0g" secondAttribute="bottom" constant="10" id="mPs-RQ-4Sq"/>
+                                    <constraint firstItem="BCM-e2-a2e" firstAttribute="top" secondItem="1zh-s2-d0g" secondAttribute="bottom" constant="5" id="mPs-RQ-4Sq"/>
                                     <constraint firstItem="1zh-s2-d0g" firstAttribute="leading" secondItem="og0-MS-D6F" secondAttribute="leading" id="osJ-mz-bjK"/>
-                                    <constraint firstItem="1zh-s2-d0g" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.4" id="r7h-aY-oIR"/>
+                                    <constraint firstItem="1zh-s2-d0g" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.55" id="r7h-aY-oIR"/>
                                     <constraint firstItem="VzP-2r-NV0" firstAttribute="width" secondItem="og0-MS-D6F" secondAttribute="width" id="v1r-RG-iQf"/>
-                                    <constraint firstItem="VzP-2r-NV0" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.3" id="x1Y-Nu-10c"/>
+                                    <constraint firstItem="VzP-2r-NV0" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.25" id="x1Y-Nu-10c"/>
                                 </constraints>
                             </view>
                         </subviews>

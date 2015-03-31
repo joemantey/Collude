@@ -98,9 +98,7 @@
 
 -(void)setUpTextBox{
     
-    EventTableViewController *eventTVC = [[EventTableViewController alloc]init];
-
-    self.textView.text = self.event.eventName;
+    self.textView.text = [NSString stringWithFormat:@" Name:  %@\n Location:  %@\n Foursquare Rating:  %@\n Attendee count:  %@", self.event.eventName, self.event.eventName, self.event.eventName, self.event.eventName];
 }
 
 -(void)setUpGradient{
@@ -151,6 +149,8 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark TableView Delegate
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 30;
 }
@@ -161,11 +161,27 @@
     return [self.attendees count];
 }
 
+/*
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 25;
+}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectionHeaderName = @"Attendees";
+    return sectionHeaderName;
+}
+*/
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"attendeeCell" forIndexPath:indexPath];
     User *user = self.attendees[indexPath.row];
     cell.textLabel.text = user.username;
+    
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1.0, cell.contentView.frame.size.width, 2)];
+    
+    lineView.backgroundColor = [UIColor whiteColor];
+    [cell.contentView addSubview:lineView];
     return cell;
 }
 
