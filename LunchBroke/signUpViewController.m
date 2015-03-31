@@ -20,7 +20,12 @@
     
     [super viewDidLoad];
     
+    self.signUpView.dismissButton.hidden = NO;
+    [self.signUpView.logo setFrame:CGRectMake(0, 0, 10, 150)];
+    [self.signUpView setLogo:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"colludeFull"]]];
+    
 }
+
 
 -(void)viewDidLayoutSubviews{
     
@@ -37,7 +42,6 @@
     
 //    [self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nomofomo.png"]]];
 
-    self.signUpView.logo.hidden = YES;
     self.signUpView.signUpButton.backgroundColor= [UIColor redColor];
     NSLog(@"View Will Appear layout xxxx");
     

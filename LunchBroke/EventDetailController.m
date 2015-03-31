@@ -15,6 +15,7 @@
 #import "User.h"
 #import <MapKit/MapKit.h> 
 #import <UINavigationBar+Addition.h>
+#import "Locations.h"
 
 
 @interface EventDetailController () <MKMapViewDelegate>;
@@ -30,6 +31,7 @@
 @property (strong, nonatomic) NSString *eventObjectId;
 
 @property (strong, nonatomic) NSString *eventName;
+@property (strong, nonatomic) NSString *attendeeCountString;
 @property (strong, nonatomic) NSDate *timeOfEvent;
 @property (strong, nonatomic) NSArray *attendees;
 
@@ -101,7 +103,12 @@
 
 -(void)setUpTextBox{
     
-    self.textView.text = [NSString stringWithFormat:@" Name:  %@\n Location:  %@\n Foursquare Rating:  %@\n Attendee count:  %@", self.event.eventName, self.event.eventName, self.event.eventName, self.event.eventName];
+    NSString *dateString = [NSDateFormatter localizedStringFromDate:self.event.timeOfEvent
+                                                          dateStyle:NSDateFormatterShortStyle
+                                                          timeStyle:NSDateFormatterShortStyle];
+
+    
+    self.textView.text = [NSString stringWithFormat:@" Name:  %@\n Date & Time:  %@\n Location:  %@\n Foursquare Rating:  N/A", self.event.eventName, dateString, self.event.locationName];
 }
 
 -(void)setUpGradient{
@@ -162,6 +169,7 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.attendees count];
+ 
 }
 
 /*

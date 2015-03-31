@@ -16,6 +16,7 @@
 #import "EventTableViewController.h"
 #import "fourSquareViewControllerTableViewController.h"
 #import <UINavigationBar+Addition.h>
+#import "Locations.h"
 
 
 @interface NewEventTableViewController ()
@@ -77,9 +78,11 @@
     NSDate *choosenDate = [self.datePicker date];
     
     NSString *nameField = self.nameField.text;
+    
     Event *newEvent = [[Event alloc] init];
     newEvent.eventName = nameField;
     newEvent.timeOfEvent = choosenDate;
+    newEvent.locationName = self.eventLocationField.text;
     newEvent.manager = PFUser.currentUser;
     newEvent.imageLabel =  self.eventIcon.iconLabel;
     

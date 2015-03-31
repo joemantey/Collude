@@ -22,6 +22,8 @@
 @property (nonatomic, strong) NSString *lat;
 @property (nonatomic, strong) NSString *lng;
 
+
+
 @end
 
 @implementation fourSquareViewControllerTableViewController
@@ -71,6 +73,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fourSquareCell" forIndexPath:indexPath];
     
     cell.textLabel.text = self.fourSquareResults[indexPath.row][@"venue"][@"name"];
+
+    
     
     return cell;
 }
@@ -79,6 +83,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Row: %ld", (long)indexPath.row);
     NSLog(@"Venue: %@", self.fourSquareResults[indexPath.row][@"venue"][@"name"]);
+    
 }
 
 - (IBAction)cancelTapped:(id)sender {
