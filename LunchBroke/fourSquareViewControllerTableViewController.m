@@ -75,6 +75,7 @@
     return cell;
 }
 
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Row: %ld", (long)indexPath.row);
     NSLog(@"Venue: %@", self.fourSquareResults[indexPath.row][@"venue"][@"name"]);

@@ -51,7 +51,7 @@
     if (self.event.imageLabel) {
         self.eventIcon.image = [UIImage imageNamed:self.event.imageLabel];
     }
-    
+    [self isSelected];
 //  [self fetchEventAttendees];
 //    self.eventAttendeeCount.text = [NSString stringWithFormat:@"Attendees: %lu", (unsigned long)[self.eventAttendeesArray count]];
 //    

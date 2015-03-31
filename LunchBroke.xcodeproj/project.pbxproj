@@ -11,8 +11,8 @@
 		38267A9B1ABB6B6A00D1EC59 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 38267A9A1ABB6B6A00D1EC59 /* Event.m */; };
 		3833267F1AC48FE60014EC86 /* EventIconCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3833267E1AC48FE60014EC86 /* EventIconCollectionViewCell.m */; };
 		383326941AC49A7D0014EC86 /* EventIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 383326931AC49A7D0014EC86 /* EventIcon.m */; };
-		38C498061ACA640900B57B72 /* collude 3 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C498051ACA640900B57B72 /* collude 3 copy.png */; };
-		38C4980A1ACA665000B57B72 /* collude full small.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C498091ACA665000B57B72 /* collude full small.png */; };
+		38C498061ACA640900B57B72 /* colludeFullBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C498051ACA640900B57B72 /* colludeFullBig.png */; };
+		38C4980A1ACA665000B57B72 /* colludefullsmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C498091ACA665000B57B72 /* colludefullsmall.png */; };
 		38C4980C1ACA6E9100B57B72 /* Raccoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C4980B1ACA6E9100B57B72 /* Raccoon.png */; };
 		38CCADD11ABB36A40058125A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD01ABB36A40058125A /* main.m */; };
 		38CCADD41ABB36A40058125A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CCADD31ABB36A40058125A /* AppDelegate.m */; };
@@ -56,8 +56,8 @@
 		3833267E1AC48FE60014EC86 /* EventIconCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventIconCollectionViewCell.m; sourceTree = "<group>"; };
 		383326921AC49A7D0014EC86 /* EventIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventIcon.h; sourceTree = "<group>"; };
 		383326931AC49A7D0014EC86 /* EventIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventIcon.m; sourceTree = "<group>"; };
-		38C498051ACA640900B57B72 /* collude 3 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collude 3 copy.png"; sourceTree = "<group>"; };
-		38C498091ACA665000B57B72 /* collude full small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collude full small.png"; sourceTree = "<group>"; };
+		38C498051ACA640900B57B72 /* colludeFullBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colludeFullBig.png; sourceTree = "<group>"; };
+		38C498091ACA665000B57B72 /* colludefullsmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colludefullsmall.png; sourceTree = "<group>"; };
 		38C4980B1ACA6E9100B57B72 /* Raccoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Raccoon.png; sourceTree = "<group>"; };
 		38CCADCB1ABB36A40058125A /* LunchBroke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchBroke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CCADCF1ABB36A40058125A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -209,8 +209,8 @@
 				38CCADD21ABB36A40058125A /* AppDelegate.h */,
 				38CCADD31ABB36A40058125A /* AppDelegate.m */,
 				38CCADDB1ABB36A40058125A /* Images.xcassets */,
-				38C498091ACA665000B57B72 /* collude full small.png */,
-				38C498051ACA640900B57B72 /* collude 3 copy.png */,
+				38C498091ACA665000B57B72 /* colludefullsmall.png */,
+				38C498051ACA640900B57B72 /* colludeFullBig.png */,
 				38C4980B1ACA6E9100B57B72 /* Raccoon.png */,
 				38DF96E61AC8D14600AD579E /* nomofomo.png */,
 				38CCADDD1ABB36A40058125A /* LaunchScreen.xib */,
@@ -345,8 +345,8 @@
 				38DF96E71AC8D14600AD579E /* nomofomo.png in Resources */,
 				38CCADDF1ABB36A40058125A /* LaunchScreen.xib in Resources */,
 				38CCADDC1ABB36A40058125A /* Images.xcassets in Resources */,
-				38C4980A1ACA665000B57B72 /* collude full small.png in Resources */,
-				38C498061ACA640900B57B72 /* collude 3 copy.png in Resources */,
+				38C4980A1ACA665000B57B72 /* colludefullsmall.png in Resources */,
+				38C498061ACA640900B57B72 /* colludeFullBig.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
