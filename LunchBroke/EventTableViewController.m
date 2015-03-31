@@ -32,13 +32,13 @@
     [self setColors];
     [self fetchEvents]; 
     [self fetchEventData];
-    [self.tableView reloadData];
+    
     
     UINavigationBar *navigationBar = self.navigationController.navigationBar;
     [navigationBar hideBottomHairline];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchEvents) name:@"fetchEventsNotification" object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadDataMethod) name:@"reloadTable" object:nil];
     
  
     if (![PFUser currentUser]) { // No user logged in
@@ -58,9 +58,15 @@
     [logoView setUserInteractionEnabled:NO];
     
     self.navigationItem.titleView = logoView;
+    [self reloadDataMethod];
 }
 
 
+
+
+-(void)reloadDataMethod{
+    [self.tableView reloadData];
+}
 //Obligatory dealloc for the NSNotificationCenter
 -(void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -150,6 +156,7 @@
     cell.event = currentEvent;
     
     [cell updateUI];
+    [cell updateCount];
     
 
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1.0, cell.contentView.frame.size.width, 2)];

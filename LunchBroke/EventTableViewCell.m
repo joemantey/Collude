@@ -29,6 +29,7 @@
 
 @implementation EventTableViewCell
 
+
 - (void)updateUI{
     if (self.event.eventName) {
         self.eventName.text = self.event.eventName;
@@ -51,10 +52,15 @@
         self.eventIcon.image = [UIImage imageNamed:self.event.imageLabel];
     }
     
-  [self fetchEventAttendees];
+//  [self fetchEventAttendees];
+//    self.eventAttendeeCount.text = [NSString stringWithFormat:@"Attendees: %lu", (unsigned long)[self.eventAttendeesArray count]];
+//    
+    
+}
+
+-(void)updateCount{
+    [self fetchEventAttendees];
     self.eventAttendeeCount.text = [NSString stringWithFormat:@"Attendees: %lu", (unsigned long)[self.eventAttendeesArray count]];
-    
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -100,6 +106,8 @@
 
 - (IBAction)voteButtonTapped:(id)sender {
     self.isSelected = !self.isSelected;
+    [self updateCount];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTable" object:nil userInfo:nil];
 }
 
 - (void) fetchEventAttendees{
@@ -110,15 +118,11 @@
         
         PFQuery *attendeeQuery = [eventStuff.Attendees query];
         
-//        [attendeeQuery countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
-//            NSLog(@"%d",number);
-//        }];
-        
-        [attendeeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        [attendeeQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+        {
             self.eventAttendeesArray =[NSMutableArray arrayWithArray:objects];
+             self.eventAttendeeCount.text = [NSString stringWithFormat:@"Attendees: %lu", (unsigned long)[self.eventAttendeesArray count]];
         
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadTable" object:nil userInfo:nil];
-//            [self updateUI];
         }];
     }];
 }

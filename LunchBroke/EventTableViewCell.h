@@ -13,6 +13,7 @@
 
 - (IBAction)voteButtonTapped:(id)sender;
 - (void)updateUI;
+- (void)updateCount;
 
 
 
