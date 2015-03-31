@@ -52,30 +52,24 @@
     UINavigationBar *navigationBar = self.navigationController.navigationBar;
     [navigationBar hideBottomHairline];
     
-    //dummy data
+    //Map Stuff
     CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 39.281516;
-    zoomLocation.longitude= -76.580806;
+    zoomLocation.latitude = 40.703743;
+    zoomLocation.longitude= -74.011885;
     
     MKPointAnnotation *mapAnnotation = [[MKPointAnnotation alloc]init];
     [mapAnnotation setCoordinate:zoomLocation];
-    [mapAnnotation setTitle:@"Joe's"];
+    [mapAnnotation setTitle:@"Just Salad (& Wraps)"];
     
     [self.mapView addAnnotation:mapAnnotation];
     
-    //make annotiation
-    //add annotation to map
-    //set the center of the map to the annotation
-    //se the region of the map
-    // set regions via self.mapview.region --> mkmapregion comprised of a span and center coordinate
-    
-    //my location
+  
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
     
     // 3
     [_mapView setRegion:viewRegion animated:YES];
     
-//    [self fetchEventData];
+    [self fetchEventData];
     [self fetchEventAttendees];
     [self.tableView reloadData];
     

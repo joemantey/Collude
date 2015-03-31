@@ -22,9 +22,11 @@
 
 -(void)viewWillLayoutSubviews
 {
-    [self.logInView setBackgroundColor:[UIColor clearColor]];
-    NSLog(@"View Will Appear layout subiews");
+    [super viewWillLayoutSubviews];
     
+    [self.logInView setLogo:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"colludeFull"]]];
+    
+    [self.logInView setBackgroundColor:[UIColor clearColor]];
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.logInView.bounds;
     gradient.startPoint = CGPointZero;
@@ -33,7 +35,7 @@
     
     [self.logInView.layer insertSublayer:gradient atIndex:0];
     
-
+    self.logInView.dismissButton.hidden = YES;
     
 }
     

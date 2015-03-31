@@ -20,18 +20,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="og0-MS-D6F" userLabel="ContainerView">
-                                <rect key="frame" x="60" y="75" width="480" height="450"/>
+                                <rect key="frame" x="60" y="5" width="480" height="510"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCM-e2-a2e">
-                                        <rect key="frame" x="0.0" y="253" width="480" height="90"/>
+                                        <rect key="frame" x="0.0" y="286" width="480" height="102"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </string>
                                         <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-s2-d0g">
-                                        <rect key="frame" x="0.0" y="0.0" width="480" height="248"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="281"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="480" id="Eq0-cB-HX8"/>
                                             <constraint firstAttribute="height" constant="128" id="VY1-sk-gRM"/>
@@ -59,7 +59,7 @@
                                                     <subviews>
                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Attendee Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9pl-cP-khf">
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -83,7 +83,7 @@
                                     <constraint firstItem="1zh-s2-d0g" firstAttribute="leading" secondItem="og0-MS-D6F" secondAttribute="leading" id="osJ-mz-bjK"/>
                                     <constraint firstItem="1zh-s2-d0g" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.55" id="r7h-aY-oIR"/>
                                     <constraint firstItem="VzP-2r-NV0" firstAttribute="width" secondItem="og0-MS-D6F" secondAttribute="width" id="v1r-RG-iQf"/>
-                                    <constraint firstItem="VzP-2r-NV0" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" multiplier="0.25" id="x1Y-Nu-10c"/>
+                                    <constraint firstItem="VzP-2r-NV0" firstAttribute="height" secondItem="og0-MS-D6F" secondAttribute="height" id="x1Y-Nu-10c"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -92,8 +92,8 @@
                             <constraint firstItem="og0-MS-D6F" firstAttribute="width" secondItem="fBU-9n-Byz" secondAttribute="width" multiplier="0.8" id="1Rr-DM-Cnq"/>
                             <constraint firstAttribute="height" secondItem="1zh-s2-d0g" secondAttribute="height" id="MhF-na-SjW"/>
                             <constraint firstAttribute="centerX" secondItem="og0-MS-D6F" secondAttribute="centerX" id="NWU-9Y-ehY"/>
-                            <constraint firstItem="og0-MS-D6F" firstAttribute="height" secondItem="fBU-9n-Byz" secondAttribute="height" multiplier="0.75" id="SYQ-Iy-Tcn"/>
-                            <constraint firstAttribute="centerY" secondItem="og0-MS-D6F" secondAttribute="centerY" id="vH3-o3-HMZ"/>
+                            <constraint firstItem="og0-MS-D6F" firstAttribute="height" secondItem="fBU-9n-Byz" secondAttribute="height" multiplier="0.85" id="SYQ-Iy-Tcn"/>
+                            <constraint firstItem="og0-MS-D6F" firstAttribute="centerY" secondItem="fBU-9n-Byz" secondAttribute="centerY" constant="-40" id="vH3-o3-HMZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

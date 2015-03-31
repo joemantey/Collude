@@ -26,10 +26,7 @@
     
 }
 
-
 -(void)viewDidLayoutSubviews{
-    
-    NSLog(@"View Will Appear layout subiews xxxxx");
     
     [self.signUpView setBackgroundColor:[UIColor clearColor]];
     CAGradientLayer *gradient = [CAGradientLayer layer];
@@ -37,20 +34,16 @@
     gradient.startPoint = CGPointZero;
     gradient.endPoint = CGPointMake(0, 1);
     gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_mangoPulpEndColor] CGColor], (id)[[UIColor uig_mangoPulpStartColor]CGColor], nil];
-    [self.signUpView.logo setFrame:CGRectMake(0, 0, 287.0, 200)];
     [self.signUpView.layer insertSublayer:gradient atIndex:0];
     
-//    [self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nomofomo.png"]]];
-
-    self.signUpView.signUpButton.backgroundColor= [UIColor redColor];
-    NSLog(@"View Will Appear layout xxxx");
+    [self.signUpView.logo setFrame:CGRectMake(0, 0, 287.0, 200)];
     
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    
     [super viewDidAppear:animated];
     NSLog(@"View did appear sign up");
-    
     
 }
 
