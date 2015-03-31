@@ -19,6 +19,7 @@
 @dynamic imageName;
 @dynamic imageLabel;
 @synthesize attendeesArray;
+@dynamic  locationName;
 
 
 
