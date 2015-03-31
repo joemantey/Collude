@@ -109,12 +109,14 @@
 //    [fourSq getNearby4SquareLocationsWithCompletionBlock:^(id results) {
 //        NSLog(@"1. Results: %@", results);
 //    }];
+     
+    UINavigationController *temp = [[self storyboard] instantiateViewControllerWithIdentifier:@"fourSquareNavController"];
     
-    fourSquareViewControllerTableViewController *FSTVC = [[fourSquareViewControllerTableViewController alloc] init];
+    fourSquareViewControllerTableViewController *fourSqNavCont = temp.viewControllers[0];
     
-    FSTVC.fourSqQuery = self.eventLocationField.text;
-    
-    [self presentViewController:FSTVC animated:YES completion:nil];
+    fourSqNavCont.fourSqQuery = self.eventLocationField.text;
+
+    [self presentViewController:temp animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source

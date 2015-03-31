@@ -287,7 +287,7 @@
             </objects>
             <point key="canvasLocation" x="3719" y="481"/>
         </scene>
-        <!--Four Square View Controller Table View Controller-->
+        <!--4Square Results-->
         <scene sceneID="yac-uT-NWB">
             <objects>
                 <tableViewController id="UiQ-hg-kHw" customClass="fourSquareViewControllerTableViewController" sceneMemberID="viewController">
@@ -322,10 +322,17 @@
                             <outlet property="delegate" destination="UiQ-hg-kHw" id="B2O-FN-vog"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="4Square Results" id="tXq-ek-i0H">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3Hp-2Z-73Y">
+                            <connections>
+                                <action selector="cancelTapped:" destination="UiQ-hg-kHw" id="afq-GG-0BL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJc-np-QZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5220" y="-352"/>
+            <point key="canvasLocation" x="6857" y="-335"/>
         </scene>
         <!--New Event Table View Controller-->
         <scene sceneID="gZf-z2-sZJ">
@@ -386,7 +393,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="fourSquareSearch:" destination="yAl-eb-v5B" eventType="touchUpInside" id="IZV-Mm-NSa"/>
-                                                        <segue destination="UiQ-hg-kHw" kind="presentation" id="om6-4o-kPt"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -654,6 +660,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3NI-9P-zeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2875" y="467"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Osy-uZ-TBc">
+            <objects>
+                <navigationController storyboardIdentifier="fourSquareNavController" automaticallyAdjustsScrollViewInsets="NO" id="NwB-eQ-mut" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0AK-vM-aOr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UiQ-hg-kHw" kind="relationship" relationship="rootViewController" id="Fli-1U-mKc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d33-ND-kaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6045" y="-335"/>
         </scene>
     </scenes>
     <resources>
