@@ -90,7 +90,7 @@ static NSString *const PFLogInViewDefaultTwitterButtonImageName = @"twitter_icon
     _fields = otherFields;
 
     _logo = [[UIImageView alloc] initWithImage:[PFImage imageNamed:PFLogInViewDefaultLogoImageName]];
-    _logo.contentMode = UIViewContentModeScaleAspectFit;
+    _logo.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:_logo];
 
     if (_fields & PFLogInFieldsDismissButton) {

@@ -40,13 +40,19 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.logInView.dismissButton.hidden = YES;
-    [self.logInView.logo setFrame:CGRectMake(66.5, 70.0, 187.0, 100)];
     [self.logInView setLogo:[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"colludeFull"]]];
     //    [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nomofomo.png"]]];
     self.logInView.logInButton.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.4];
     
 }
 
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [self.logInView.logo setFrame:CGRectMake(0, 0, 287.0, 200)];
+
+    
+}
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     NSLog(@"View did appear");
