@@ -57,6 +57,12 @@
     zoomLocation.latitude = 39.281516;
     zoomLocation.longitude= -76.580806;
     
+    MKPointAnnotation *mapAnnotation = [[MKPointAnnotation alloc]init];
+    [mapAnnotation setCoordinate:zoomLocation];
+    [mapAnnotation setTitle:@"Joe's"];
+    
+    [self.mapView addAnnotation:mapAnnotation];
+    
     //make annotiation
     //add annotation to map
     //set the center of the map to the annotation
