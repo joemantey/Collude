@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8BA0DFCBB0E58679BA513B0C"
-               BuildableName = "libPods-LunchBroke-ParseFacebookUtils.a"
-               BlueprintName = "Pods-LunchBroke-ParseFacebookUtils"
+               BlueprintIdentifier = "AFE56A4E97058EC998656BA5"
+               BuildableName = "libPods-LunchBroke-UINavigationBar+Addition.a"
+               BlueprintName = "Pods-LunchBroke-UINavigationBar+Addition"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8BA0DFCBB0E58679BA513B0C"
-            BuildableName = "libPods-LunchBroke-ParseFacebookUtils.a"
-            BlueprintName = "Pods-LunchBroke-ParseFacebookUtils"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -57,15 +48,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8BA0DFCBB0E58679BA513B0C"
-            BuildableName = "libPods-LunchBroke-ParseFacebookUtils.a"
-            BlueprintName = "Pods-LunchBroke-ParseFacebookUtils"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
