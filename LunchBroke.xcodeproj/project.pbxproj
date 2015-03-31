@@ -29,6 +29,7 @@
 		3C4C1C081AC084EF00361979 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4C1C071AC084EF00361979 /* CoreLocation.framework */; };
 		3CC467DA1AC0BEEC005075E8 /* fourSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC467D91AC0BEEC005075E8 /* fourSquare.m */; };
 		3CE5040B1AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5040A1AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.m */; };
+		3CE5040E1ACA06AF00DFA4E1 /* fourSquareVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5040D1ACA06AF00DFA4E1 /* fourSquareVenue.m */; };
 		9DBCDDF2D6641C7068ED3470 /* libPods-LunchBroke.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,8 @@
 		3CC467D91AC0BEEC005075E8 /* fourSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fourSquare.m; sourceTree = "<group>"; };
 		3CE504091AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fourSquareViewControllerTableViewController.h; sourceTree = "<group>"; };
 		3CE5040A1AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fourSquareViewControllerTableViewController.m; sourceTree = "<group>"; };
+		3CE5040C1ACA06AF00DFA4E1 /* fourSquareVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fourSquareVenue.h; sourceTree = "<group>"; };
+		3CE5040D1ACA06AF00DFA4E1 /* fourSquareVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fourSquareVenue.m; sourceTree = "<group>"; };
 		64C6A6E43FB3F62EE4463155 /* libPods-LunchBroke.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LunchBroke.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D1EDED09F3D1DA8CDF4CB2 /* Pods-LunchBroke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchBroke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.debug.xcconfig"; sourceTree = "<group>"; };
 		E828165CDE2157D7440DD6BE /* Pods-LunchBroke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LunchBroke.release.xcconfig"; path = "Pods/Target Support Files/Pods-LunchBroke/Pods-LunchBroke.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				38267A9A1ABB6B6A00D1EC59 /* Event.m */,
 				3C23828A1AC43FBE005F739E /* User.h */,
 				3C23828B1AC43FBE005F739E /* User.m */,
+				3CE5040C1ACA06AF00DFA4E1 /* fourSquareVenue.h */,
+				3CE5040D1ACA06AF00DFA4E1 /* fourSquareVenue.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 				3C23828C1AC43FBE005F739E /* User.m in Sources */,
 				383326941AC49A7D0014EC86 /* EventIcon.m in Sources */,
 				3833267F1AC48FE60014EC86 /* EventIconCollectionViewCell.m in Sources */,
+				3CE5040E1ACA06AF00DFA4E1 /* fourSquareVenue.m in Sources */,
 				3CC467DA1AC0BEEC005075E8 /* fourSquare.m in Sources */,
 				38CCADD11ABB36A40058125A /* main.m in Sources */,
 				3C2144001AC22CA700C9A678 /* SignUpViewController.m in Sources */,

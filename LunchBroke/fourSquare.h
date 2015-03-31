@@ -11,11 +11,15 @@
 
 @interface fourSquare : NSObject <CLLocationManagerDelegate>
 
+- (instancetype) initWithQuery:(NSString *)query;
+
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (nonatomic) CLLocationCoordinate2D userCoordinate;
 @property (nonatomic, strong) NSString *lat;
 @property (nonatomic, strong) NSString *lng;
+@property (nonatomic, strong) NSString *query;
 
--(void)getNearby4SquareLocationsWithQuery:(NSString *)query completionBlock:(void (^)(NSArray *))completionBlock;
+
+-(void)getNearby4SquareLocationsWithCompletionBlock:(void (^)(NSArray *))completionBlock;
 
 @end

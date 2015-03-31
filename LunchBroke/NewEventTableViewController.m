@@ -14,11 +14,11 @@
 #import "EventIcon.h"
 #import "EventIconCollectionViewCell.h"
 #import "EventTableViewController.h"
+#import "fourSquareViewControllerTableViewController.h"
 
 @interface NewEventTableViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
-
 @property (weak, nonatomic) IBOutlet UITextField *timeDisplay;
 @property (weak, nonatomic) IBOutlet UITextField *eventLocationField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
@@ -57,7 +57,6 @@
     //collectionView Delegate
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-
 }
 
 
@@ -96,7 +95,14 @@
 }
 
 - (IBAction)fourSquareSearch:(id)sender {
-    self.query = self.eventLocationField.text;
+    fourSquare *fourSq = [[fourSquare alloc] initWithQuery:self.eventLocationField.text];
+    [fourSq getNearby4SquareLocationsWithCompletionBlock:^(NSArray *result) {
+        NSLog(@"%@", result);
+    }];
+}
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
@@ -240,9 +246,7 @@
     EventIconCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"eventIcon" forIndexPath:indexPath];
     
     EventIcon *currentIcon = self.iconArray[indexPath.item];
-    
-    NSLog(@"Icon location text ran");
-    
+        
     cell.iconImage.image = currentIcon.iconImage;
     
     self.eventIcon = currentIcon;
@@ -252,8 +256,6 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSLog(@"%@", self.iconArray[indexPath.item]);
     
     self.eventIcon = self.iconArray[indexPath.item];
     

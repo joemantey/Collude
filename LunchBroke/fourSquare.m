@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <AFNetworking/AFNetworking.h>
 #import <CoreLocation/CoreLocation.h>
+#import "fourSquareViewControllerTableViewController.h"
 
 @implementation fourSquare
 
@@ -17,6 +18,15 @@ NSString *const fourSquareClientID = @"YQ5S1FET0XHJY3FGVJ1XY25NXTXU4OLN2XVFP5IV1
 NSString *const fourSquareClientSecret = @"DAEBFC0VKT333HMWN4HO30Q5PAWBSIE5WCHJT125U0DQOMZP";
 NSString *const fourSquareAPIURL = @"https://api.foursquare.com/v2/venues/explore";
 NSString *const fourSquareV = @"20150101";
+
+- (instancetype) initWithQuery:(NSString *)query {
+    self = [super init];
+    
+    if (self) {
+        _query = query;
+    }
+    return self;
+}
 
 -(void)findingLocation {
     
@@ -38,16 +48,15 @@ NSString *const fourSquareV = @"20150101";
     self.lat = [NSString stringWithFormat:@"%f",self.userCoordinate.latitude];
 }
 
-
-
--(void)getNearby4SquareLocationsWithQuery:(NSString *)query completionBlock:(void (^)(NSArray *))completionBlock {
+-(void)getNearby4SquareLocationsWithCompletionBlock:(void (^)(NSArray *))completionBlock {
     [self findingLocation];
-    NSString *foursquareAPIURLConcatenated = [NSString stringWithFormat:@"%@?ll=%@,%@&client_id=%@&client_secret=%@&v=20150101&m=foursquare&query=%@", fourSquareAPIURL, self.lat, self.lng, fourSquareClientID, fourSquareClientSecret, query];
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
+    NSString *foursquareAPIURLConcatenated = [NSString stringWithFormat:@"%@?ll=%@,%@&client_id=%@&client_secret=%@&v=20150101&m=foursquare&query=%@", fourSquareAPIURL, self.lat, self.lng, fourSquareClientID, fourSquareClientSecret, self.query];
+    NSLog(@"fourSquare.h : query = %@", self.query);
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:foursquareAPIURLConcatenated parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        completionBlock(responseObject);
-        NSLog(@"%@", responseObject);
+        completionBlock(responseObject);        
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"Fail: %@",error.localizedDescription);
     }];
