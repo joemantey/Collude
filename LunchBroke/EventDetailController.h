@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Event.h"
 
 @interface EventDetailController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSString *selectedObjectID;
+@property (strong, nonatomic) Event *selectedEvent;
+@property (strong, nonatomic) Event *event;
 
 @end

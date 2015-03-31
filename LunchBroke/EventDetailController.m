@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @property (strong, nonatomic) NSMutableArray *eventDataArray;
 @property (strong, nonatomic) NSString *eventObjectId;
@@ -30,6 +31,7 @@
 @property (strong, nonatomic) NSString *eventName;
 @property (strong, nonatomic) NSDate *timeOfEvent;
 @property (strong, nonatomic) NSArray *attendees;
+
 
 @end
 
@@ -39,19 +41,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUpTextBox];
     NSLog(@"ObjectID: %@", self.selectedObjectID);
     
     self.mapView.delegate = self;
+    
     
     //dummy data
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = 39.281516;
     zoomLocation.longitude= -76.580806;
+    
     //make annotiation
     //add annotation to map
     //set the center of the map to the annotation
     //se the region of the map
-    // 2
+    // set regions via self.mapview.region --> mkmapregion comprised of a span and center coordinate
+    
+    //my location
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
     
     // 3
@@ -87,6 +94,13 @@
 //    annotation.coordinate = item.placemark.coordinate;
     
     [self.mapView addAnnotation: annotation];
+}
+
+-(void)setUpTextBox{
+    
+    EventTableViewController *eventTVC = [[EventTableViewController alloc]init];
+
+    self.textView.text = self.event.eventName;
 }
 
 -(void)setUpGradient{
@@ -137,7 +151,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 30;
+}
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return [self.attendees count];
 }
 
