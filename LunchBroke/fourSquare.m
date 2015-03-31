@@ -55,11 +55,13 @@ NSString *const fourSquareV = @"20150101";
     NSLog(@"fourSquare.h : query = %@", self.query);
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:foursquareAPIURLConcatenated parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        completionBlock(responseObject);        
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"Fail: %@",error.localizedDescription);
-    }];
+    if (self.lat && self.lng) {
+        [manager GET:foursquareAPIURLConcatenated parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+            completionBlock(responseObject);
+        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+            NSLog(@"Fail: %@",error.localizedDescription);
+        }];
+    }
 }
 
 
