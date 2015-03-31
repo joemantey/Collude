@@ -136,8 +136,7 @@
         self.eventName = eventWithDetails.eventName;
         self.timeOfEvent = eventWithDetails.timeOfEvent;
         [self.tableView reloadData];
-        NSLog(@"Name: %@ Time of Event: %@", self.eventName, self.timeOfEvent);
-        
+
     }];
 }
 

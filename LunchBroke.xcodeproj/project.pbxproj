@@ -296,10 +296,11 @@
 				TargetAttributes = {
 					38CCADCA1ABB36A40058125A = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = UHLAE5BT7M;
+						DevelopmentTeam = 9RXLE5FXUN;
 					};
 					38CCADE31ABB36A40058125A = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 9RXLE5FXUN;
 						TestTargetID = 38CCADCA1ABB36A40058125A;
 					};
 				};
