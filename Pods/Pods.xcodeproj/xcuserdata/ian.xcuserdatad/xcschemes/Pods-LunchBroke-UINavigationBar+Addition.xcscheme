@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "10A278CDB8B3ADB2ABC4B43F"
+               BlueprintIdentifier = "AFE56A4E97058EC998656BA5"
                BuildableName = "libPods-LunchBroke-UINavigationBar+Addition.a"
                BlueprintName = "Pods-LunchBroke-UINavigationBar+Addition"
                ReferencedContainer = "container:Pods.xcodeproj">
