@@ -247,11 +247,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-<<<<<<< HEAD
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="0.029999999999999999" colorSpace="calibratedRGB"/>
-=======
-                                <color key="backgroundColor" red="0.94354540109634399" green="0.97088074684143066" blue="0.99985319375991821" alpha="1" colorSpace="calibratedRGB"/>
->>>>>>> 2a54e80ba3cf5e5d9a3bb6ebf1d2188d3ddb0704
                                 <connections>
                                     <outlet property="eventAttendeeCount" destination="vOf-1c-D3e" id="frD-CP-bkP"/>
                                     <outlet property="eventDate" destination="d05-Gy-sOR" id="PK3-1b-Ejx"/>
