@@ -14,6 +14,7 @@
 #import "Event.h"
 #import "User.h"
 #import <MapKit/MapKit.h> 
+#import <UINavigationBar+Addition.h>
 
 
 @interface EventDetailController () <MKMapViewDelegate>;
@@ -46,6 +47,8 @@
     
     self.mapView.delegate = self;
     
+    UINavigationBar *navigationBar = self.navigationController.navigationBar;
+    [navigationBar hideBottomHairline];
     
     //dummy data
     CLLocationCoordinate2D zoomLocation;

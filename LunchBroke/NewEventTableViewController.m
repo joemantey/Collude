@@ -15,6 +15,7 @@
 #import "EventIconCollectionViewCell.h"
 #import "EventTableViewController.h"
 #import "fourSquareViewControllerTableViewController.h"
+#import <UINavigationBar+Addition.h>
 
 @interface NewEventTableViewController ()
 
@@ -48,6 +49,9 @@
 
     //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_kyotoEndColor]];
+    
+    UINavigationBar *navigationBar = self.navigationController.navigationBar;
+    [navigationBar hideBottomHairline];
     
     //turn the bar opaque
     [self.navigationController.navigationBar setTranslucent:NO];
