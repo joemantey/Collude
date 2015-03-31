@@ -37,7 +37,7 @@
     gradient.startPoint = CGPointZero;
     gradient.endPoint = CGPointMake(0, 1);
     gradient.colors = [NSArray arrayWithObjects: (id)[[UIColor uig_mangoPulpEndColor] CGColor], (id)[[UIColor uig_mangoPulpStartColor]CGColor], nil];
-    
+    [self.signUpView.logo setFrame:CGRectMake(0, 0, 287.0, 200)];
     [self.signUpView.layer insertSublayer:gradient atIndex:0];
     
 //    [self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nomofomo.png"]]];
