@@ -16,12 +16,14 @@
 
 @property (nonatomic) PFUser *currentUser;
 @property (nonatomic) BOOL isSelected;
+
 @property (weak, nonatomic) IBOutlet UITextField *voteTextField;
 @property (weak, nonatomic) IBOutlet UITextField *eventName;
 @property (weak, nonatomic) IBOutlet UITextField *eventAttendeeCount;
 @property (weak, nonatomic) IBOutlet UITextField *eventDate;
 @property (weak, nonatomic) IBOutlet UIImageView *eventIcon;
 @property (weak, nonatomic) IBOutlet UIButton *voteButton;
+
 @property (strong, nonatomic) NSString *eventObjectId;
 @property (strong, nonatomic) NSArray *eventAttendeesArray;
 

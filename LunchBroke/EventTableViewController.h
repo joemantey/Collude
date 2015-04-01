@@ -14,9 +14,14 @@
 
 @interface EventTableViewController : UITableViewController <UITextFieldDelegate, UITableViewDataSource, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
+//event objects are written to this array and use in the tableview methods
 @property (strong, nonatomic) NSMutableArray *eventsArray;
-@property (strong, nonatomic) NSString *selectedObjectID;
 
+//the id -used and issued by parse- for the selcted event
+@property (strong, nonatomic) NSString *selectedEventObjectID;
+
+
+//properties used by fetch methods within tablview
 @property (strong, nonatomic) NSString *eventName;
 @property (strong, nonatomic) NSDate *timeOfEvent;
 

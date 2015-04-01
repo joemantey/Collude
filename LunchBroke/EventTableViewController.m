@@ -29,118 +29,114 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setColors];
-    [self fetchEvents]; 
+
+    [self setUpNavigationBar];
+    [self setUpLoginAndSignUp];
+    [self setUpLogo];
+
+    [self fetchEvents];
     [self fetchEventData];
     
+    [self reloadDataMethod];
     
-    UINavigationBar *navigationBar = self.navigationController.navigationBar;
-    [navigationBar hideBottomHairline];
-    
+    //sets up notification center for fetch events and the command to reload the table method
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchEvents) name:@"fetchEventsNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadDataMethod) name:@"reloadTable" object:nil];
     
- 
-    if (![PFUser currentUser]) { // No user logged in
-        
-    LoginViewController *logInViewController = [[LoginViewController alloc] init];
-    logInViewController.delegate = self;
-    [self presentViewController:logInViewController animated:YES completion:nil];
     
-    SignUpViewController *signUpViewController = [[SignUpViewController alloc] init];
-    signUpViewController.delegate = self;
-    signUpViewController.fields = PFSignUpFieldsDefault;
-    logInViewController.signUpController = signUpViewController;
+}
+
+-(void)setUpLoginAndSignUp{
+    
+    //If there is no user signed into the app
+    if (![PFUser currentUser]) {
+        
+        //create a login view controller using your subclassed LoginView, set the delegate and present it
+        LoginViewController *logInViewController = [[LoginViewController alloc] init];
+        logInViewController.delegate = self;
+        [self presentViewController:logInViewController animated:YES completion:nil];
+        
+        //create a sublclassed signupview controller, set the delegate, set the fields to be standard provided by parse, and set it as the signUpController property of signupviewcontroller
+        SignUpViewController *signUpViewController = [[SignUpViewController alloc] init];
+        signUpViewController.delegate = self;
+        signUpViewController.fields = PFSignUpFieldsDefault;
+        logInViewController.signUpController = signUpViewController;
     }
+}
+
+
+-(void)setUpNavigationBar{
+    
+    
+    //create navigation bar
+    UINavigationBar *navigationBar = self.navigationController.navigationBar;
+    
+    //set the color of the bar
+    [self.navigationController.navigationBar setBarTintColor:[UIColor uig_kyotoEndColor]];
+    
+    //turn the bar opaque
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
+    //hide the bottom line under the navigation bar
+    [navigationBar hideBottomHairline];
+    
+}
+
+-(void)setUpLogo{
     
     UIButton *logoView = [[UIButton alloc] initWithFrame:CGRectMake(0,0,10,50)];
     [logoView setBackgroundImage:[UIImage imageNamed:@"Raccoon.png"] forState:UIControlStateNormal];
     [logoView setUserInteractionEnabled:NO];
-    
     self.navigationItem.titleView = logoView;
-    [self reloadDataMethod];
 }
-
-
-
 
 -(void)reloadDataMethod{
     [self.tableView reloadData];
 }
+
 //Obligatory dealloc for the NSNotificationCenter
 -(void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
--(void)setColors {
-    //set the color of the bar
-    [self.navigationController.navigationBar setBarTintColor:[UIColor uig_kyotoEndColor]];
-    
-    //turn the bar opaque
-    [self.navigationController.navigationBar setTranslucent:NO];
-}
 
 #pragma mark The delegate for the login and signUp view controllers
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 // Sent to the delegate when the log in attempt fails.
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
+    
     NSLog(@"Failed to log in...");
 }
 
 // Sent to the delegate when the log in screen is dismissed.
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
+
     [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
 }
 
 // Sent to the delegate when the sign up attempt fails.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error {
+
     NSLog(@"Failed to sign up...");
 }
 
 // Sent to the delegate when the sign up screen is dismissed.
 - (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
+    
     NSLog(@"User dismissed the signUpViewController");
 }
-
-
-
-#pragma mark - Parse methods
--(void)fetchEvents{
-    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
-    [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.eventsArray = [NSMutableArray arrayWithArray:objects];
-        [self.tableView reloadData];
-    }];
-}
-
-
-
-
--(void) fetchEventData {
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    
-    [query getObjectInBackgroundWithId:self.selectedObjectID block:^(PFObject *eventData, NSError *error) {
-        
-        Event *eventWithDetails = (Event *)eventData;
-        self.eventName = eventWithDetails.eventName;
-        self.timeOfEvent = eventWithDetails.timeOfEvent;
-        [self.tableView reloadData];
-
-    }];
-}
-
-
 
 
 
@@ -184,6 +180,34 @@
     [sender endRefreshing];
 }
 
+
+#pragma mark - Parse methods
+
+//this methods fetches the array of all the events from parse
+-(void)fetchEvents{
+    PFQuery *eventQuery = [PFQuery queryWithClassName:@"Event"];
+    [eventQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.eventsArray = [NSMutableArray arrayWithArray:objects];
+        [self.tableView reloadData];
+    }];
+}
+
+//this method
+-(void)fetchEventData {
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    
+    [query getObjectInBackgroundWithId:self.selectedEventObjectID block:^(PFObject *eventData, NSError *error) {
+        
+        Event *eventWithDetails = (Event *)eventData;
+        self.eventName = eventWithDetails.eventName;
+        self.timeOfEvent = eventWithDetails.timeOfEvent;
+        [self.tableView reloadData];
+        
+    }];
+}
+
+
 #pragma mark - Data methods
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -192,7 +216,7 @@
         //set a PFObject equal to the selected event...
         PFObject *myObject = [self.eventsArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
         //...and get it's object ID
-        self.selectedObjectID = [myObject objectId];
+        self.selectedEventObjectID = [myObject objectId];
         
         //PREPARE FOR SEGUE!
         //Create a nav controller and cast it as a destinationViewController
