@@ -48,16 +48,17 @@ NSString *const fourSquareV = @"20150101";
     self.lat = [NSString stringWithFormat:@"%f",self.userCoordinate.latitude];
 }
 
--(void)getNearby4SquareLocationsWithCompletionBlock:(void (^)(id ))completionBlock {
+-(void)getNearby4SquareLocationsWithQuery:(NSString *)query completionBlock:(void (^)(id ))completionBlock {
     [self findingLocation];
     
-    NSString *foursquareAPIURLConcatenated = [NSString stringWithFormat:@"%@?ll=%@,%@&client_id=%@&client_secret=%@&v=20150101&m=foursquare&query=%@", fourSquareAPIURL, self.lat, self.lng, fourSquareClientID, fourSquareClientSecret, self.query];
+    NSString *foursquareAPIURLConcatenated = [NSString stringWithFormat:@"%@?ll=%@,%@&client_id=%@&client_secret=%@&v=20150101&m=foursquare&query=%@", fourSquareAPIURL, self.lat, self.lng, fourSquareClientID, fourSquareClientSecret, query];
     NSLog(@"fourSquare.h : query = %@", self.query);
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     if (self.lat && self.lng) {
         [manager GET:foursquareAPIURLConcatenated parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             completionBlock(responseObject);
+            NSLog(@"Response: %@", responseObject);
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
             NSLog(@"Fail: %@",error.localizedDescription);
         }];

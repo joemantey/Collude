@@ -19,9 +19,8 @@
 @dynamic imageName;
 @dynamic imageLabel;
 @synthesize attendeesArray;
-@dynamic  locationName;
-
-
+@dynamic locationName;
+@dynamic coordinates;
 
 + (NSString *)parseClassName
 {
