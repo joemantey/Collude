@@ -127,6 +127,7 @@
     [self.eventCoordinates addObject:latitude];
     [self.eventCoordinates addObject:longitude];
     self.didFourSquare = YES;
+    self.eventLocationField.text = name;
 }
 
 #pragma mark - Table view data source
