@@ -22,7 +22,8 @@
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSString *imageLabel;
 @property (strong, nonatomic) NSString *locationName;
-@property (strong, nonatomic) NSArray *coordinates;
+@property (strong, nonatomic) NSMutableArray *coordinates;
 @property (strong, nonatomic) NSMutableArray *attendeesArray;
+@property (strong, nonatomic) NSNumber *rating;
 
 @end

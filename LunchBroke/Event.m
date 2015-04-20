@@ -21,6 +21,7 @@
 @synthesize attendeesArray;
 @dynamic locationName;
 @dynamic coordinates;
+@dynamic rating;
 
 + (NSString *)parseClassName
 {

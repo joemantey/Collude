@@ -35,16 +35,6 @@
 	_locationManager = [[CLLocationManager alloc]init];
 	[self.locationManager requestWhenInUseAuthorization];
 	[self.locationManager startUpdatingLocation];
-
-	// Uncomment the following line to preserve selection between presentations.
-	// self.clearsSelectionOnViewWillAppear = NO;
-
-//	fourSquare *fourSq = [[fourSquare alloc] initWithQuery:self.fourSqQuery];
-////	[fourSq getNearby4SquareLocationsWithCompletionBlock: ^(id results) {
-////	    (NSDictionary *)results;
-////	    self.fourSquareResults = [NSArray arrayWithArray:results[@"response"][@"groups"][0][@"items"]];
-////	    [self.tableView reloadData];
-//	}];
 }
 
 -(void) setFourSqQuery:(NSString *)fourSqQuery {
@@ -83,7 +73,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	[self.delegate selectedVeneuWithName:self.fourSquareResults[indexPath.row][@"venue"][@"name"] latitiude:self.fourSquareResults[indexPath.row][@"venue"][@"location"][@"lat"] longitude:self.fourSquareResults[indexPath.row][@"venue"][@"location"][@"lng"]];
+	[self.delegate selectedVeneuWithName:self.fourSquareResults[indexPath.row][@"venue"][@"name"]
+                               latitiude:self.fourSquareResults[indexPath.row][@"venue"][@"location"][@"lat"]
+                               longitude:self.fourSquareResults[indexPath.row][@"venue"][@"location"][@"lng"]
+                                  rating:self.fourSquareResults[indexPath.row][@"venue"][@"rating"]];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
