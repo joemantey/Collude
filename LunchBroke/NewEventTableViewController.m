@@ -123,9 +123,11 @@
 }
 
 -(void)selectedVeneuWithName:(NSString *)name latitiude:(NSString *)latitude longitude:(NSString *)longitude {
+    
     self.eventName = name;
-    [self.eventCoordinates addObject:latitude];
-    [self.eventCoordinates addObject:longitude];
+    [self.eventCoordinates insertObject:latitude atIndex:0];
+    [self.eventCoordinates insertObject:longitude atIndex:1];
+    
     self.didFourSquare = YES;
     self.eventLocationField.text = name;
 }

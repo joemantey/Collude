@@ -16,7 +16,7 @@
 #import <MapKit/MapKit.h> 
 #import <UINavigationBar+Addition.h>
 #import "Locations.h"
-
+#import <CoreLocation/CoreLocation.h>
 
 @interface EventDetailController () <MKMapViewDelegate>;
 - (IBAction)dismissTapped:(id)sender;
@@ -35,6 +35,9 @@
 @property (strong, nonatomic) NSDate *timeOfEvent;
 @property (strong, nonatomic) NSArray *attendees;
 
+@property (strong, nonatomic) CLLocation *longitude;
+@property (strong, nonatomic) CLLocation *latitude;
+
 
 @end
 
@@ -45,6 +48,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpTextBox];
+    [self setupMap];
+    
     NSLog(@"ObjectID: %@", self.selectedObjectID);
     
     self.mapView.delegate = self;
@@ -52,22 +57,6 @@
     UINavigationBar *navigationBar = self.navigationController.navigationBar;
     [navigationBar hideBottomHairline];
     
-    //Map Stuff
-    CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 40.703743;
-    zoomLocation.longitude= -74.011885;
-    
-    MKPointAnnotation *mapAnnotation = [[MKPointAnnotation alloc]init];
-    [mapAnnotation setCoordinate:zoomLocation];
-    [mapAnnotation setTitle:@"Just Salad (& Wraps)"];
-    
-    [self.mapView addAnnotation:mapAnnotation];
-    
-  
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
-    
-    // 3
-    [_mapView setRegion:viewRegion animated:YES];
     
     [self fetchEventData];
     [self fetchEventAttendees];
@@ -90,15 +79,38 @@
     
     
     
+
+    
 }
-
-
 
 -(void)setupMap{
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-//    annotation.coordinate = item.placemark.coordinate;
     
     [self.mapView addAnnotation: annotation];
+    [self setCoordinatesfromCoordinationArray:self.event.coordinates];
+    
+    
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = 40.703743;
+    zoomLocation.longitude= -74.011885;
+    
+    MKPointAnnotation *mapAnnotation = [[MKPointAnnotation alloc]init];
+    [mapAnnotation setCoordinate:zoomLocation];
+    [mapAnnotation setTitle:@"Just Salad (& Wraps)"];
+    
+    [self.mapView addAnnotation:mapAnnotation];
+    
+    //set map region
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+    [_mapView setRegion:viewRegion animated:YES];
+}
+
+-(void)setCoordinatesfromCoordinationArray:(NSArray *)coordinates{
+    
+    self.latitude = coordinates[0];
+    self.longitude = coordinates[1];
+    
 }
 
 -(void)setUpTextBox{
@@ -195,5 +207,7 @@
     [cell.contentView addSubview:lineView];
     return cell;
 }
+
+
 
 @end
