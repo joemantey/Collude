@@ -192,7 +192,6 @@
 
 
 
-//when this method is called...
 - (void)showDatePickerCell {
     
     //...change the BOOLEAN to indicate the the date picker is (about to be) shown...
