@@ -20,6 +20,6 @@
 @property (nonatomic, strong) NSString *query;
 
 
--(void)getNearby4SquareLocationsWithCompletionBlock:(void (^)(id ))completionBlock;
+-(void)getNearby4SquareLocationsWithQuery:(NSString *)query completionBlock:(void (^)(id ))completionBlock;
 
 @end

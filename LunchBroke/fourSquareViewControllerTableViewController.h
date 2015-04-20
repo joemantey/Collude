@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol fourSquareLocationInfoDelegate <NSObject>
+
+-(void)selectedVeneuWithName:(NSString *)name latitiude:(NSString *)latitude longitude:(NSString *)longitude;
+
+@end
+
 @interface fourSquareViewControllerTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSString *fourSqQuery;
+@property (weak, nonatomic) id<fourSquareLocationInfoDelegate> delegate;
 
 @end

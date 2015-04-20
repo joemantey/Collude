@@ -19,7 +19,7 @@
 #import "Locations.h"
 
 
-@interface NewEventTableViewController ()
+@interface NewEventTableViewController () <fourSquareLocationInfoDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *timeDisplay;
@@ -34,6 +34,9 @@
 @property (strong, nonatomic) NSArray *iconArray;
 @property (strong, nonatomic) EventIcon *eventIcon;
 
+@property (strong, nonatomic) NSMutableArray *eventCoordinates;
+@property (strong, nonatomic) NSString *eventName;
+@property (nonatomic) BOOL didFourSquare;
 
 - (IBAction)cancelButton:(id)sender;
 - (IBAction)pickerDateChanged:(id)sender;
@@ -48,6 +51,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self iconArray];
+    
+    self.didFourSquare = NO;
 
     //set the color of the bar
     [self.navigationController.navigationBar setBarTintColor:[UIColor uig_kyotoEndColor]];
@@ -63,8 +68,6 @@
     //collectionView Delegate
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    
-    
 }
 
 
@@ -77,19 +80,21 @@
 - (IBAction)savebutton:(id)sender {
     NSDate *choosenDate = [self.datePicker date];
     
-    NSString *nameField = self.nameField.text;
-    
     Event *newEvent = [[Event alloc] init];
-    newEvent.eventName = nameField;
     newEvent.timeOfEvent = choosenDate;
-    newEvent.locationName = self.eventLocationField.text;
     newEvent.manager = PFUser.currentUser;
+    newEvent.eventName = self.nameField.text;
     newEvent.imageLabel =  self.eventIcon.iconLabel;
+
+    if (self.didFourSquare) {
+        newEvent.locationName = self.eventName;
+        [newEvent.coordinates arrayByAddingObjectsFromArray:self.eventCoordinates];
+    } else {
+        newEvent.locationName = self.eventLocationField.text;
+    }
     
     [newEvent.Attendees addObject:PFUser.currentUser];
-    //  newEvent.location = SOMETHING HERE
-    
-    
+
     [newEvent saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             [self dismissViewControllerAnimated:YES completion:^{
@@ -105,18 +110,24 @@
 }
 
 - (IBAction)fourSquareSearch:(id)sender {
-//    fourSquare *fourSq = [[fourSquare alloc] initWithQuery:self.eventLocationField.text];
-//    [fourSq getNearby4SquareLocationsWithCompletionBlock:^(id results) {
-//        NSLog(@"1. Results: %@", results);
-//    }];
-     
     UINavigationController *temp = [[self storyboard] instantiateViewControllerWithIdentifier:@"fourSquareNavController"];
     
     fourSquareViewControllerTableViewController *fourSqNavCont = temp.viewControllers[0];
     
     fourSqNavCont.fourSqQuery = self.eventLocationField.text;
-
+    
+    fourSqNavCont.delegate = self;
+    
     [self presentViewController:temp animated:YES completion:nil];
+    
+}
+
+-(void)selectedVeneuWithName:(NSString *)name latitiude:(NSString *)latitude longitude:(NSString *)longitude {
+    self.eventName = name;
+    [self.eventCoordinates addObject:latitude];
+    [self.eventCoordinates addObject:longitude];
+    self.didFourSquare = YES;
+    self.eventLocationField.text = name;
 }
 
 #pragma mark - Table view data source
