@@ -33,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSArray *iconArray;
 @property (strong, nonatomic) EventIcon *eventIcon;
+@property (strong, nonatomic) NSNumber *rating;
 
 @property (strong, nonatomic) NSMutableArray *eventCoordinates;
 @property (strong, nonatomic) NSString *eventName;
@@ -85,10 +86,14 @@
     newEvent.manager = PFUser.currentUser;
     newEvent.eventName = self.nameField.text;
     newEvent.imageLabel =  self.eventIcon.iconLabel;
+    newEvent.rating = self.rating;
 
     if (self.didFourSquare) {
         newEvent.locationName = self.eventName;
-        [newEvent.coordinates arrayByAddingObjectsFromArray:self.eventCoordinates];
+        newEvent.coordinates= [[NSMutableArray alloc] init];
+        [newEvent.coordinates addObject:self.eventCoordinates[0]];
+        [newEvent.coordinates addObject:self.eventCoordinates[1]];
+//        [newEvent.coordinates arrayByAddingObjectsFromArray:self.eventCoordinates];
     } else {
         newEvent.locationName = self.eventLocationField.text;
     }
@@ -122,14 +127,17 @@
     
 }
 
--(void)selectedVeneuWithName:(NSString *)name latitiude:(NSString *)latitude longitude:(NSString *)longitude {
+
+-(void)selectedVeneuWithName:(NSString *)name latitiude:(NSString *)latitude longitude:(NSString *)longitude rating:(NSNumber *)rating {
     
+    self.eventCoordinates = [[NSMutableArray alloc] init];
     self.eventName = name;
     [self.eventCoordinates insertObject:latitude atIndex:0];
     [self.eventCoordinates insertObject:longitude atIndex:1];
     
     self.didFourSquare = YES;
     self.eventLocationField.text = name;
+    self.rating = rating;
 }
 
 #pragma mark - Table view data source

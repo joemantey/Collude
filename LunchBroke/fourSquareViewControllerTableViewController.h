@@ -10,7 +10,7 @@
 
 @protocol fourSquareLocationInfoDelegate <NSObject>
 
--(void)selectedVeneuWithName:(NSString *)name latitiude:(NSString *)latitude longitude:(NSString *)longitude;
+-(void)selectedVeneuWithName:(NSString *)name latitiude:(NSString *)latitude longitude:(NSString *)longitude rating:(NSNumber *)rating;
 
 @end
 

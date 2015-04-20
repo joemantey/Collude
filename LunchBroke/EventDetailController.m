@@ -90,13 +90,18 @@
     [self setCoordinatesfromCoordinationArray:self.event.coordinates];
     
     
+    
+    NSString *latString=  self.event.coordinates[1];
+    NSString *longString = self.event.coordinates[0];
+  
     CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 40.703743;
-    zoomLocation.longitude= -74.011885;
+    
+    zoomLocation.longitude = [latString doubleValue];
+    zoomLocation.latitude  = [longString doubleValue];
     
     MKPointAnnotation *mapAnnotation = [[MKPointAnnotation alloc]init];
     [mapAnnotation setCoordinate:zoomLocation];
-    [mapAnnotation setTitle:@"Just Salad (& Wraps)"];
+    [mapAnnotation setTitle:self.event.locationName];
     
     [self.mapView addAnnotation:mapAnnotation];
     
@@ -105,6 +110,8 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
     [_mapView setRegion:viewRegion animated:YES];
 }
+
+
 
 -(void)setCoordinatesfromCoordinationArray:(NSArray *)coordinates{
     
@@ -120,7 +127,7 @@
                                                           timeStyle:NSDateFormatterShortStyle];
 
     
-    self.textView.text = [NSString stringWithFormat:@" Name:  %@\n Date & Time:  %@\n Location:  %@\n Foursquare Rating:  N/A", self.event.eventName, dateString, self.event.locationName];
+    self.textView.text = [NSString stringWithFormat:@" Name:  %@\n Date & Time:  %@\n Location:  %@\n Foursquare Rating:  %@", self.event.eventName, dateString, self.event.locationName, self.event.rating];
 }
 
 -(void)setUpGradient{
