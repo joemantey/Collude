@@ -78,9 +78,6 @@
     [self.navigationController.navigationBar setTranslucent:NO];
     
     
-    
-
-    
 }
 
 -(void)setupMap{
