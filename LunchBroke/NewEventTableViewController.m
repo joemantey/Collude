@@ -152,7 +152,6 @@
     
     //Set's the the defailt date to today's date
     NSDate *defaultDate = [NSDate date];
-    
     //set the text and tint of the date formatter
     self.timeDisplay.text = [self.dateFormatter stringFromDate:defaultDate];
     self.timeDisplay.textColor = [self.timeDisplay tintColor];
@@ -193,7 +192,8 @@
 }
 
 //When the row with the date displayed is selected....
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
     if (indexPath.row == dateTextCellIndex){
         
