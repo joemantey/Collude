@@ -51,28 +51,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self iconArray];
     
-    self.didFourSquare = NO;
-
-    //set the color of the bar
-    [self.navigationController.navigationBar setBarTintColor:[UIColor uig_kyotoEndColor]];
-    
-    UINavigationBar *navigationBar = self.navigationController.navigationBar;
-    [navigationBar hideBottomHairline];
-    
-    //turn the bar opaque
-    [self.navigationController.navigationBar setTranslucent:NO];
-    
+    [self buildIconArray];
+    [self setUpNavigationBar];
     [self setupTimeDisplay];
+
+    self.didFourSquare = NO;
     
     //collectionView Delegate
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
 }
 
+-(void)setUpNavigationBar{
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor uig_kyotoEndColor]];
+    
+    UINavigationBar *navigationBar = self.navigationController.navigationBar;
+    [navigationBar hideBottomHairline];
+    
+    [self.navigationController.navigationBar setTranslucent:NO];
+}
 
-#pragma mark Buttons
+
+#pragma mark - Buttons
 
 - (IBAction)cancelButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -93,8 +95,8 @@
         newEvent.coordinates= [[NSMutableArray alloc] init];
         [newEvent.coordinates addObject:self.eventCoordinates[0]];
         [newEvent.coordinates addObject:self.eventCoordinates[1]];
-//        [newEvent.coordinates arrayByAddingObjectsFromArray:self.eventCoordinates];
-    } else {
+    }
+    else {
         newEvent.locationName = self.eventLocationField.text;
     }
     
@@ -127,7 +129,6 @@
     
 }
 
-
 -(void)selectedVeneuWithName:(NSString *)name latitiude:(NSString *)latitude longitude:(NSString *)longitude rating:(NSNumber *)rating {
     
     self.eventCoordinates = [[NSMutableArray alloc] init];
@@ -140,30 +141,17 @@
     self.rating = rating;
 }
 
-#pragma mark - Table view data source
 
+#pragma mark - Actions
 
-- (void)setupTimeDisplay
-{
-    //The date formatter will inform which time options are shown on the date picker
-    self.dateFormatter = [[NSDateFormatter alloc] init];
-    [self.dateFormatter setDateStyle:NSDateFormatterLongStyle];
-    [self.dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+- (IBAction)pickerDateChanged:(id)sender {
+    self.timeDisplay.text =  [self.dateFormatter stringFromDate:[self.datePicker date]];
     
-    //Set's the the defailt date to today's date
-    NSDate *defaultDate = [NSDate date];
-    //set the text and tint of the date formatter
-    self.timeDisplay.text = [self.dateFormatter stringFromDate:defaultDate];
-    self.timeDisplay.textColor = [self.timeDisplay tintColor];
-    
-    //set's the default state for the date picker to today's date
-    self.selectedDate = defaultDate;
-    
-    //upon view did load, hide the date picker cell
-    [self hideDatePickerCell];
+    self.selectedDate = [self.datePicker date];
 }
 
-//Since we are using a static tableview, we can use the constants to set parameters for our tableview. Using define, we can put all of our "magic numbers" in one place, in case we need to change them later.
+#pragma mark - TableView Delegate
+
 #define kDatePickerIndex 3
 #define dateTextCellIndex 2
 #define collectionViewCellIndex 5
@@ -180,18 +168,10 @@
     }else if (indexPath.row == collectionViewCellIndex){
         height = tallCellHeight;
     }
-    
     return height;
 }
 
-//when the date picker changes, set it's input to reflect in the date picker text
-- (IBAction)pickerDateChanged:(id)sender {
-    self.timeDisplay.text =  [self.dateFormatter stringFromDate:[self.datePicker date]];
-    
-    self.selectedDate = [self.datePicker date];
-}
 
-//When the row with the date displayed is selected....
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -207,28 +187,20 @@
             [self showDatePickerCell];
         }
     }
-    
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
-
 - (void)showDatePickerCell {
     
-    //...change the BOOLEAN to indicate the the date picker is (about to be) shown...
     self.datePickerIsShowing = YES;
     
-    //...refresh the tableview...
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
     
-    //...seems like a good time to stop hiding the date picker...
     self.datePicker.hidden = NO;
-    
-    //Now some setup. Turn the date picker clear so we can have it fade in during our animation.
     self.datePicker.alpha = 0.0f;
     
-    //Let's get our Walt Disney on and animate the appearance of this date picker.
     [UIView animateWithDuration:0.25 animations:^{
         
         self.datePicker.alpha = 1.0f;
@@ -236,15 +208,14 @@
     }];
 }
 
+
 - (void)hideDatePickerCell {
     
-    //Toggle the BOOL to represent the datePickerCell is (about to be) hidden
     self.datePickerIsShowing = NO;
     
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
     
-    //Animation time again. This time were turning the date picker clear.
     [UIView animateWithDuration:0.25
      
                      animations:^{
@@ -258,9 +229,7 @@
                      }];
 }
 
-
-
-#pragma mark CollectionView Delegate
+#pragma mark - CollectionView Delegate
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -305,9 +274,8 @@
 
 #pragma mark Images and Icons
 
-
 //IMPORTANT- The tags here are set to the filenames for a reason. There is no convenient way to get filenames of images once they are compiled.
--(NSArray *)iconArray{
+-(NSArray *)buildIconArray{
     if (! _iconArray) {
         EventIcon *bar = [[EventIcon alloc]initWithLabel:@"Bar" andImage:[UIImage imageNamed:@"Bar.png"]];
         EventIcon *meal = [[EventIcon alloc]initWithLabel:@"Meal" andImage:[UIImage imageNamed:@"Meal.png"]];
@@ -324,13 +292,30 @@
     return _iconArray;
 }
 
-#pragma mark Other helper methods
+#pragma mark - Other helper methods
 
 - (UIColor *)UIColorFromRGB:(NSInteger)rgbValue {
     return [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0
                            green:((float)((rgbValue & 0xFF00) >> 8))/255.0
                             blue:((float)(rgbValue & 0xFF))/255.0
                            alpha:1.0];
+}
+
+
+- (void)setupTimeDisplay
+{
+    self.dateFormatter = [[NSDateFormatter alloc] init];
+    [self.dateFormatter setDateStyle:NSDateFormatterLongStyle];
+    [self.dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    
+    NSDate *defaultDate = [NSDate date];
+    
+    self.timeDisplay.text = [self.dateFormatter stringFromDate:defaultDate];
+    self.timeDisplay.textColor = [self.timeDisplay tintColor];
+    
+    self.selectedDate = defaultDate;
+    
+    [self hideDatePickerCell];
 }
 
 @end

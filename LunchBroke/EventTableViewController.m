@@ -215,10 +215,11 @@
         
         //set a PFObject equal to the selected event...
         PFObject *myObject = [self.eventsArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+       
+        
         //...and get it's object ID
         self.selectedEventObjectID = [myObject objectId];
         
-        //PREPARE FOR SEGUE!
         //Create a nav controller and cast it as a destinationViewController
         UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
         

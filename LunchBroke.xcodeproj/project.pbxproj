@@ -164,11 +164,7 @@
 				38CCADF71ABB38D80058125A /* EventDetailController.m */,
 				38CCADF81ABB38D80058125A /* NewEventTableViewController.h */,
 				38CCADF91ABB38D80058125A /* NewEventTableViewController.m */,
-				3C2143FB1AC1EAE200C9A678 /* LoginViewController.h */,
-				3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */,
-				3C2143FE1AC22CA700C9A678 /* SignUpViewController.h */,
-				3C2143FF1AC22CA700C9A678 /* SignUpViewController.m */,
-				3CE504091AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.h */,
+				38E8609C1AFA732D00A2CA11 /* Sign-Up and Log-in */,
 				3CE5040A1AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.m */,
 			);
 			name = Controllers;
@@ -236,6 +232,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		38E8609C1AFA732D00A2CA11 /* Sign-Up and Log-in */ = {
+			isa = PBXGroup;
+			children = (
+				3C2143FB1AC1EAE200C9A678 /* LoginViewController.h */,
+				3C2143FC1AC1EAE200C9A678 /* LoginViewController.m */,
+				3C2143FE1AC22CA700C9A678 /* SignUpViewController.h */,
+				3C2143FF1AC22CA700C9A678 /* SignUpViewController.m */,
+				3CE504091AC9B8C700DFA4E1 /* fourSquareViewControllerTableViewController.h */,
+			);
+			name = "Sign-Up and Log-in";
+			sourceTree = "<group>";
+		};
 		771CC370037316E4E09CDC95 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,7 +304,7 @@
 				TargetAttributes = {
 					38CCADCA1ABB36A40058125A = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 9RXLE5FXUN;
+						DevelopmentTeam = UHLAE5BT7M;
 					};
 					38CCADE31ABB36A40058125A = {
 						CreatedOnToolsVersion = 6.2;
